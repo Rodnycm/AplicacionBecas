@@ -11,6 +11,11 @@ namespace BLL
 {
     public class GestorRol
     {
+
+        /// <summary>
+        /// Este metodo crea un nuevo rol
+        /// </summary>
+        /// <param name="pnombre">Nombre del rol</param>
         public void agregarRol(string pnombre)
         {
             try
@@ -37,7 +42,10 @@ namespace BLL
                 throw;
             }
         }
-
+        /// <summary>
+        /// Modifica el rol
+        /// </summary>
+        /// <param name="pnombre">nombre del rol a modificar</param>
         public void modificarRol(string pnombre)
         {
 
@@ -45,7 +53,10 @@ namespace BLL
             RolRepository.Instance.Update(objRol);
 
         }
-
+        /// <summary>
+        /// Elimina un rol
+        /// </summary>
+        /// <param name="pnombre">nombre del rol a modificar</param>
         public void eliminarRol(String pnombre)
         {
             /////////////////////////////////////
@@ -54,23 +65,38 @@ namespace BLL
             RolRepository.Instance.Delete(objRol);
         }
 
+        /// <summary>
+        /// Consultar los roles
+        /// </summary>
+        /// <returns>Retorna una lista de roles</returns>
         public IEnumerable<Rol> consultarRoles()
         {
             return RolRepository.Instance.GetAll();
         }
 
+        /// <summary>
+        /// Consulta los permisos
+        /// </summary>
+        /// <returns>Retorna una lista de permisos</returns>
         public IEnumerable<Permiso> consultarPermisos()
         {
             return PermisoRepository.Instance.GetAll();
         }
 
+        /// <summary>
+        /// Consulta un rol por el nombre
+        /// </summary>
+        /// <param name="pnombre">Nombre del rol a consultar</param>
+        /// <returns>El rol digitado</returns>
         public Rol consultarRolPorNombre(String pnombre)
         {
             return RolRepository.Instance.GetByNombre(pnombre);
         }
 
 
-
+        /// <summary>
+        /// Guarda los datos 
+        /// </summary>
         public void guardarCambios()
         {
             //try

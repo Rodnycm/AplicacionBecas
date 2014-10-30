@@ -8,6 +8,7 @@ using System.Transactions;
 using System.Data.SqlClient;
 using System.Data;
 
+
 namespace DAL
 {
     public class RolRepository : IRepository<Rol>
@@ -17,6 +18,7 @@ namespace DAL
         private List<IEntity> _deleteItems;
         private List<IEntity> _updateItems;
 
+
         public RolRepository()
         {
             _insertItems = new List<IEntity>();
@@ -24,6 +26,9 @@ namespace DAL
             _updateItems = new List<IEntity>();
         }
 
+        /// <summary>
+        /// trae la instancia de Rol repository
+        /// </summary>
         public static RolRepository Instance
         {
 
@@ -36,22 +41,37 @@ namespace DAL
                 return instance;
             }
         }
-
+        /// <summary>
+        /// agrega a una lista los roles a insertar
+        /// </summary>
+        /// <param name="entity">el rol aeliminar</param>
         public void Insert(Rol entity)
         {
             _insertItems.Add(entity);
         }
 
+        /// <summary>
+        /// agrega a una lista los roles a eliminar
+        /// </summary>
+        /// <param name="entity">el rol a eliminar</param>
         public void Delete(Rol entity)
         {
             _deleteItems.Add(entity);
         }
 
+        /// <summary>
+        /// agrega a una lista los roles a modificar
+        /// </summary>
+        /// <param name="entity">rol a modificar</param>
         public void Update(Rol entity)
         {
             _updateItems.Add(entity);
         }
 
+        /// <summary>
+        /// trae todos losroles a consultar
+        /// </summary>
+        /// <returns>una lista de roles</returns>
         public IEnumerable<Rol> GetAll()
         {
 
@@ -59,7 +79,7 @@ namespace DAL
             List<Rol> pRol = null;
 
             SqlCommand cmd = new SqlCommand();
-            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_ConsultarRoles");
+            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_buscarRol");
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -75,54 +95,47 @@ namespace DAL
 
             return pRol;
         }
-
-        public Rol GetById(int id)
-        {
-            Rol objRol = null;
-            /*var sqlQuery = "SELECT Id, Nombre, Precio FROM Producto WHERE id = @idProducto";
-            SqlCommand cmd = new SqlCommand(sqlQuery);
-            cmd.Parameters.AddWithValue("@idProducto", id);
-
-            var ds = DBAccess.ExecuteQuery(cmd);
-
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                var dr = ds.Tables[0].Rows[0];
-
-                objMusculo = new Musculo
-                {
-                    Id = Convert.ToInt32(dr["Id"]),
-                    nombre = dr["nombre"].ToString(),
-                    ubicacion = dr["ubicacion"].ToString(),
-                    origen = dr["Origen"].ToString(),
-                    insercion = dr["insercion"].ToString()
-                };
-            }*/
-
-            return objRol;
-        }
-
+        /// <summary>
+        /// consulta por nombre el rol
+        /// </summary>
+        /// <param name="pnombre">el rol a consultar</param>
+        /// <returns>el rol consultado</returns>
         public Rol GetByNombre(String pnombre)
         {
+
             Rol objRol = null;
-            SqlCommand cmd = new SqlCommand();
-            cmd.Parameters.AddWithValue("@nombre", pnombre);
-
-            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_BuscarRol");
-
-            if (ds.Tables[0].Rows.Count > 0)
+            try
             {
-                var dr = ds.Tables[0].Rows[0];
 
-                objRol = new Rol
+                SqlCommand cmd = new SqlCommand();
+                cmd.Parameters.Add(new SqlParameter("@Nombre", pnombre));
+
+                var ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_buscarRolPorNombre");
+
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    Id = Convert.ToInt32(dr["IdRol"]),
-                    Nombre = dr["Nombre"].ToString(),
-                };
+                    var dr = ds.Tables[0].Rows[0];
+
+                    objRol = new Rol
+                    {
+                        Nombre = dr["Nombre"].ToString()
+                    };
+                }
+
             }
+
+            catch (Exception ex)
+            {
+                Console.Write(ex);
+            }
+
+
             return objRol;
         }
 
+        /// <summary>
+        /// Guarda los cambios
+        /// </summary>
         public void Save()
         {
             using (TransactionScope scope = new TransactionScope())
@@ -171,6 +184,9 @@ namespace DAL
             }
         }
 
+        /// <summary>
+        /// Limpia los datos
+        /// </summary>
         public void Clear()
         {
             _insertItems.Clear();
@@ -178,6 +194,11 @@ namespace DAL
             _updateItems.Clear();
         }
 
+
+        /// <summary>
+        /// Inserta el rol a la BD
+        /// </summary>
+        /// <param name="objRol">el rol a insertar</param>
         private void InsertRol(Rol objRol)
         {
 
@@ -196,14 +217,19 @@ namespace DAL
 
         }
 
+
+        /// <summary>
+        /// Modifica el rol a la BD
+        /// </summary>
+        /// <param name="objRol">el rol a modificar</param>
         private void UpdateRol(Rol objRol)
         {
             try
             {
                 SqlCommand cmd = new SqlCommand();
 
-                cmd.Parameters.Add(new SqlParameter("@Nombre", objRol.Nombre));
-                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_ModificarRol");
+                cmd.Parameters.Add(new SqlParameter("@nombre", objRol.Nombre));
+                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_modificarRol");
 
             }
             catch (Exception ex)
@@ -211,14 +237,17 @@ namespace DAL
 
             }
         }
-
+        /// <summary>
+        /// Elimina el rol dela BD
+        /// </summary>
+        /// <param name="objRol">El rol a eliminar</param>
         private void DeleteRol(Rol objRol)
         {
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Parameters.Add(new SqlParameter("@nombre", objRol.Nombre));
-                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_EliminarRol");
+                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_eliminarRol");
 
             }
             catch (SqlException ex)

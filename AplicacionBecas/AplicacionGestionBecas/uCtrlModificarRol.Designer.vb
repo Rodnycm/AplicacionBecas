@@ -22,19 +22,28 @@ Partial Class uCtrlModificarRol
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.CLBPermisos = New System.Windows.Forms.CheckedListBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.lblNombre = New System.Windows.Forms.Label()
-        Me.CLBPermisos = New System.Windows.Forms.CheckedListBox()
         Me.SuspendLayout()
+        '
+        'CLBPermisos
+        '
+        Me.CLBPermisos.BackColor = System.Drawing.Color.White
+        Me.CLBPermisos.FormattingEnabled = True
+        Me.CLBPermisos.Location = New System.Drawing.Point(298, 45)
+        Me.CLBPermisos.Name = "CLBPermisos"
+        Me.CLBPermisos.Size = New System.Drawing.Size(325, 154)
+        Me.CLBPermisos.TabIndex = 19
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(136, 90)
+        Me.txtNombre.Location = New System.Drawing.Point(126, 64)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
-        Me.txtNombre.TabIndex = 8
+        Me.txtNombre.TabIndex = 18
         '
         'btnCancelar
         '
@@ -42,24 +51,23 @@ Partial Class uCtrlModificarRol
         Me.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.Color.White
-        Me.btnCancelar.Location = New System.Drawing.Point(406, 258)
+        Me.btnCancelar.Location = New System.Drawing.Point(396, 232)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(110, 47)
-        Me.btnCancelar.TabIndex = 7
+        Me.btnCancelar.TabIndex = 17
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'btnAceptar
         '
         Me.btnAceptar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-
         Me.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnAceptar.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAceptar.ForeColor = System.Drawing.Color.White
-        Me.btnAceptar.Location = New System.Drawing.Point(545, 258)
+        Me.btnAceptar.Location = New System.Drawing.Point(535, 232)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(110, 47)
-        Me.btnAceptar.TabIndex = 6
+        Me.btnAceptar.TabIndex = 16
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
@@ -69,26 +77,16 @@ Partial Class uCtrlModificarRol
         Me.lblNombre.BackColor = System.Drawing.Color.Transparent
         Me.lblNombre.Font = New System.Drawing.Font("Segoe UI Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblNombre.Location = New System.Drawing.Point(50, 84)
+        Me.lblNombre.Location = New System.Drawing.Point(40, 58)
         Me.lblNombre.Name = "lblNombre"
         Me.lblNombre.Size = New System.Drawing.Size(75, 25)
-        Me.lblNombre.TabIndex = 5
+        Me.lblNombre.TabIndex = 15
         Me.lblNombre.Text = "Nombre"
-        '
-        'CLBPermisos
-        '
-        Me.CLBPermisos.BackColor = System.Drawing.Color.White
-        Me.CLBPermisos.FormattingEnabled = True
-        Me.CLBPermisos.Location = New System.Drawing.Point(308, 71)
-        Me.CLBPermisos.Name = "CLBPermisos"
-        Me.CLBPermisos.Size = New System.Drawing.Size(325, 154)
-        Me.CLBPermisos.TabIndex = 14
         '
         'uCtrlModificarRol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-
         Me.Controls.Add(Me.CLBPermisos)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.btnCancelar)
@@ -100,10 +98,10 @@ Partial Class uCtrlModificarRol
         Me.PerformLayout()
 
     End Sub
+    Friend WithEvents CLBPermisos As System.Windows.Forms.CheckedListBox
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
     Friend WithEvents lblNombre As System.Windows.Forms.Label
-    Friend WithEvents CLBPermisos As System.Windows.Forms.CheckedListBox
 
 End Class

@@ -17,6 +17,10 @@ namespace EntitiesLayer
         public String Nombre { get; set; }
         public String Descripción { get; set; }
 
+
+        /// <summary>
+        /// crea un nuevo permisos sin parametros
+        /// </summary>
         public Permiso()
         {
             Id = 0;
@@ -24,6 +28,12 @@ namespace EntitiesLayer
             Descripción = "";
         }
 
+
+        /// <summary>
+        /// Crea un nuevo permiso
+        /// </summary>
+        /// <param name="pnombre">nombre del permiso</param>
+        /// <param name="pDescripción">descripcion del permiso</param>
         public Permiso(String pnombre, String pDescripción)
         {
             Id = 0;

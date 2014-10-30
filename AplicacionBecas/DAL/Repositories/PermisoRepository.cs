@@ -7,6 +7,8 @@ using System.Collections;
 using System.Transactions;
 using System.Data.SqlClient;
 using System.Data;
+using TIL.CustomExceptions;
+
 
 namespace DAL
 {
@@ -24,6 +26,10 @@ namespace DAL
             _deleteItems = new List<IEntity>();
             _updateItems = new List<IEntity>();
         }
+
+        /// <summary>
+        /// Devuelve la instancia del repository de ´permiso
+        /// </summary>
         public static PermisoRepository Instance
         {
 
@@ -37,21 +43,37 @@ namespace DAL
             }
         }
 
+        /// <summary>
+        /// agrega a una lista el permiso a insertar 
+        /// </summary>
+        /// <param name="entity">El permiso a insertar</param>
         public void Insert(Permiso entity)
         {
             _insertItems.Add(entity);
         }
 
+        /// <summary>
+        /// agrega a una lista el permiso a eliminar
+        /// </summary>
+        /// <param name="entity">Permiso a eliminar</param>
         public void Delete(Permiso entity)
         {
             _deleteItems.Add(entity);
         }
 
+        /// <summary>
+        /// agrega a una lista el permiso a modificar
+        /// </summary>
+        /// <param name="entity">Permiso a modificar</param>
         public void Update(Permiso entity)
         {
             _updateItems.Add(entity);
         }
 
+        /// <summary>
+        /// Trae todos los permisos de la BD
+        /// </summary>
+        /// <returns>Una lista de los permisos</returns>
         public IEnumerable<Permiso> GetAll()
         {
 
@@ -59,7 +81,7 @@ namespace DAL
             List<Permiso> pPermiso = null;
 
             SqlCommand cmd = new SqlCommand();
-            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_ConsultarPermisos");
+            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_consultarPermisos");
 
 
 
@@ -78,15 +100,11 @@ namespace DAL
 
             return pPermiso;
         }
-
-        public Permiso GetById(int id)
-        {
-            Permiso objPermiso = null;
-
-            return objPermiso;
-        }
-
-
+        /// <summary>
+        /// Consulta el permiso por el nombre
+        /// </summary>
+        /// <param name="pnombre">permiso a consultar</param>
+        /// <returns>El permiso consultado</returns>
         public Permiso GetByNombre(String pnombre)
         {
             Permiso objPermiso = null;
@@ -111,7 +129,9 @@ namespace DAL
 
             return objPermiso;
         }
-
+        /// <summary>
+        /// Guarda los permisos cambiados
+        /// </summary>
         public void Save()
         {
             using (TransactionScope scope = new TransactionScope())
@@ -159,7 +179,9 @@ namespace DAL
 
             }
         }
-
+        /// <summary>
+        /// Limpia la lista 
+        /// </summary>
         public void Clear()
         {
             _insertItems.Clear();
@@ -167,14 +189,18 @@ namespace DAL
             _updateItems.Clear();
         }
 
-        private void InsertPermiso(Permiso objHueso)
+        /// <summary>
+        /// Inserta un permiso a la BD
+        /// </summary>
+        /// <param name="objPermiso">El permiso a insertar</param>
+        private void InsertPermiso(Permiso objPermiso)
         {
 
             try
             {
                 SqlCommand cmd = new SqlCommand();
 
-                cmd.Parameters.Add(new SqlParameter("@nomb", objHueso.Nombre));
+                cmd.Parameters.Add(new SqlParameter("@nomb", objPermiso.Nombre));
 
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_agregarPermiso");
 
@@ -186,6 +212,10 @@ namespace DAL
 
         }
 
+        /// <summary>
+        /// Modifica un permiso a la BD
+        /// </summary>
+        /// <param name="objPermiso">El permiso a modificar</param>
         private void UpdatePermiso(Permiso objPermiso)
         {
             try
@@ -200,9 +230,14 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                //throw new DataAccessException("No se pudó modificar el Permiso", ex);
+                throw new DataAccessException("No se pudó modificar el Permiso", ex);
             }
         }
+
+        /// <summary>
+        /// ELimina el permiso de la BD
+        /// </summary>
+        /// <param name="objPermiso">El permiso a eliminar</param>
 
         private void DeletePermiso(Permiso objPermiso)
         {
@@ -216,13 +251,13 @@ namespace DAL
             catch (SqlException ex)
             {
                 //logear la excepcion a la bd con un Exception
-                //throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
+                throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
 
             }
             catch (Exception ex)
             {
                 //logear la excepcion a la bd con un Exception
-                //throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
+                throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
             }
         }
 

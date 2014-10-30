@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EntitiesLayer;
 
+
 namespace EntitiesLayer
 {
     public class Rol : IEntity
@@ -20,6 +21,9 @@ namespace EntitiesLayer
 
         public String Nombre { get; set; }
 
+        /// <summary>
+        /// Crea un nuevo rol sin parametros
+        /// </summary>
         public Rol()
         {
 
@@ -27,11 +31,19 @@ namespace EntitiesLayer
 
         }
 
+        /// <summary>
+        /// Crea un nuevo Rol
+        /// </summary>
+        /// <param name="pNombre">nombre del rol</param>
         public Rol(String pNombre)
         {
             Nombre = pNombre;
         }
 
+        /// <summary>
+        /// Trae la lista de permisos del rol
+        /// </summary>
+        /// <returns>reporta la lista de permisos</returns>
         public List<Permiso> getListaPermisos()
         {
 
@@ -39,6 +51,10 @@ namespace EntitiesLayer
 
         }
 
+        /// <summary>
+        /// SETEA los permisos de el rol
+        /// </summary>
+        /// <param name="plistaPermisos">la nueva lista de permisos</param>
         public void setListaPermisos(List<Permiso> plistaPermisos)
         {
 
@@ -48,6 +64,7 @@ namespace EntitiesLayer
 
     }
 }
+
 
 
 

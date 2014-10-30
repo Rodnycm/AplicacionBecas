@@ -17,7 +17,7 @@ Public Class uCtrlModificarRol
     '''<summary> Descripción del método o clase</summary>
     '''<author> Autor del código.</author> 
     '''<name> Parámetros que recibe el método </name>  
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs)
         Me.Dispose()
     End Sub
 
@@ -26,7 +26,7 @@ Public Class uCtrlModificarRol
     '''<author> Autor del código.</author> 
     '''<name> Parámetros que recibe el método </name>  
 
-    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+    Private Sub btnAceptar_Click(sender As Object, e As EventArgs)
         nombre = txtNombre.Text
 
         objGestorRol.modificarRol(nombre)

@@ -96,6 +96,11 @@ namespace BLL
             return beneficio;
         }
 
+        /// <summary>
+        /// Crea un objeto rol
+        /// </summary>
+        /// <param name="nombre">nombre del rol a crear</param>
+        /// <returns>devuelve el rol creado</returns>
         public Rol crearObjetoRol(string nombre)
         {
             return new Rol(nombre);
