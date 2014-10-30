@@ -95,11 +95,37 @@ namespace DAL
 
             return pRol;
         }
+
+        public Rol GetById(int id)
+        {
+            Rol objRol = null;
+            var sqlQuery = "";
+            SqlCommand cmd = new SqlCommand(sqlQuery);
+            cmd.Parameters.AddWithValue("@idRol", id);
+
+            var ds = DBAccess.ExecuteQuery(cmd);
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                var dr = ds.Tables[0].Rows[0];
+
+                objRol = new Rol
+                {
+                    Nombre = dr["Nombre"].ToString()
+                };
+            }
+
+
+
+            return objRol;
+        }
         /// <summary>
         /// consulta por nombre el rol
         /// </summary>
         /// <param name="pnombre">el rol a consultar</param>
         /// <returns>el rol consultado</returns>
+        /// 
+
         public Rol GetByNombre(String pnombre)
         {
 

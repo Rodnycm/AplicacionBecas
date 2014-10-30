@@ -6,7 +6,17 @@ AplicacionGestionBecas
 </name>
 </assembly>
 <members>
-<member name="P:AplicacionGestionBecas.My.Resources.Resources.ResourceManager">
+<member name="M:AplicacionGestionBecas.uCtrlEliminarRol.btnCancelar_Click(System.Object,System.EventArgs)">
+	<summary> Este Metodo esconde el usuario de control de eliminar Rol</summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlEliminarRol.recieveData(System.String)">
+	<summary>REcibe el dato del rol a eliminar </summary>
+	<author>Rodny Castro Mathews </author>
+	<param name="pnombre"> Nombre del Rol a eliminar  </param>
+</member><member name="M:AplicacionGestionBecas.uCtrlEliminarRol.btnAñadir_Click(System.Object,System.EventArgs)">
+	<summary>Elimina El rol seleccionado </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="P:AplicacionGestionBecas.My.Resources.Resources.ResourceManager">
 	<summary>
   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
@@ -79,6 +89,15 @@ AplicacionGestionBecas
 	<summary>Metodo encargado instanciar la pantalla de eliminar carrera y enviar los datos</summary>
 	<param name="numfila">Numero de fila en la que se encuentra el combobox</param>
 	<autor>Alvaro Artavia</autor>
+</member><member name="M:AplicacionGestionBecas.UCntrlRegistrarRol.btnAceptar_Click(System.Object,System.EventArgs)">
+	<summary>crea un nuevo Rol en el sistema </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.UCntrlRegistrarRol.btnCancelar_Click(System.Object,System.EventArgs)">
+	<summary>Este metodo oculta el usuario de control de registrar Rol </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.UCntrlRegistrarRol.MostrarMenuMant">
+	<summary>Este metodo muestr el menu de mantenimiento </summary>
+	<author>Rodny Castro Mathews </author>
 </member><member name="M:AplicacionGestionBecas.uCtrlMenuMantenimiento.btnCursos_Click(System.Object,System.EventArgs)">
 	<summary>Metodo que se ejecuta cuando el usuario da click al boton cursos, muestra 
  al usuario el menu de cursos</summary>
@@ -106,6 +125,19 @@ AplicacionGestionBecas
 	<summary> Descripción del método o clase</summary>
 	<author> Autor del código.</author>
 	<name> Parámetros que recibe el método </name>
+</member><member name="M:AplicacionGestionBecas.uCntrlConsultarRol.btnVolver_Click(System.Object,System.EventArgs)">
+	<summary>Este metodo oculta la ventana de consultar rol </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCntrlConsultarRol.enseñarDatos(System.String)">
+	<summary>Este metodo enseña los valores del Rol </summary>
+	<author>Rodny Castro Mathews </author>
+	<param name="pnombre"> Nombre del Rol a eliminar  </param>
+</member><member name="M:AplicacionGestionBecas.uCntrlConsultarRol.listarPermisos">
+	<summary>Este metodo lista los permisos del Rol </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCntrlConsultarRol.uCntrlConsultarRol_Load(System.Object,System.EventArgs)">
+	<summary>Este metodo hace que apenas se abra el usuario de control se listen los permisos </summary>
+	<author>Rodny Castro Mathews </author>
 </member><member name="M:AplicacionGestionBecas.uCtrlCrearCarrera.btnColor_Click(System.Object,System.EventArgs)">
 	<summary>Metodo que se ejecuta cuando el usuario da click al boton seleccionar color, este metodo 
  muestra al usuario una paleta de colores</summary>
@@ -150,9 +182,7 @@ AplicacionGestionBecas
 	<remarks></remarks>
 </member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.verBeneficios">
 	<summary>
- consulta un beneficio
- </summary>
-	<author>Mathias Muller</author>
+	</summary>
 	<remarks></remarks>
 </member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.editarBeneficios">
 	<summary>
@@ -166,6 +196,40 @@ AplicacionGestionBecas
  </summary>
 	<author>Mathias Muller</author>
 	<remarks></remarks>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ListarRoles">
+	<summary> Este metodo lista los roles</summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ListarRol_Load(System.Object,System.EventArgs)">
+	<summary>Este metodo hace que apenas se abra el usuario de control le liste los roles </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.modificarRol(System.Int32)">
+	<summary>Metodo  modifica el rol seleccionado</summary>
+	<author>Rodny Castro Mathews </author>
+ '''<param name="numfila"> numero de fila en el que se encuentra el rol a modificar  </param>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.eliminarRol(System.Int32)">
+	<summary>Este metodo elimina el rol seleccionado </summary>
+	<author>Rodny Castro Mathews </author>
+	<param name="numfila"> Numero de fila del rol a eliminar  </param>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.consultarRol(System.Int32)">
+	<summary>Este metodo consulta el rol seleccionado </summary>
+	<author>Rodny Castro Mathews </author>
+	<param name="numfila"> Numero de fila de rol a consultar  </param>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.DGVRol_EditingControlShowing(System.Object,System.Windows.Forms.DataGridViewEditingControlShowingEventArgs)">
+	<summary>
+	</summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ComboBox_SelectionChangeCommitted(System.Object,System.EventArgs)">
+	<summary> Este metodo indica si hay que eliminar,ver,modificar dependiendo de lo que escoja </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ListarRol">
+	<summary>este metodo lista el rol a buscar </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.btnCrearRoles_Click(System.Object,System.EventArgs)">
+	<summary>Este metodo llama al usuario de control de crear rol </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.btnBuscarRol_Click(System.Object,System.EventArgs)">
+	<summary>Este boton Busca el rol digitado </summary>
+	<author>Rodny Castro Mathews </author>
 </member><member name="M:AplicacionGestionBecas.uCtrlConsultarBeneficio.uCtrlConsultarBeneficio_Load(System.Object,System.EventArgs)">
 	<summary>
  Trae del Gestor, una instancia de un beneficio y lo muestra en un datagrid.

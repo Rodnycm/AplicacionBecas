@@ -19,20 +19,20 @@ Public Class uCntrlBuscarBeneficio
 
         Try
 
-        
-        Dim listaBeneficios As New List(Of Beneficio)
-        listaBeneficios = objGestorBeneficio.buscarBeneficios()
 
-        dtaBuscarBeneficio.Rows.Clear()
-        For i As Integer = 0 To listaBeneficios.Count - 1
+            Dim listaBeneficios As New List(Of Beneficio)
+            listaBeneficios = objGestorBeneficio.buscarBeneficios()
 
-            dtaBuscarBeneficio.Rows.Add(1)
-            dtaBuscarBeneficio.Rows(i).Cells(0).Value = listaBeneficios.Item(i).id
-            dtaBuscarBeneficio.Rows(i).Cells(1).Value = listaBeneficios.Item(i).Nombre
-            dtaBuscarBeneficio.Rows(i).Cells(2).Value = listaBeneficios.Item(i).Porcentaje
-            dtaBuscarBeneficio.Rows(i).Cells(3).Value = listaBeneficios.Item(i).Aplicacion
-            dtaBuscarBeneficio.Columns("dtaAplicabilidad").Visible = False
-            dtaBuscarBeneficio.Columns("dtaId").Visible = False
+            dtaBuscarBeneficio.Rows.Clear()
+            For i As Integer = 0 To listaBeneficios.Count - 1
+
+                dtaBuscarBeneficio.Rows.Add(1)
+                dtaBuscarBeneficio.Rows(i).Cells(0).Value = listaBeneficios.Item(i).Id
+                dtaBuscarBeneficio.Rows(i).Cells(1).Value = listaBeneficios.Item(i).Nombre
+                dtaBuscarBeneficio.Rows(i).Cells(2).Value = listaBeneficios.Item(i).Porcentaje
+                dtaBuscarBeneficio.Rows(i).Cells(3).Value = listaBeneficios.Item(i).Aplicacion
+                dtaBuscarBeneficio.Columns("dtaAplicabilidad").Visible = False
+                dtaBuscarBeneficio.Columns("dtaId").Visible = False
 
             Next i
 
@@ -167,9 +167,8 @@ Public Class uCntrlBuscarBeneficio
     '//////////////////////////////////////////////////////////////////////////////////////////
 
     ''' <summary>
-    ''' consulta un beneficio
+    ''' 
     ''' </summary>
-    ''' <author>Mathias Muller</author>
     ''' <remarks></remarks>
     Private Sub verBeneficios()
         Dim nombre As String = dtaBuscarBeneficio.CurrentRow.Cells(1).Value

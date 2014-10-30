@@ -7,7 +7,7 @@ using System.Collections;
 using System.Transactions;
 using System.Data.SqlClient;
 using System.Data;
-using TIL.CustomExceptions;
+//using TIL.CustomExceptions;
 
 
 namespace DAL
@@ -105,12 +105,15 @@ namespace DAL
         /// </summary>
         /// <param name="pnombre">permiso a consultar</param>
         /// <returns>El permiso consultado</returns>
-        public Permiso GetByNombre(String pnombre)
+        /// 
+
+
+        public Permiso GetById(int id)
         {
             Permiso objPermiso = null;
             var sqlQuery = "";
             SqlCommand cmd = new SqlCommand(sqlQuery);
-            cmd.Parameters.AddWithValue("@idPermiso", pnombre);
+            cmd.Parameters.AddWithValue("@idPermiso", id);
 
             var ds = DBAccess.ExecuteQuery(cmd);
 
@@ -120,7 +123,29 @@ namespace DAL
 
                 objPermiso = new Permiso
                 {
-                    Id = Convert.ToInt32(dr["Id"]),
+                    Nombre = dr["Nombre"].ToString()
+                };
+            }
+
+
+
+            return objPermiso;
+        }
+        public Permiso GetByNombre(String pnombre)
+        {
+            Permiso objPermiso = null;
+            var sqlQuery = "";
+            SqlCommand cmd = new SqlCommand(sqlQuery);
+            cmd.Parameters.AddWithValue("@nombre", pnombre);
+
+            var ds = DBAccess.ExecuteQuery(cmd);
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                var dr = ds.Tables[0].Rows[0];
+
+                objPermiso = new Permiso
+                {
                     Nombre = dr["Nombre"].ToString()
                 };
             }
@@ -230,7 +255,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw new DataAccessException("No se pudó modificar el Permiso", ex);
+               // throw new DataAccessException("No se pudó modificar el Permiso", ex);
             }
         }
 
@@ -251,13 +276,13 @@ namespace DAL
             catch (SqlException ex)
             {
                 //logear la excepcion a la bd con un Exception
-                throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
+               // throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
 
             }
             catch (Exception ex)
             {
                 //logear la excepcion a la bd con un Exception
-                throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
+               // throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
             }
         }
 

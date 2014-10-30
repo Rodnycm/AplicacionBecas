@@ -3,10 +3,10 @@
     Public Property uCtrlMantCarreras As uCtrlMantenimientoCarreras = New uCtrlMantenimientoCarreras()
     Public Property uCtrlMantCursos As uCtrlMantenimientoCursos = New uCtrlMantenimientoCursos()
     Public Property uCtrlMantRequisitos As uCtrlMantenimientoRequisitos = New uCtrlMantenimientoRequisitos()
-    Public Property uCntrlRol As UCntrlRegistrarRol = New UCntrlRegistrarRol()
+    Public Property uCntrlMantRol As uCtrlListarRol = New uCtrlListarRol()
     Public Property ucntrlUsuario As UctrlListarYBuscarUsuario = New UctrlListarYBuscarUsuario()
     Public Property uCntrlBuscarBeneficio As uCntrlBuscarBeneficio = New uCntrlBuscarBeneficio()
-
+    '' Dim ListarRol As New ListarRol()
     Private Sub btnRequisitos_Click(sender As Object, e As EventArgs) Handles btnRequisitos.Click
 
         Me.Hide()
@@ -44,9 +44,9 @@
 
     Private Sub btnRoles_Click(sender As Object, e As EventArgs) Handles btnRoles.Click
         Me.Hide()
-        frmPrincipal.Controls.Add(uCntrlRol)
-        uCntrlRol.Location = New Point(210, 100)
-        uCntrlRol.Show()
+        frmPrincipal.Controls.Add(uCntrlMantRol)
+        uCntrlMantRol.Location = New Point(210, 100)
+        uCntrlMantRol.Show()
     End Sub
 
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
