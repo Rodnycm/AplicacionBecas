@@ -114,14 +114,14 @@ AplicacionGestionBecas
 	<summary> Descripción del método o clase</summary>
 	<author> Autor del código.</author>
 	<name> Parámetros que recibe el método </name>
-</member><member name="M:AplicacionGestionBecas.uCtrlModificarRol.btnAceptar_Click(System.Object,System.EventArgs)">
-	<summary> Descripción del método o clase</summary>
-	<author> Autor del código.</author>
-	<name> Parámetros que recibe el método </name>
 </member><member name="M:AplicacionGestionBecas.uCtrlModificarRol.listarPermisos">
 	<summary> Descripción del método o clase</summary>
 	<author> Autor del código.</author>
 </member><member name="M:AplicacionGestionBecas.uCtrlModificarRol.uCtrlModificarRol_Load(System.Object,System.EventArgs)">
+	<summary> Descripción del método o clase</summary>
+	<author> Autor del código.</author>
+	<name> Parámetros que recibe el método </name>
+</member><member name="M:AplicacionGestionBecas.uCtrlModificarRol.btnAceptar_Click_1(System.Object,System.EventArgs)">
 	<summary> Descripción del método o clase</summary>
 	<author> Autor del código.</author>
 	<name> Parámetros que recibe el método </name>

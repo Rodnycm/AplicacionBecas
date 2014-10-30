@@ -4,7 +4,7 @@ Imports EntitiesLayer
 Public Class uCtrlModificarRol
 
     Dim nombre As String
-
+    Dim nombreROl As String
 
     '''<summary> Descripción del método o clase</summary>
     '''<author> Autor del código.</author> 
@@ -12,6 +12,7 @@ Public Class uCtrlModificarRol
 
     Public Sub recieveData(ByVal pnombre As String)
         txtNombre.Text = pnombre
+        nombreROl = pnombre
     End Sub
 
     '''<summary> Descripción del método o clase</summary>
@@ -22,16 +23,9 @@ Public Class uCtrlModificarRol
     End Sub
 
 
-    '''<summary> Descripción del método o clase</summary>
-    '''<author> Autor del código.</author> 
-    '''<name> Parámetros que recibe el método </name>  
+    
 
-    Private Sub btnAceptar_Click(sender As Object, e As EventArgs)
-        nombre = txtNombre.Text
 
-        objGestorRol.modificarRol(nombre)
-        objGestorRol.guardarCambios()
-    End Sub
 
     '''<summary> Descripción del método o clase</summary>
     '''<author> Autor del código.</author> 
@@ -56,4 +50,16 @@ Public Class uCtrlModificarRol
         listarPermisos()
     End Sub
 
+    Private Sub btnCancelar_Click_1(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Me.Dispose()
+    End Sub
+    '''<summary> Descripción del método o clase</summary>
+    '''<author> Autor del código.</author> 
+    '''<name> Parámetros que recibe el método </name>  
+    Private Sub btnAceptar_Click_1(sender As Object, e As EventArgs) Handles btnAceptar.Click
+        nombre = txtNombre.Text
+
+        objGestorRol.modificarRol(nombreROl)
+        objGestorRol.guardarCambios()
+    End Sub
 End Class
