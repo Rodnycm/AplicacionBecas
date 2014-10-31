@@ -46,21 +46,40 @@ namespace BLL
         /// Modifica el rol
         /// </summary>
         /// <param name="pnombre">nombre del rol a modificar</param>
-        public void modificarRol(string pnombre)
+        public void modificarRol(string pnombre, int pidRol)
         {
 
-            Rol objRol = ContenedorMantenimiento.Instance.crearObjetoRol(pnombre);
+            Rol objRol = ContenedorMantenimiento.Instance.crearObjetoRol(pidRol,pnombre);
             RolRepository.Instance.Update(objRol);
 
+        }
+
+        public void asignarPermisoAUnRol(int pidPermiso, int pidRol)
+        {
+            PermisoRepository.Instance.InsertPermisoAUnRol(pidPermiso, pidRol);
+
+        }
+
+        public IEnumerable<int> ConsultarIdPermisoROl(int pidPermiso, int pidRol)
+        {
+
+
+            return PermisoRepository.Instance.GetIdRolesPermisos(pidPermiso, pidRol);
+
+        }
+
+        public void eliminarPermisoAUnRol(int pIdPermisoROl)
+        {
+            PermisoRepository.Instance.EliminarPermisoAUnRol(pIdPermisoROl);
         }
         /// <summary>
         /// Elimina un rol
         /// </summary>
         /// <param name="pnombre">nombre del rol a modificar</param>
-        public void eliminarRol(String pnombre)
+        public void eliminarRol(String pnombre, int pidRol)
         {
             /////////////////////////////////////
-            Rol objRol = ContenedorMantenimiento.Instance.crearObjetoRol(pnombre);
+            Rol objRol = ContenedorMantenimiento.Instance.crearObjetoRol(pidRol,pnombre);
             //Rol objRol = new Rol { Id = idRol };
             RolRepository.Instance.Delete(objRol);
         }
@@ -81,6 +100,11 @@ namespace BLL
         public IEnumerable<Permiso> consultarPermisos()
         {
             return PermisoRepository.Instance.GetAll();
+        }
+
+        public IEnumerable<Permiso> consultarPermisosPorRol(int pidRol)
+        {
+            return PermisoRepository.Instance.GetPermisosPorRol(pidRol);
         }
 
         /// <summary>

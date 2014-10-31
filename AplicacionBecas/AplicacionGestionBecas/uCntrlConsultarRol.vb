@@ -2,6 +2,11 @@
 
 Class uCntrlConsultarRol
 
+    Dim nombre As String
+    Dim idRol As String
+    Dim listarRoles As uCtrlListarRol
+    Dim listaPermisos As New List(Of Permiso)
+
     '''<summary>Este metodo oculta la ventana de consultar rol </summary>
     '''<author>Rodny Castro Mathews </author> 
     Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
@@ -15,12 +20,14 @@ Class uCntrlConsultarRol
         txtNombre.Text = pnombre
     End Sub
 
-    '''<summary>Este metodo lista los permisos del Rol </summary>
-    '''<author>Rodny Castro Mathews </author> 
+    Public Sub getFrmBuscar(plistarRoles As uCtrlListarRol)
+
+        listarRoles = plistarRoles
+    End Sub
+
     Sub listarPermisos()
 
-        Dim listaPermisos As New List(Of Permiso)
-        listaPermisos = objGestorRol.consultarPermisos
+        listaPermisos = objGestorRol.consultarPermisosPorRol(idRol)
 
         ' CLBPermisos.BeginUpdate()
         For i As Integer = 0 To listaPermisos.Count - 1
@@ -28,6 +35,11 @@ Class uCntrlConsultarRol
 
         Next
         ' CLBPermisos.EndUpdate()
+    End Sub
+
+    Public Sub recieveData(ByVal pnombre As String, ByVal pidRol As Integer)
+        txtNombre.Text = pnombre
+        idRol = pidRol
     End Sub
 
     '''<summary>Este metodo hace que apenas se abra el usuario de control se listen los permisos </summary>

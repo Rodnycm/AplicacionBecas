@@ -15,8 +15,9 @@ Public Class uCtrlListarRol
         For i As Integer = 0 To listaRoles.Count - 1
 
             DGVRol.Rows.Add(1)
-            DGVRol.Rows(i).Cells(0).Value = listaRoles.Item(i).Nombre()
-
+            DGVRol.Rows(i).Cells(0).Value = listaRoles.Item(i).Id()
+            DGVRol.Rows(i).Cells(1).Value = listaRoles.Item(i).Nombre()
+            DGVRol.Columns("dtaId").Visible = False
         Next
     End Sub
     '''<summary>Este metodo hace que apenas se abra el usuario de control le liste los roles </summary>
@@ -30,11 +31,12 @@ Public Class uCtrlListarRol
     ''' '''<param name="numfila"> numero de fila en el que se encuentra el rol a modificar  </param>  
     Private Sub modificarRol(numfila As Integer)
 
-        Dim value1 As Object = DGVRol.Rows(numfila).Cells(0).Value
-
+        Dim value1 As Object = DGVRol.Rows(numfila).Cells(1).Value
+        Dim idROl As Integer = DGVRol.Rows(numfila).Cells(0).Value
         Dim uCtrlModRol As New uCtrlModificarRol()
-        uCtrlModRol.recieveData(value1)
+        uCtrlModRol.recieveData(value1, idROl)
         uCtrlModRol.txtNombre.Text = CType(value1, String)
+        uCtrlModRol.getFrmBuscar(Me)
         frmPrincipal.Controls.Add(uCtrlModRol)
         uCtrlModRol.Show()
         uCtrlModRol.BringToFront()
@@ -47,10 +49,10 @@ Public Class uCtrlListarRol
     '''<param name="numfila"> Numero de fila del rol a eliminar  </param> 
     Private Sub eliminarRol(numfila As Integer)
 
-        Dim value1 As Object = DGVRol.Rows(numfila).Cells(0).Value
-
+        Dim value1 As Object = DGVRol.Rows(numfila).Cells(1).Value
+        Dim idROl As Integer = DGVRol.Rows(numfila).Cells(0).Value
         Dim uCtrlEliRol As New uCtrlEliminarRol()
-        uCtrlEliRol.recieveData(value1)
+        uCtrlEliRol.recieveData(value1, idROl)
         frmPrincipal.Controls.Add(uCtrlEliRol)
         uCtrlEliRol.Show()
         uCtrlEliRol.Location = New Point(250, 170)
@@ -63,10 +65,11 @@ Public Class uCtrlListarRol
     '''<param name="numfila"> Numero de fila de rol a consultar  </param> 
     Private Sub consultarRol(numfila As Integer)
 
-        Dim value1 As String = DGVRol.Rows(numfila).Cells(0).Value
-        DGVRol.Rows.Clear()
+        Dim value1 As Object = DGVRol.Rows(numfila).Cells(1).Value
+        Dim idROl As Integer = DGVRol.Rows(numfila).Cells(0).Value
         Dim uCtrlConsulRol As New uCntrlConsultarRol()
         uCtrlConsulRol.enseñarDatos(value1)
+        uCtrlConsulRol.recieveData(value1, idROl)
         uCtrlConsulRol.txtNombre.Text = value1
         frmPrincipal.Controls.Add(uCtrlConsulRol)
         uCtrlConsulRol.Show()
@@ -78,7 +81,7 @@ Public Class uCtrlListarRol
     '''<author>Rodny Castro Mathews </author> 
     Private Sub DGVRol_EditingControlShowing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewEditingControlShowingEventArgs) Handles DGVRol.EditingControlShowing
         ' Only for a DatagridComboBoxColumn at ColumnIndex 1.
-        If DGVRol.CurrentCell.ColumnIndex = 1 Then
+        If DGVRol.CurrentCell.ColumnIndex = 2 Then
             Dim combo As ComboBox = CType(e.Control, ComboBox)
             If (combo IsNot Nothing) Then
                 ' Remove an existing event-handler, if present, to avoid 
@@ -121,7 +124,7 @@ Public Class uCtrlListarRol
         Rol = objGestorRol.consultarRolPorNombre(txtBuscarRol.Text)
         DGVRol.Rows.Clear()
         DGVRol.Rows.Add(1)
-        DGVRol.Rows(0).Cells(0).Value = Rol.Nombre()
+        DGVRol.Rows(0).Cells(1).Value = Rol.Nombre()
     End Sub
 
     '''<summary>Este metodo llama al usuario de control de crear rol </summary>
