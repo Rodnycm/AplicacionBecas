@@ -60,6 +60,7 @@
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Hide()
+        uCntrlBuscarBeneficio.dtaBuscarBeneficio.Rows.Clear()
+        uCntrlBuscarBeneficio.listarBeneficios()
     End Sub
-
 End Class

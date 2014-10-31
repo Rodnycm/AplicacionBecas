@@ -5,8 +5,12 @@ Imports System.Drawing
 Public Class uCntrlBuscarBeneficio
 
     Private Sub PantallaConsultarBeneficio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            listarBeneficios()
+        Catch
+            MsgBox("Debe crear un beneficio")
+        End Try
 
-        listarBeneficios()
 
     End Sub
 
@@ -17,30 +21,18 @@ Public Class uCntrlBuscarBeneficio
     ''' <author>Mathias Muller</author>
     Public Sub listarBeneficios()
 
-        Try
-
 
             Dim listaBeneficios As New List(Of Beneficio)
             listaBeneficios = objGestorBeneficio.buscarBeneficios()
-
             dtaBuscarBeneficio.Rows.Clear()
-            For i As Integer = 0 To listaBeneficios.Count - 1
 
-                dtaBuscarBeneficio.Rows.Add(1)
-                dtaBuscarBeneficio.Rows(i).Cells(0).Value = listaBeneficios.Item(i).Id
-                dtaBuscarBeneficio.Rows(i).Cells(1).Value = listaBeneficios.Item(i).Nombre
-                dtaBuscarBeneficio.Rows(i).Cells(2).Value = listaBeneficios.Item(i).Porcentaje
-                dtaBuscarBeneficio.Rows(i).Cells(3).Value = listaBeneficios.Item(i).Aplicacion
+            For Each Beneficio In listaBeneficios
+
+                dtaBuscarBeneficio.Rows.Add(Beneficio.Id, Beneficio.Nombre, Beneficio.Porcentaje, Beneficio.Aplicacion)
                 dtaBuscarBeneficio.Columns("dtaAplicabilidad").Visible = False
                 dtaBuscarBeneficio.Columns("dtaId").Visible = False
 
-            Next i
-
-        Catch
-
-            MsgBox("Debe crear un beneficio")
-
-        End Try
+            Next
 
     End Sub
     Private Sub btnMantenimiento_Click(sender As Object, e As EventArgs) Handles btnMantenimiento.Click

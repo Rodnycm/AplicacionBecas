@@ -24,7 +24,7 @@ Partial Class uCtrlMenuReportes
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uCtrlMenuReportes))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnConsultarBitacoraAcciones = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -38,7 +38,7 @@ Partial Class uCtrlMenuReportes
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Button3, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnConsultarBitacoraAcciones, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Button5, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Button4, 2, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(250, 134)
@@ -49,20 +49,20 @@ Partial Class uCtrlMenuReportes
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(850, 229)
         Me.TableLayoutPanel1.TabIndex = 14
         '
-        'Button3
+        'btnConsultarBitacoraAcciones
         '
-        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(3, 3)
-        Me.Button3.MaximumSize = New System.Drawing.Size(128, 99)
-        Me.Button3.MinimumSize = New System.Drawing.Size(128, 99)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(128, 99)
-        Me.Button3.TabIndex = 8
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnConsultarBitacoraAcciones.BackgroundImage = CType(resources.GetObject("btnConsultarBitacoraAcciones.BackgroundImage"), System.Drawing.Image)
+        Me.btnConsultarBitacoraAcciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnConsultarBitacoraAcciones.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnConsultarBitacoraAcciones.ForeColor = System.Drawing.Color.White
+        Me.btnConsultarBitacoraAcciones.Location = New System.Drawing.Point(3, 3)
+        Me.btnConsultarBitacoraAcciones.MaximumSize = New System.Drawing.Size(128, 99)
+        Me.btnConsultarBitacoraAcciones.MinimumSize = New System.Drawing.Size(128, 99)
+        Me.btnConsultarBitacoraAcciones.Name = "btnConsultarBitacoraAcciones"
+        Me.btnConsultarBitacoraAcciones.Size = New System.Drawing.Size(128, 99)
+        Me.btnConsultarBitacoraAcciones.TabIndex = 8
+        Me.btnConsultarBitacoraAcciones.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnConsultarBitacoraAcciones.UseVisualStyleBackColor = True
         '
         'Button5
         '
@@ -103,7 +103,7 @@ Partial Class uCtrlMenuReportes
 
     End Sub
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents btnConsultarBitacoraAcciones As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
 

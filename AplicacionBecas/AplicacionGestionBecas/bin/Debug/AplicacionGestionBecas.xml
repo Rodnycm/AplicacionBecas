@@ -16,186 +16,6 @@ AplicacionGestionBecas
 </member><member name="M:AplicacionGestionBecas.uCtrlEliminarRol.btnAñadir_Click(System.Object,System.EventArgs)">
 	<summary>Elimina El rol seleccionado </summary>
 	<author>Rodny Castro Mathews </author>
-</member><member name="P:AplicacionGestionBecas.My.Resources.Resources.ResourceManager">
-	<summary>
-  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
-</summary>
-</member><member name="P:AplicacionGestionBecas.My.Resources.Resources.Culture">
-	<summary>
-  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
-  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
-</summary>
-</member><member name="P:AplicacionGestionBecas.My.Resources.Resources.Sin_título_5">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="P:AplicacionGestionBecas.My.Resources.Resources.tablaFinalMedianaAzul">
-	<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member><member name="T:AplicacionGestionBecas.My.Resources.Resources">
-	<summary>
-  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
-</summary>
-</member><member name="M:AplicacionGestionBecas.uCtrlEliminar.btnCancelar_Click(System.Object,System.EventArgs)">
-	<summary>Metodo encargado de eliminar la carrera cuando se da click al boton aceptar</summary>
-	<autor>Alvaro Artavia</autor>
-</member><member name="M:AplicacionGestionBecas.uCtrlEliminar.btnAceptar_Click(System.Object,System.EventArgs)">
-	<summary>Metodo encargado de eliminar la carrera cuando se da click al boton aceptar</summary>
-	<autor>Alvaro Artavia</autor>
-</member><member name="M:AplicacionGestionBecas.uCtrlModificarCarrera.btnColor_Click(System.Object,System.EventArgs)">
-	<summary>Metodo que se ejecuta cuando el usuario da click al boton seleccionar color, este metodo 
- muestra al usuario una paleta de colores</summary>
-	<autor>Alvaro Artavia</autor>
-</member><member name="M:AplicacionGestionBecas.uCtrlModificarCarrera.btnModificar_Click(System.Object,System.EventArgs)">
-	<summary>Metodo que se ejecuta cuando el usuario da click al boton modificar y llama a la clase
- gestor para modificar la informaciòn</summary>
-	<autor>Alvaro Artavia</autor>
-</member><member name="M:AplicacionGestionBecas.uCtrlRegistrarBeneficio.getFrmBuscar(AplicacionGestionBecas.uCntrlBuscarBeneficio)">
-	<summary>
- Setea una instancia del UsrControlBuscarBeneficio
- </summary>
-	<param name="puCntrlBuscarBeneficio">Es la instancia del usrControl</param>
-	<remarks></remarks>
-</member><member name="M:AplicacionGestionBecas.uCtrlRegistrarBeneficio.btnAñadir_Click(System.Object,System.EventArgs)">
-	<summary>
- Este método toma los valores ingresados en la pantalla y los envía al GestorBeneficios para crear un beneficio.
- </summary>
-	<author>Mathias Muller</author>
-	<param name="sender"></param>
-	<param name="e">Es el evento</param>
-</member><member name="M:AplicacionGestionBecas.uCtrlRegistrarBeneficio.btnCancelar_Click(System.Object,System.EventArgs)">
-	<summary>
- Este método esconde la pantalla, cuando el usuario selecciona el boton cancelar.
- </summary>
-	<author>Mathias Muller</author>
-	<param name="sender"></param>
-	<param name="e"></param>
-</member><member name="M:AplicacionGestionBecas.uCtrlMantenimientoCarreras.btnMantenimiento_Click(System.Object,System.EventArgs)">
-	<summary>Metodo que se ejecuta cuando el usuario da click al boton crear carrera, muestra 
- al usuario los datos para crear una carrera</summary>
-	<autor>Alvaro Artavia</autor>
-</member><member name="M:AplicacionGestionBecas.uCtrlMantenimientoCarreras.listarCarreras">
-	<summary>Metodo lista en un datagridview las carreras encontradas</summary>
-	<autor>Alvaro Artavia</autor>
-</member><member name="M:AplicacionGestionBecas.uCtrlMantenimientoCarreras.ComboBox_SelectionChangeCommitted(System.Object,System.EventArgs)">
-	<summary>Metodo encargado de controlar cuando se da click al combobox se ejecuten las acciones</summary>
-	<autor>Alvaro Artavia</autor>
-</member><member name="M:AplicacionGestionBecas.uCtrlMantenimientoCarreras.modificarCarrera(System.Int32)">
-	<summary>Metodo encargado instanciar la pantalla de modificar carrera y enviar los datos</summary>
-	<param name="numfila">Numero de fila en la que se encuentra el combobox</param>
-	<autor>Alvaro Artavia</autor>
-</member><member name="M:AplicacionGestionBecas.uCtrlMantenimientoCarreras.eliminarCarrera(System.Int32)">
-	<summary>Metodo encargado instanciar la pantalla de eliminar carrera y enviar los datos</summary>
-	<param name="numfila">Numero de fila en la que se encuentra el combobox</param>
-	<autor>Alvaro Artavia</autor>
-</member><member name="M:AplicacionGestionBecas.UCntrlRegistrarRol.btnAceptar_Click(System.Object,System.EventArgs)">
-	<summary>crea un nuevo Rol en el sistema </summary>
-	<author>Rodny Castro Mathews </author>
-</member><member name="M:AplicacionGestionBecas.UCntrlRegistrarRol.btnCancelar_Click(System.Object,System.EventArgs)">
-	<summary>Este metodo oculta el usuario de control de registrar Rol </summary>
-	<author>Rodny Castro Mathews </author>
-</member><member name="M:AplicacionGestionBecas.UCntrlRegistrarRol.MostrarMenuMant">
-	<summary>Este metodo muestr el menu de mantenimiento </summary>
-	<author>Rodny Castro Mathews </author>
-</member><member name="M:AplicacionGestionBecas.uCtrlMenuMantenimiento.btnCursos_Click(System.Object,System.EventArgs)">
-	<summary>Metodo que se ejecuta cuando el usuario da click al boton cursos, muestra 
- al usuario el menu de cursos</summary>
-	<autor>Alvaro Artavia</autor>
-</member><member name="M:AplicacionGestionBecas.uCtrlMenuMantenimiento.btnCarreras_Click(System.Object,System.EventArgs)">
-	<summary>Metodo que se ejecuta cuando el usuario da click al boton carreras, muestra 
- al usuario el menu de carreras</summary>
-	<autor>Alvaro Artavia</autor>
-</member><member name="M:AplicacionGestionBecas.uCtrlModificarRol.recieveData(System.String)">
-	<summary> Descripción del método o clase</summary>
-	<author> Autor del código.</author>
-	<name> Parámetros que recibe el método </name>
-</member><member name="M:AplicacionGestionBecas.uCtrlModificarRol.btnCancelar_Click(System.Object,System.EventArgs)">
-	<summary> Descripción del método o clase</summary>
-	<author> Autor del código.</author>
-	<name> Parámetros que recibe el método </name>
-</member><member name="M:AplicacionGestionBecas.uCtrlModificarRol.btnAceptar_Click(System.Object,System.EventArgs)">
-	<summary> Descripción del método o clase</summary>
-	<author> Autor del código.</author>
-	<name> Parámetros que recibe el método </name>
-</member><member name="M:AplicacionGestionBecas.uCtrlModificarRol.listarPermisos">
-	<summary> Descripción del método o clase</summary>
-	<author> Autor del código.</author>
-</member><member name="M:AplicacionGestionBecas.uCtrlModificarRol.uCtrlModificarRol_Load(System.Object,System.EventArgs)">
-	<summary> Descripción del método o clase</summary>
-	<author> Autor del código.</author>
-	<name> Parámetros que recibe el método </name>
-</member><member name="M:AplicacionGestionBecas.uCntrlConsultarRol.btnVolver_Click(System.Object,System.EventArgs)">
-	<summary>Este metodo oculta la ventana de consultar rol </summary>
-	<author>Rodny Castro Mathews </author>
-</member><member name="M:AplicacionGestionBecas.uCntrlConsultarRol.enseñarDatos(System.String)">
-	<summary>Este metodo enseña los valores del Rol </summary>
-	<author>Rodny Castro Mathews </author>
-	<param name="pnombre"> Nombre del Rol a eliminar  </param>
-</member><member name="M:AplicacionGestionBecas.uCntrlConsultarRol.listarPermisos">
-	<summary>Este metodo lista los permisos del Rol </summary>
-	<author>Rodny Castro Mathews </author>
-</member><member name="M:AplicacionGestionBecas.uCntrlConsultarRol.uCntrlConsultarRol_Load(System.Object,System.EventArgs)">
-	<summary>Este metodo hace que apenas se abra el usuario de control se listen los permisos </summary>
-	<author>Rodny Castro Mathews </author>
-</member><member name="M:AplicacionGestionBecas.uCtrlCrearCarrera.btnColor_Click(System.Object,System.EventArgs)">
-	<summary>Metodo que se ejecuta cuando el usuario da click al boton seleccionar color, este metodo 
- muestra al usuario una paleta de colores</summary>
-	<autor>Alvaro Artavia</autor>
-</member><member name="M:AplicacionGestionBecas.uCtrlCrearCarrera.btnAñadir_Click(System.Object,System.EventArgs)">
-	<summary>Metodo que se ejecuta cuando el usuario da click al boton añadir y llama a la clase
- gestor para enviar la informaciòn</summary>
-	<autor>Alvaro Artavia</autor>
-</member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.listarBeneficios">
-	<summary>
- Este método llama a un método en el gestor y recibe una lista de beneficios.
- Llena el data grid con la lista de beneficios.
- </summary>
-	<author>Mathias Muller</author>
-</member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.dtaBuscarBeneficio_EditingControlShowing(System.Object,System.Windows.Forms.DataGridViewEditingControlShowingEventArgs)">
-	<summary>
- Este método agarra el valor seleccionado del combobox y crea un evento
- </summary>
-	<author>Mathias Muller</author>
-	<param name="sender"></param>
-	<param name="e"></param>
-	<remarks></remarks>
-</member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.ComboBox_SelectionChangeCommitted(System.Object,System.EventArgs)">
-	<summary>
- Dependiendo de la seleccion del usuario, el sistema realiza diferentes acciones.
- --&gt;La opcion ver: consulta un beneficio.
- --&gt;La opcion Editar: muestra un popup, que permite editar un beneficio.
- --&gt;La opcion Eliminar: muestra una alerta que permite eliminar un beneficio.
- </summary>
-	<author>Mathias Muller</author>
-	<param name="sender"></param>
-	<param name="e"></param>
-	<remarks></remarks>
-</member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.btnBuscar_Click(System.Object,System.EventArgs)">
-	<summary>
- Busca un beneficio dependiendo del valor del parametro
- Si el parametro es NULL, entonces la lista se referesca nada mas
- </summary>
-	<author>Mathias Muller</author>
-	<param name="sender"></param>
-	<param name="e"></param>
-	<remarks></remarks>
-</member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.verBeneficios">
-	<summary>
-	</summary>
-	<remarks></remarks>
-</member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.editarBeneficios">
-	<summary>
- Edita un beneficio
- </summary>
-	<author>Mathias Muller</author>
-	<remarks></remarks>
-</member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.eliminarBeneficios">
-	<summary>
- Elimina un beneficio
- </summary>
-	<author>Mathias Muller</author>
-	<remarks></remarks>
 </member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ListarRoles">
 	<summary> Este metodo lista los roles</summary>
 	<author>Rodny Castro Mathews </author>
@@ -303,6 +123,866 @@ AplicacionGestionBecas
 	<author>Mathias Muller</author>
 	<param name="sender"></param>
 	<param name="e"></param>
+</member><member name="M:AplicacionGestionBecas.uCtrlEliminar.btnCancelar_Click(System.Object,System.EventArgs)">
+	<summary>Metodo encargado de eliminar la carrera cuando se da click al boton aceptar</summary>
+	<autor>Alvaro Artavia</autor>
+</member><member name="M:AplicacionGestionBecas.uCtrlEliminar.btnAceptar_Click(System.Object,System.EventArgs)">
+	<summary>Metodo encargado de eliminar la carrera cuando se da click al boton aceptar</summary>
+	<autor>Alvaro Artavia</autor>
+</member><member name="M:AplicacionGestionBecas.uCtrlMantenimientoCarreras.btnMantenimiento_Click(System.Object,System.EventArgs)">
+	<summary>Metodo que se ejecuta cuando el usuario da click al boton crear carrera, muestra 
+ al usuario los datos para crear una carrera</summary>
+	<autor>Alvaro Artavia</autor>
+</member><member name="M:AplicacionGestionBecas.uCtrlMantenimientoCarreras.listarCarreras">
+	<summary>Metodo lista en un datagridview las carreras encontradas</summary>
+	<autor>Alvaro Artavia</autor>
+</member><member name="M:AplicacionGestionBecas.uCtrlMantenimientoCarreras.ComboBox_SelectionChangeCommitted(System.Object,System.EventArgs)">
+	<summary>Metodo encargado de controlar cuando se da click al combobox se ejecuten las acciones</summary>
+	<autor>Alvaro Artavia</autor>
+</member><member name="M:AplicacionGestionBecas.uCtrlMantenimientoCarreras.modificarCarrera(System.Int32)">
+	<summary>Metodo encargado instanciar la pantalla de modificar carrera y enviar los datos</summary>
+	<param name="numfila">Numero de fila en la que se encuentra el combobox</param>
+	<autor>Alvaro Artavia</autor>
+</member><member name="M:AplicacionGestionBecas.uCtrlMantenimientoCarreras.eliminarCarrera(System.Int32)">
+	<summary>Metodo encargado instanciar la pantalla de eliminar carrera y enviar los datos</summary>
+	<param name="numfila">Numero de fila en la que se encuentra el combobox</param>
+	<autor>Alvaro Artavia</autor>
+</member><member name="P:AplicacionGestionBecas.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:AplicacionGestionBecas.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member><member name="P:AplicacionGestionBecas.My.Resources.Resources.Sin_título_5">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AplicacionGestionBecas.My.Resources.Resources.tablaFinalMedianaAzul">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="T:AplicacionGestionBecas.My.Resources.Resources">
+	<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.listarBeneficios">
+	<summary>
+ Este método llama a un método en el gestor y recibe una lista de beneficios.
+ Llena el data grid con la lista de beneficios.
+ </summary>
+	<author>Mathias Muller</author>
+</member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.dtaBuscarBeneficio_EditingControlShowing(System.Object,System.Windows.Forms.DataGridViewEditingControlShowingEventArgs)">
+	<summary>
+ Este método agarra el valor seleccionado del combobox y crea un evento
+ </summary>
+	<author>Mathias Muller</author>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.ComboBox_SelectionChangeCommitted(System.Object,System.EventArgs)">
+	<summary>
+ Dependiendo de la seleccion del usuario, el sistema realiza diferentes acciones.
+ --&gt;La opcion ver: consulta un beneficio.
+ --&gt;La opcion Editar: muestra un popup, que permite editar un beneficio.
+ --&gt;La opcion Eliminar: muestra una alerta que permite eliminar un beneficio.
+ </summary>
+	<author>Mathias Muller</author>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.btnBuscar_Click(System.Object,System.EventArgs)">
+	<summary>
+ Busca un beneficio dependiendo del valor del parametro
+ Si el parametro es NULL, entonces la lista se referesca nada mas
+ </summary>
+	<author>Mathias Muller</author>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.verBeneficios">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.editarBeneficios">
+	<summary>
+ Edita un beneficio
+ </summary>
+	<author>Mathias Muller</author>
+	<remarks></remarks>
+</member><member name="M:AplicacionGestionBecas.uCntrlBuscarBeneficio.eliminarBeneficios">
+	<summary>
+ Elimina un beneficio
+ </summary>
+	<author>Mathias Muller</author>
+	<remarks></remarks>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_BecasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_BeneficiosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_BitácoraAcciónDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_BitácoraErrorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_CantonDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_CarreraCursosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_CarrerasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_CursosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_DatosFamiliaresDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_DistritoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_DocumentosAdjuntosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_FlujoDeAprobaciónDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_FormulariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_HistorialCursoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_HistorialesAcadémicosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_PermisosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_PersonasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_PlanesDeEstudioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_PostulantesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_ProvinciaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_RequisitosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_RequisitosTipoBecaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_RolesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_RolesPermisosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_SolicitudesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_TipoBecaBeneficioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_TiposDeBecaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_UsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarBeneficioPorNombreDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarBeneficiosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarCursosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarRolDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarRolPorIdDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarUnUsuarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarUsuariosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_consultarBeneficioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_consultarCarrerasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_consultarPermisosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_consultarRolDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_consultarRolesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_BecasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_BeneficiosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_BitácoraAcciónRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_BitácoraErrorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_CantonRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_CarreraCursosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_CarrerasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_CursosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_DatosFamiliaresRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_DistritoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_DocumentosAdjuntosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_FlujoDeAprobaciónRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_FormulariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_HistorialCursoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_HistorialesAcadémicosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_PermisosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_PersonasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_PlanesDeEstudioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_PostulantesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_ProvinciaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_RequisitosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_RequisitosTipoBecaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_RolesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_RolesPermisosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_SolicitudesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_TipoBecaBeneficioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_TiposDeBecaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_UsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarBeneficioPorNombreRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarBeneficiosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarCursosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarRolRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarRolPorIdRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarUnUsuarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarUsuariosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_consultarBeneficioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_consultarCarrerasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_consultarPermisosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_consultarRolRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_consultarRolesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_BecasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_BeneficiosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_BitácoraAcciónRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_BitácoraErrorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_CantonRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_CarreraCursosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_CarrerasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_CursosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_DatosFamiliaresRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_DistritoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_DocumentosAdjuntosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_FlujoDeAprobaciónRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_FormulariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_HistorialCursoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_HistorialesAcadémicosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_PermisosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_PersonasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_PlanesDeEstudioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_PostulantesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_ProvinciaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_RequisitosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_RequisitosTipoBecaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_RolesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_RolesPermisosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_SolicitudesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_TipoBecaBeneficioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_TiposDeBecaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Tb_UsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarBeneficioPorNombreRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarBeneficiosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarCursosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarRolRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarRolPorIdRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarUnUsuarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_buscarUsuariosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_consultarBeneficioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_consultarCarrerasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_consultarPermisosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_consultarRolRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet.Sp_consultarRolesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_BecasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_BeneficiosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_BitácoraAcciónTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_BitácoraErrorTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_CantonTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_CarreraCursosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_CarrerasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_CursosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_DatosFamiliaresTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_DistritoTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_DocumentosAdjuntosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_FlujoDeAprobaciónTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_FormulariosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_HistorialCursoTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_HistorialesAcadémicosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_PermisosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_PersonasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_PlanesDeEstudioTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_PostulantesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_ProvinciaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_RequisitosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_RequisitosTipoBecaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_RolesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_RolesPermisosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_SolicitudesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_TipoBecaBeneficioTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_TiposDeBecaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Tb_UsuariosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Sp_buscarBeneficioPorNombreTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Sp_buscarBeneficiosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Sp_buscarCursosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Sp_buscarRolTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Sp_buscarRolPorIdTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Sp_buscarUnUsuarioTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Sp_buscarUsuariosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Sp_consultarBeneficioTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Sp_consultarCarrerasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Sp_consultarPermisosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Sp_consultarRolTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.Sp_consultarRolesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.QueriesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(AplicacionGestionBecas.DB_Proyecto2DataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(AplicacionGestionBecas.DB_Proyecto2DataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(AplicacionGestionBecas.DB_Proyecto2DataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.TableAdapterManager.UpdateAll(AplicacionGestionBecas.DB_Proyecto2DataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="M:AplicacionGestionBecas.UCntrlRegistrarRol.btnAceptar_Click(System.Object,System.EventArgs)">
+	<summary>crea un nuevo Rol en el sistema </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.UCntrlRegistrarRol.btnCancelar_Click(System.Object,System.EventArgs)">
+	<summary>Este metodo oculta el usuario de control de registrar Rol </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.UCntrlRegistrarRol.MostrarMenuMant">
+	<summary>Este metodo muestr el menu de mantenimiento </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlModificarRol.recieveData(System.String)">
+	<summary> Descripción del método o clase</summary>
+	<author> Autor del código.</author>
+	<name> Parámetros que recibe el método </name>
+</member><member name="M:AplicacionGestionBecas.uCtrlModificarRol.btnCancelar_Click(System.Object,System.EventArgs)">
+	<summary> Descripción del método o clase</summary>
+	<author> Autor del código.</author>
+	<name> Parámetros que recibe el método </name>
+</member><member name="M:AplicacionGestionBecas.uCtrlModificarRol.btnAceptar_Click(System.Object,System.EventArgs)">
+	<summary> Descripción del método o clase</summary>
+	<author> Autor del código.</author>
+	<name> Parámetros que recibe el método </name>
+</member><member name="M:AplicacionGestionBecas.uCtrlModificarRol.listarPermisos">
+	<summary> Descripción del método o clase</summary>
+	<author> Autor del código.</author>
+</member><member name="M:AplicacionGestionBecas.uCtrlModificarRol.uCtrlModificarRol_Load(System.Object,System.EventArgs)">
+	<summary> Descripción del método o clase</summary>
+	<author> Autor del código.</author>
+	<name> Parámetros que recibe el método </name>
+</member><member name="M:AplicacionGestionBecas.uCtrlRegistrarBeneficio.getFrmBuscar(AplicacionGestionBecas.uCntrlBuscarBeneficio)">
+	<summary>
+ Setea una instancia del UsrControlBuscarBeneficio
+ </summary>
+	<param name="puCntrlBuscarBeneficio">Es la instancia del usrControl</param>
+	<remarks></remarks>
+</member><member name="M:AplicacionGestionBecas.uCtrlRegistrarBeneficio.btnAñadir_Click(System.Object,System.EventArgs)">
+	<summary>
+ Este método toma los valores ingresados en la pantalla y los envía al GestorBeneficios para crear un beneficio.
+ </summary>
+	<author>Mathias Muller</author>
+	<param name="sender"></param>
+	<param name="e">Es el evento</param>
+</member><member name="M:AplicacionGestionBecas.uCtrlRegistrarBeneficio.btnCancelar_Click(System.Object,System.EventArgs)">
+	<summary>
+ Este método esconde la pantalla, cuando el usuario selecciona el boton cancelar.
+ </summary>
+	<author>Mathias Muller</author>
+	<param name="sender"></param>
+	<param name="e"></param>
+</member><member name="M:AplicacionGestionBecas.uCntrlConsultarRol.btnVolver_Click(System.Object,System.EventArgs)">
+	<summary>Este metodo oculta la ventana de consultar rol </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCntrlConsultarRol.enseñarDatos(System.String)">
+	<summary>Este metodo enseña los valores del Rol </summary>
+	<author>Rodny Castro Mathews </author>
+	<param name="pnombre"> Nombre del Rol a eliminar  </param>
+</member><member name="M:AplicacionGestionBecas.uCntrlConsultarRol.listarPermisos">
+	<summary>Este metodo lista los permisos del Rol </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCntrlConsultarRol.uCntrlConsultarRol_Load(System.Object,System.EventArgs)">
+	<summary>Este metodo hace que apenas se abra el usuario de control se listen los permisos </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlCrearCarrera.btnColor_Click(System.Object,System.EventArgs)">
+	<summary>Metodo que se ejecuta cuando el usuario da click al boton seleccionar color, este metodo 
+ muestra al usuario una paleta de colores</summary>
+	<autor>Alvaro Artavia</autor>
+</member><member name="M:AplicacionGestionBecas.uCtrlCrearCarrera.btnAñadir_Click(System.Object,System.EventArgs)">
+	<summary>Metodo que se ejecuta cuando el usuario da click al boton añadir y llama a la clase
+ gestor para enviar la informaciòn</summary>
+	<autor>Alvaro Artavia</autor>
+</member><member name="M:AplicacionGestionBecas.uCtrlMenuMantenimiento.btnCursos_Click(System.Object,System.EventArgs)">
+	<summary>Metodo que se ejecuta cuando el usuario da click al boton cursos, muestra 
+ al usuario el menu de cursos</summary>
+	<autor>Alvaro Artavia</autor>
+</member><member name="M:AplicacionGestionBecas.uCtrlMenuMantenimiento.btnCarreras_Click(System.Object,System.EventArgs)">
+	<summary>Metodo que se ejecuta cuando el usuario da click al boton carreras, muestra 
+ al usuario el menu de carreras</summary>
+	<autor>Alvaro Artavia</autor>
+</member><member name="M:AplicacionGestionBecas.uCtrlModificarCarrera.btnColor_Click(System.Object,System.EventArgs)">
+	<summary>Metodo que se ejecuta cuando el usuario da click al boton seleccionar color, este metodo 
+ muestra al usuario una paleta de colores</summary>
+	<autor>Alvaro Artavia</autor>
+</member><member name="M:AplicacionGestionBecas.uCtrlModificarCarrera.btnModificar_Click(System.Object,System.EventArgs)">
+	<summary>Metodo que se ejecuta cuando el usuario da click al boton modificar y llama a la clase
+ gestor para modificar la informaciòn</summary>
+	<autor>Alvaro Artavia</autor>
 </member>
 </members>
 </doc>

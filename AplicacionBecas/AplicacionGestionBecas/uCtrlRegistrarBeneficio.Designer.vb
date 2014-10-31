@@ -120,9 +120,9 @@ Partial Class uCtrlRegistrarBeneficio
         Me.lblPorcentaje.Location = New System.Drawing.Point(179, 182)
         Me.lblPorcentaje.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPorcentaje.Name = "lblPorcentaje"
-        Me.lblPorcentaje.Size = New System.Drawing.Size(91, 25)
+        Me.lblPorcentaje.Size = New System.Drawing.Size(137, 25)
         Me.lblPorcentaje.TabIndex = 14
-        Me.lblPorcentaje.Text = "Porcentaje"
+        Me.lblPorcentaje.Text = "Porcentaje (0.00)"
         '
         'txtNombre
         '
