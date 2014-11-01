@@ -138,10 +138,6 @@
     <Compile Include="uCtrlConsultarBeneficio.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uCtrlConsultarBitacoraAcciones.Designer.vb">
-      <DependentUpon>uCtrlConsultarBitacoraAcciones.vb</DependentUpon>
-    </Compile>
-    <Compile Include="uCtrlConsultarBitacoraAcciones.vb" />
     <Compile Include="UCtrlConsultarUsuario.Designer.vb">
       <DependentUpon>UCtrlConsultarUsuario.vb</DependentUpon>
     </Compile>
@@ -309,9 +305,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uCtrlConsultarBeneficio.resx">
       <DependentUpon>uCtrlConsultarBeneficio.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uCtrlConsultarBitacoraAcciones.resx">
-      <DependentUpon>uCtrlConsultarBitacoraAcciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCtrlConsultarUsuario.resx">
       <DependentUpon>UCtrlConsultarUsuario.vb</DependentUpon>

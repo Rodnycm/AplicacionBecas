@@ -37,7 +37,6 @@ Public Class uCtrlListarRol
         Catch
             MsgBox("Debe agregar un rol")
         End Try
->>>>>>> origin/Mathias
     End Sub
     '''<summary>Este metodo hace que apenas se abra el usuario de control le liste los roles </summary>
     '''<author>Rodny Castro Mathews </author> 
