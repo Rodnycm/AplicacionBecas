@@ -5,11 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using EntitiesLayer;
 using DAL;
+using DAL.Repositories;
 
 namespace BLL
 {
-    public class GestorBeneficios
+    public class GestorBeneficios:IGestor
     {
+        public string actividad;
+    
         //private BeneficioRepository repBeneficio;
         /// <summary>
         /// Este método recive los parametros necesarios para instanciar un beneficio.
@@ -35,6 +38,8 @@ namespace BLL
                 {
 
                     BeneficioRepository.Instance.Insert(objBeneficio);
+                     actividad = "Se ha registrado un Beneficio";
+                    registrarAccion(actividad);
                 }
                 else
                 {
@@ -46,10 +51,14 @@ namespace BLL
                     throw new ApplicationException(sb.ToString());
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+
+                String error = e.ToString();
+
+                System.Console.Write(error);
+                throw new ApplicationException("Noooooo");
             }
         }
         /// <summary>
@@ -73,6 +82,8 @@ namespace BLL
                 if (objBeneficio.IsValid)
                 {
                     BeneficioRepository.Instance.Update(objBeneficio);
+                     actividad = "Se ha modificado un Beneficio";
+                    registrarAccion(actividad);
                 }
                 else
                 {
@@ -110,6 +121,8 @@ namespace BLL
             {
 
                 BeneficioRepository.Instance.Delete(objBeneficio);
+                 actividad = "Se ha eliminado un Beneficio";
+                    registrarAccion(actividad);
             }
 
             catch (Exception)
@@ -162,6 +175,25 @@ namespace BLL
             return BeneficioRepository.Instance.GetByNombre(pnombre);
         }
 
+        public void registrarAccion(string pactividad)
+        {
+
+            RegistroAccion objRegistro;
+            DateTime fecha = DateTime.Today;
+            string nombreUsuario;
+            string nombreRol = "Decano";
+            string descripcion = pactividad;
+            //nombreUsuario = Globals.userName;
+            nombreUsuario = "Pedro";
+
+
+            objRegistro = new RegistroAccion(nombreUsuario, nombreRol, descripcion, fecha);
+
+            RegistroAccionRepository objRegistroRep = new RegistroAccionRepository();
+
+            objRegistroRep.InsertAccion(objRegistro);
+
+        }
 
     }
 }

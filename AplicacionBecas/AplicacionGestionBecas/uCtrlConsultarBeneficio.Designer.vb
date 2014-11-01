@@ -22,7 +22,7 @@ Partial Class uCtrlConsultarBeneficio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dtaConsultarBeneficio = New System.Windows.Forms.DataGridView()
         Me.dtaId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dtaNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -37,16 +37,16 @@ Partial Class uCtrlConsultarBeneficio
         '
         Me.dtaConsultarBeneficio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dtaConsultarBeneficio.BackgroundColor = System.Drawing.Color.White
-        Me.dtaConsultarBeneficio.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dtaConsultarBeneficio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dtaConsultarBeneficio.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dtaConsultarBeneficio.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dtaConsultarBeneficio.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dtaConsultarBeneficio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtaConsultarBeneficio.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dtaId, Me.dtaNombre, Me.dtaPorcentaje, Me.dtaAplicabilidad})
         Me.dtaConsultarBeneficio.GridColor = System.Drawing.Color.White
@@ -80,6 +80,7 @@ Partial Class uCtrlConsultarBeneficio
         '
         'pctbxBeneficios
         '
+        Me.pctbxBeneficios.BackgroundImage = Global.AplicacionGestionBecas.My.Resources.Resources.tablaFinalGrandeAzul
         Me.pctbxBeneficios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pctbxBeneficios.Location = New System.Drawing.Point(-22, 18)
         Me.pctbxBeneficios.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -97,7 +98,7 @@ Partial Class uCtrlConsultarBeneficio
         Me.Font = New System.Drawing.Font("Segoe UI Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "uCtrlConsultarBeneficio"
-        Me.Size = New System.Drawing.Size(910, 310)
+        Me.Size = New System.Drawing.Size(910, 349)
         CType(Me.dtaConsultarBeneficio, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pctbxBeneficios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

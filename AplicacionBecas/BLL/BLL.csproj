@@ -48,6 +48,7 @@
     <Compile Include="GestorRol.cs" />
     <Compile Include="GestorTipoBeca.cs" />
     <Compile Include="GestorUsuario.cs" />
+    <Compile Include="IGestor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
