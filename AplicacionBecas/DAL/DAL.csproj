@@ -66,6 +66,10 @@
       <Project>{a4bca628-fabe-4669-bd1f-dd99f26d9b68}</Project>
       <Name>EntitiesLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TIL\TIL.csproj">
+      <Project>{7de0c88b-2ccd-48d2-915f-46b92e5be89d}</Project>
+      <Name>TIL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

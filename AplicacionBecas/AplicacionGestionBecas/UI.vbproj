@@ -79,6 +79,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_Proyecto2DataSet.xsd</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="DB_Proyecto2DataSet.vb">
       <DependentUpon>DB_Proyecto2DataSet.xsd</DependentUpon>
     </Compile>
@@ -89,6 +90,13 @@
     </Compile>
     <Compile Include="DB_Proyecto2DataSetConsultarRegistroAcciones.vb">
       <DependentUpon>DB_Proyecto2DataSetConsultarRegistroAcciones.xsd</DependentUpon>
+=======
+    <Compile Include="FrmIniciarSesion.Designer.vb">
+      <DependentUpon>FrmIniciarSesion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIniciarSesion.vb">
+      <SubType>Form</SubType>
+>>>>>>> origin/Backi
     </Compile>
     <Compile Include="frmPrincipal.vb">
       <SubType>Form</SubType>
@@ -295,6 +303,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmIniciarSesion.resx">
+      <DependentUpon>FrmIniciarSesion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </EmbeddedResource>

@@ -16,6 +16,7 @@ C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.dll
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.pdb
+<<<<<<< HEAD
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\DAL.dll
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\DAL.pdb
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\EntitiesLayer.dll
@@ -25,3 +26,16 @@ R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.Properties.Res
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.dll
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.pdb
+=======
+C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\DAL.dll
+C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\DAL.pdb
+C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\EntitiesLayer.dll
+C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\TIL.dll
+C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\EntitiesLayer.pdb
+C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\TIL.pdb
+C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.Properties.Resources.resources
+C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
+C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.dll
+C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.pdb
+>>>>>>> origin/Backi

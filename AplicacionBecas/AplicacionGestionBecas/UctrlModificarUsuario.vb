@@ -1,8 +1,14 @@
 ﻿Imports EntitiesLayer
 Public Class UctrlModificarUsuario
 
+    Dim idUsuario As Integer
     Dim parametro As String
+    Dim ucntrl As UctrlListarYBuscarUsuario
 
+
+    Public Sub setIdUsuario(ByVal pid As Integer)
+        idUsuario = pid
+    End Sub
     Public Sub setParametro(ByVal pparametro As String)
         parametro = pparametro
     End Sub
@@ -48,6 +54,7 @@ Public Class UctrlModificarUsuario
         cmbRoles.SelectedText = objetoUsuario.rol.Nombre
         txtCorreoElectronico.Text = objetoUsuario.correoElectronico
         txtContraseña.Text = objetoUsuario.contraseña
+        setIdUsuario(objetoUsuario.Id)
 
 
     End Sub
@@ -85,7 +92,19 @@ Public Class UctrlModificarUsuario
             End If
         End If
 
-        objGestorUsuario.modificarUsuario(pNombre, sNombre, pApellido, sApellido, identificacion, telefono, fechaNacimiento, rol, genero, correoElectronico, contraseña, confirmacion, Me.parametro)
+        objGestorUsuario.modificarUsuario(pNombre, sNombre, pApellido, sApellido, identificacion, telefono, fechaNacimiento, rol, genero, correoElectronico, contraseña, confirmacion, Me.idUsuario)
         objGestorUsuario.guardarCambios()
+        ucntrl.dgUsuarios.Rows.Clear()
+        ucntrl.listarUsuarios()
+        Me.Dispose()
     End Sub
+
+    Public Sub refrecarLista(ByVal puctrl As UctrlListarYBuscarUsuario)
+        ucntrl = puctrl
+
+
+    End Sub
+
+
+
 End Class

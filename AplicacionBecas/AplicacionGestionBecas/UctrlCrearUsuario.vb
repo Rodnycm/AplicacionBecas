@@ -17,8 +17,7 @@ Public Class UctrlCrearUsuario
         Dim rol As String = cmbRoles.Text
         Dim genero As Integer
         Dim correoElectronico As String = txtCorreoElectronico.Text
-        Dim contraseña As String = txtContraseña.Text
-        Dim confirmacion As String = txtConfirmacionContraseña.Text
+
 
         If (rbtMasculino.Checked = True) Then
             genero = 1
@@ -31,7 +30,7 @@ Public Class UctrlCrearUsuario
             End If
         End If
 
-        objGestorUsuario.crearUsuario(pNombre, sNombre, pApellido, sApellido, identificacion, telefono, fechaNacimiento, rol, genero, correoElectronico, contraseña, confirmacion)
+        objGestorUsuario.crearUsuario(pNombre, sNombre, pApellido, sApellido, identificacion, telefono, fechaNacimiento, rol, genero, correoElectronico)
         objGestorUsuario.guardarCambios()
 
     End Sub
@@ -57,5 +56,21 @@ Public Class UctrlCrearUsuario
 
     Private Sub UctrlCrearUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarComboRoles()
+    End Sub
+
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Dim ucntrl As UctrlListarYBuscarUsuario = New UctrlListarYBuscarUsuario()
+        Me.SendToBack()
+        FrmIniciarSesion.principal.Controls.Add(ucntrl)
+        ucntrl.Location = New Point(120, 0)
+        ucntrl.Show()
+    End Sub
+
+    Private Sub btnX_Click(sender As Object, e As EventArgs) Handles btnX.Click
+        Dim ucntrl As UctrlListarYBuscarUsuario = New UctrlListarYBuscarUsuario()
+        Me.SendToBack()
+        FrmIniciarSesion.principal.Controls.Add(ucntrl)
+        ucntrl.Location = New Point(120, 0)
+        ucntrl.Show()
     End Sub
 End Class

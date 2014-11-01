@@ -1,14 +1,16 @@
 ﻿Public Class UctrlEliminarUsuario
 
     Dim parametro As String
+    Dim Uctrl As UctrlListarYBuscarUsuario
 
     Public Sub setParametro(ByVal pparametro As String)
         parametro = pparametro
     End Sub
 
-    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+    Public Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
         objGestorUsuario.eliminarUsuario(Me.parametro)
         objGestorUsuario.guardarCambios()
+        Me.Dispose()
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
@@ -19,11 +21,8 @@
         ucntrl.Show()
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
+    Public Sub refrescarLista(ByVal puctrl As UctrlListarYBuscarUsuario)
+        Uctrl = puctrl
     End Sub
 
-    Private Sub UctrlEliminarUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

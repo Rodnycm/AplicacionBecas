@@ -10,7 +10,7 @@ using System.Data;
 //using TIL.CustomExceptions;
 
 
-namespace DAL
+namespace DAL.Repositories
 {
     public class PermisoRepository : IRepository<Permiso>
     {

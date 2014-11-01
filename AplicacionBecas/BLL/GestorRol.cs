@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using EntitiesLayer;
-using DAL;
+using DAL.Repositories;
 using System.Collections;
 using DAL.Repositories;
 

@@ -8,7 +8,7 @@ using System.Configuration;
 using System.Transactions;
 using System.Data.SqlClient;
 using System.Data;
-
+using TIL;
 namespace DAL.Repositories
 {
     public class UsuarioRepository : IRepository<Usuario>
@@ -79,7 +79,7 @@ namespace DAL.Repositories
         {
             List<Usuario> pusuario = null;
             SqlCommand cmd = new SqlCommand();
-            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_BuscarUsuarios");
+            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_buscarUsuarios");
             Rol rolUsuario = null;
 
             if (ds.Tables[0].Rows.Count > 0)
@@ -97,17 +97,16 @@ namespace DAL.Repositories
                         segundoNombre = dr["SegundoNombre"].ToString(),
                         primerApellido = dr["PrimerApellido"].ToString(),
                         segundoApellido = dr["SegundoApellido"].ToString(),
-                        identificacion = dr["Identificación"].ToString(),
-                        telefono = dr["Teléfono"].ToString(),
+                        identificacion = dr["Identificacion"].ToString(),
+                        telefono = dr["Telefono"].ToString(),
                         fechaNacimiento = Convert.ToDateTime(dr["FechaNacimiento"]),
                         rol = rolUsuario,
-                        genero = Convert.ToInt32(dr["Género"]),
-                        correoElectronico = dr["CorreoElectrónico"].ToString(),
+                        genero = Convert.ToInt32(dr["Genero"]),
+                        correoElectronico = dr["CorreoElectronico"].ToString(),
                         contraseña = dr["Contraseña"].ToString()
                     };
                     objUsuario.Id = Convert.ToInt32(dr["id"]);
                     pusuario.Add(objUsuario);
-
                 }
             }
             return pusuario;
@@ -156,7 +155,7 @@ namespace DAL.Repositories
             SqlCommand cmd = new SqlCommand();
             cmd.Parameters.AddWithValue("@parametro", parametro);
 
-            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_BuscarUnUsuario");
+            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_buscarUnUsuario");
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -170,17 +169,16 @@ namespace DAL.Repositories
                     segundoNombre = dr["SegundoNombre"].ToString(),
                     primerApellido = dr["PrimerApellido"].ToString(),
                     segundoApellido = dr["SegundoApellido"].ToString(),
-                    identificacion = dr["Identificación"].ToString(),
-                    telefono = dr["Teléfono"].ToString(),
+                    identificacion = dr["Identificacion"].ToString(),
+                    telefono = dr["Telefono"].ToString(),
                     fechaNacimiento = Convert.ToDateTime(dr["FechaNacimiento"]),
                     rol = rolUsuario,
-                    genero = Convert.ToInt32(dr["Género"]),
-                    correoElectronico = dr["CorreoElectrónico"].ToString(),
+                    genero = Convert.ToInt32(dr["Genero"]),
+                    correoElectronico = dr["CorreoElectronico"].ToString(),
                     contraseña = dr["Contraseña"].ToString(),
                 };
                 objUsuario.Id = Convert.ToInt32(dr["id"]);
             }
-
             return objUsuario;
         }
 
@@ -258,7 +256,6 @@ namespace DAL.Repositories
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                cmd.Parameters.Add(new SqlParameter("@id", objUsuario.Id));
                 cmd.Parameters.Add(new SqlParameter("@nombre", objUsuario.primerNombre));
                 cmd.Parameters.Add(new SqlParameter("@segundoNombre", objUsuario.segundoNombre));
                 cmd.Parameters.Add(new SqlParameter("@primerApellido", objUsuario.primerApellido));
@@ -271,12 +268,12 @@ namespace DAL.Repositories
                 cmd.Parameters.Add(new SqlParameter("@correoElectronico", objUsuario.correoElectronico));
                 cmd.Parameters.Add(new SqlParameter("@contraseña", objUsuario.contraseña));
 
-                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_CrearUsuario");
+                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_crearUsuario");
 
             }
             catch (Exception ex)
             {
-
+                Console.Write(ex);
             }
 
         }
@@ -293,7 +290,7 @@ namespace DAL.Repositories
             {
                 SqlCommand cmd = new SqlCommand();
 
-                //cmd.Parameters.Add(new SqlParameter("@id", pparametro));
+                cmd.Parameters.Add(new SqlParameter("@id", objUsuario.Id));
                 cmd.Parameters.Add(new SqlParameter("@nombre", objUsuario.primerNombre));
                 cmd.Parameters.Add(new SqlParameter("@segundoNombre", objUsuario.segundoNombre));
                 cmd.Parameters.Add(new SqlParameter("@primerApellido", objUsuario.primerApellido));
@@ -305,8 +302,7 @@ namespace DAL.Repositories
                 cmd.Parameters.Add(new SqlParameter("@genero", objUsuario.genero));
                 cmd.Parameters.Add(new SqlParameter("@correoElectronico", objUsuario.correoElectronico));
                 cmd.Parameters.Add(new SqlParameter("@contraseña", objUsuario.contraseña));
-
-                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_ModificarUsuario");
+                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_modificarUsuario");
 
             }
             catch (Exception ex)
@@ -325,7 +321,7 @@ namespace DAL.Repositories
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Parameters.Add(new SqlParameter("@identificacion", objUsuario.identificacion));
-                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_BorrarUsuario");
+                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_borrarUsuario");
 
             }
             catch (SqlException ex)
@@ -339,6 +335,50 @@ namespace DAL.Repositories
                 //logear la excepcion a la bd con un Exception
                 //throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
             }
+        }
+
+        public static int autenticar(String pusuario, String pcontraseña)
+        {
+            int resultado = 1;
+
+            SqlCommand cmd = new SqlCommand();
+            return resultado;
+        }
+
+        public Usuario iniciarSesion(String pnombreUsuario)
+        {
+            Usuario objUsuario = null;
+
+            Rol rolUsuario = null;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Parameters.AddWithValue("@nombreUsuario", pnombreUsuario);
+
+            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_iniciarSesion");
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                var dr = ds.Tables[0].Rows[0];
+                int rol = Convert.ToInt32(dr["Fk_Tb_Roles_Tb_Usuarios_IdRol"]);
+
+                rolUsuario = RolRepository.Instance.GetById(rol);
+                objUsuario = new Usuario
+                {
+                    primerNombre = dr["PrimerNombre"].ToString(),
+                    segundoNombre = dr["SegundoNombre"].ToString(),
+                    primerApellido = dr["PrimerApellido"].ToString(),
+                    segundoApellido = dr["SegundoApellido"].ToString(),
+                    identificacion = dr["Identificacion"].ToString(),
+                    telefono = dr["Telefono"].ToString(),
+                    fechaNacimiento = Convert.ToDateTime(dr["FechaNacimiento"]),
+                    rol = rolUsuario,
+                    genero = Convert.ToInt32(dr["Genero"]),
+                    correoElectronico = dr["CorreoElectronico"].ToString(),
+                    contraseña = dr["Contraseña"].ToString(),
+                };
+                objUsuario.Id = Convert.ToInt32(dr["id"]);
+            }
+            return objUsuario;
+
         }
     }
 }
