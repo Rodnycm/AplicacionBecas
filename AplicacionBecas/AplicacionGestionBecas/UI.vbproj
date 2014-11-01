@@ -79,9 +79,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_Proyecto2DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DB_Proyecto2DataSet.vb">
+      <DependentUpon>DB_Proyecto2DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DB_Proyecto2DataSetConsultarRegistroAcciones.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>DB_Proyecto2DataSetConsultarRegistroAcciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_Proyecto2DataSetConsultarRegistroAcciones.vb">
       <DependentUpon>DB_Proyecto2DataSetConsultarRegistroAcciones.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.vb">
