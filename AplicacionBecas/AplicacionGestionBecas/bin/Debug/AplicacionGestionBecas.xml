@@ -8,6 +8,7 @@ AplicacionGestionBecas
 <members>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <member name="P:AplicacionGestionBecas.My.Resources.Resources.ResourceManager">
 =======
 <member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_BecasDataTable">
@@ -53,687 +54,732 @@ AplicacionGestionBecas
 	<author>Rodny Castro Mathews </author>
 </member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_BecasDataTable">
 >>>>>>> origin/Mathias
+=======
+<member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_BecasDataTable">
+>>>>>>> origin/Mathias
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_BeneficiosDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_BeneficiosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_BitacoraAccionDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_BitacoraAccionDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_BitacoraErrorDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_BitacoraErrorDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_CantonDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_CantonDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_CarreraCursosDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_CarreraCursosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_CarrerasDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_CarrerasDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_CursosDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_CursosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_DatosFamiliaresDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_DatosFamiliaresDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_DistritoDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_DistritoDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_DocumentosAdjuntosDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_DocumentosAdjuntosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_FlujoDeAprobacionDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_FlujoDeAprobacionDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_FormulariosDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_FormulariosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_HistorialCursoDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_HistorialCursoDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_HistorialesAcademicosDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_HistorialesAcademicosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_PermisosDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_PermisosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_PersonasDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_PersonasDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_PlanesDeEstudioDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_PlanesDeEstudioDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_PostulantesDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_PostulantesDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_ProvinciaDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_ProvinciaDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_RequisitosDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_RequisitosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_RequisitosTipoBecaDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_RequisitosTipoBecaDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_RolesDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_RolesDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_RolesPermisosDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_RolesPermisosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_SolicitudesDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_SolicitudesDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_TipoBecaBeneficioDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_TipoBecaBeneficioDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_TiposDeBecaDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_TiposDeBecaDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_UsuariosDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_UsuariosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarBeneficioPorNombreDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarBeneficioPorNombreDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarBeneficiosDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarBeneficiosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarCursosDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarCursosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarRolDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarRolDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarRolPorIdDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarRolPorIdDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarUnUsuarioDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarUnUsuarioDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarUsuariosDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarUsuariosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_consultarBeneficioDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_consultarBeneficioDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_consultarCarrerasDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_consultarCarrerasDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_consultarPermisosDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_consultarPermisosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_consultarRolDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_consultarRolDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_consultarRolesDataTable">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_consultarRolesDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_BecasRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_BecasRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_BeneficiosRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_BeneficiosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_BitacoraAccionRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_BitacoraAccionRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_BitacoraErrorRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_BitacoraErrorRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_CantonRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_CantonRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_CarreraCursosRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_CarreraCursosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_CarrerasRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_CarrerasRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_CursosRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_CursosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_DatosFamiliaresRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_DatosFamiliaresRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_DistritoRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_DistritoRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_DocumentosAdjuntosRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_DocumentosAdjuntosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_FlujoDeAprobacionRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_FlujoDeAprobacionRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_FormulariosRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_FormulariosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_HistorialCursoRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_HistorialCursoRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_HistorialesAcademicosRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_HistorialesAcademicosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_PermisosRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_PermisosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_PersonasRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_PersonasRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_PlanesDeEstudioRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_PlanesDeEstudioRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_PostulantesRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_PostulantesRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_ProvinciaRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_ProvinciaRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_RequisitosRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_RequisitosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_RequisitosTipoBecaRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_RequisitosTipoBecaRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_RolesRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_RolesRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_RolesPermisosRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_RolesPermisosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_SolicitudesRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_SolicitudesRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_TipoBecaBeneficioRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_TipoBecaBeneficioRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_TiposDeBecaRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_TiposDeBecaRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_UsuariosRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_UsuariosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarBeneficioPorNombreRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarBeneficioPorNombreRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarBeneficiosRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarBeneficiosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarCursosRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarCursosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarRolRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarRolRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarRolPorIdRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarRolPorIdRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarUnUsuarioRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarUnUsuarioRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarUsuariosRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarUsuariosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_consultarBeneficioRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_consultarBeneficioRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_consultarCarrerasRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_consultarCarrerasRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_consultarPermisosRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_consultarPermisosRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_consultarRolRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_consultarRolRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_consultarRolesRow">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_consultarRolesRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_BecasRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_BecasRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_BeneficiosRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_BeneficiosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_BitacoraAccionRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_BitacoraAccionRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_BitacoraErrorRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_BitacoraErrorRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_CantonRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_CantonRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_CarreraCursosRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_CarreraCursosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_CarrerasRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_CarrerasRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_CursosRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_CursosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_DatosFamiliaresRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_DatosFamiliaresRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_DistritoRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_DistritoRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_DocumentosAdjuntosRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_DocumentosAdjuntosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_FlujoDeAprobacionRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_FlujoDeAprobacionRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_FormulariosRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_FormulariosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_HistorialCursoRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_HistorialCursoRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_HistorialesAcademicosRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_HistorialesAcademicosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_PermisosRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_PermisosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_PersonasRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_PersonasRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_PlanesDeEstudioRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_PlanesDeEstudioRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_PostulantesRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_PostulantesRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_ProvinciaRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_ProvinciaRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_RequisitosRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_RequisitosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_RequisitosTipoBecaRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_RequisitosTipoBecaRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_RolesRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_RolesRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_RolesPermisosRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_RolesPermisosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_SolicitudesRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_SolicitudesRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_TipoBecaBeneficioRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_TipoBecaBeneficioRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_TiposDeBecaRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_TiposDeBecaRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_UsuariosRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Tb_UsuariosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarBeneficioPorNombreRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarBeneficioPorNombreRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarBeneficiosRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarBeneficiosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarCursosRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarCursosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarRolRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarRolRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarRolPorIdRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarRolPorIdRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarUnUsuarioRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarUnUsuarioRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_buscarUsuariosRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_buscarUsuariosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_consultarBeneficioRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_consultarBeneficioRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_consultarCarrerasRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_consultarCarrerasRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_consultarPermisosRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_consultarPermisosRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_consultarRolRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_consultarRolRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Sp_consultarRolesRowChangeEvent">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones.Sp_consultarRolesRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones">
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_BecasTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_BecasTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_BeneficiosTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_BeneficiosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_BitacoraAccionTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_BitacoraAccionTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_BitacoraErrorTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_BitacoraErrorTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_CantonTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_CantonTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_CarreraCursosTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_CarreraCursosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_CarrerasTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_CarrerasTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_CursosTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_CursosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_DatosFamiliaresTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_DatosFamiliaresTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_DistritoTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_DistritoTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_DocumentosAdjuntosTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_DocumentosAdjuntosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_FlujoDeAprobacionTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_FlujoDeAprobacionTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_FormulariosTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_FormulariosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_HistorialCursoTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_HistorialCursoTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_HistorialesAcademicosTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_HistorialesAcademicosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_PermisosTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_PermisosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_PersonasTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_PersonasTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_PlanesDeEstudioTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_PlanesDeEstudioTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_PostulantesTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_PostulantesTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_ProvinciaTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_ProvinciaTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_RequisitosTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_RequisitosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_RequisitosTipoBecaTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_RequisitosTipoBecaTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_RolesTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_RolesTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_RolesPermisosTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_RolesPermisosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_SolicitudesTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_SolicitudesTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_TipoBecaBeneficioTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_TipoBecaBeneficioTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_TiposDeBecaTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_TiposDeBecaTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 </member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Tb_UsuariosTableAdapter">
+=======
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_UsuariosTableAdapter">
+>>>>>>> origin/Mathias
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Sp_buscarBeneficioPorNombreTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Sp_buscarBeneficioPorNombreTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Sp_buscarBeneficiosTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Sp_buscarBeneficiosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Sp_buscarCursosTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Sp_buscarCursosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Sp_buscarRolTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Sp_buscarRolTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Sp_buscarRolPorIdTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Sp_buscarRolPorIdTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Sp_buscarUnUsuarioTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Sp_buscarUnUsuarioTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Sp_buscarUsuariosTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Sp_buscarUsuariosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Sp_consultarBeneficioTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Sp_consultarBeneficioTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Sp_consultarCarrerasTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Sp_consultarCarrerasTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Sp_consultarPermisosTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Sp_consultarPermisosTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Sp_consultarRolTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Sp_consultarRolTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.Sp_consultarRolesTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Sp_consultarRolesTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.QueriesTableAdapter">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.QueriesTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="M:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.TableAdapterManager.UpdateUpdatedRows(AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.TableAdapterManager.UpdateUpdatedRows(AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Update rows in top-down order.
 </summary>
-</member><member name="M:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.TableAdapterManager.UpdateInsertedRows(AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.TableAdapterManager.UpdateInsertedRows(AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Insert rows in top-down order.
 </summary>
-</member><member name="M:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.TableAdapterManager.UpdateDeletedRows(AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.TableAdapterManager.UpdateDeletedRows(AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Delete rows in bottom-up order.
 </summary>
-</member><member name="M:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
 </summary>
-</member><member name="M:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.TableAdapterManager.UpdateAll(AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones)">
+</member><member name="M:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.TableAdapterManager.UpdateAll(AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones)">
 	<summary>
 Update all changes to the dataset.
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.TableAdapterManager.UpdateOrderOption">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.TableAdapterManager.UpdateOrderOption">
 	<summary>
 Update Order Option
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.TableAdapterManager.SelfReferenceComparer">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.TableAdapterManager.SelfReferenceComparer">
 	<summary>
 Used to sort self-referenced table's rows
 </summary>
-</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAccionesTableAdapters.TableAdapterManager">
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
+</member><member name="M:AplicacionGestionBecas.uCtrlEliminarRol.btnCancelar_Click(System.Object,System.EventArgs)">
+	<summary> Este Metodo esconde el usuario de control de eliminar Rol</summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlEliminarRol.recieveData(System.String,System.Int32)">
+	<summary>REcibe el dato del rol a eliminar </summary>
+	<author>Rodny Castro Mathews </author>
+	<param name="pnombre"> Nombre del Rol a eliminar  </param>
+</member><member name="M:AplicacionGestionBecas.uCtrlEliminarRol.btnAñadir_Click(System.Object,System.EventArgs)">
+	<summary>Elimina El rol seleccionado </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ListarRoles">
+	<summary> Este metodo lista los roles</summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ListarRol_Load(System.Object,System.EventArgs)">
+	<summary>Este metodo hace que apenas se abra el usuario de control le liste los roles </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.modificarRol(System.Int32)">
+	<summary>Metodo  modifica el rol seleccionado</summary>
+	<author>Rodny Castro Mathews </author>
+ '''<param name="numfila"> numero de fila en el que se encuentra el rol a modificar  </param>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.eliminarRol(System.Int32)">
+	<summary>Este metodo elimina el rol seleccionado </summary>
+	<author>Rodny Castro Mathews </author>
+	<param name="numfila"> Numero de fila del rol a eliminar  </param>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.consultarRol(System.Int32)">
+	<summary>Este metodo consulta el rol seleccionado </summary>
+	<author>Rodny Castro Mathews </author>
+	<param name="numfila"> Numero de fila de rol a consultar  </param>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.DGVRol_EditingControlShowing(System.Object,System.Windows.Forms.DataGridViewEditingControlShowingEventArgs)">
+	<summary>
+	</summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ComboBox_SelectionChangeCommitted(System.Object,System.EventArgs)">
+	<summary> Este metodo indica si hay que eliminar,ver,modificar dependiendo de lo que escoja </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.btnCrearRoles_Click(System.Object,System.EventArgs)">
+	<summary>Este metodo llama al usuario de control de crear rol </summary>
+	<author>Rodny Castro Mathews </author>
 </member><member name="M:AplicacionGestionBecas.uCtrlConsultarBeneficio.uCtrlConsultarBeneficio_Load(System.Object,System.EventArgs)">
 	<summary>
  Trae del Gestor, una instancia de un beneficio y lo muestra en un datagrid.
