@@ -51,8 +51,11 @@
 
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
 
+
+        Dim ucntrlUsuario As UctrlListarYBuscarUsuario = New UctrlListarYBuscarUsuario()
+        Me.SendToBack()
         Me.Hide()
-        frmPrincipal.Controls.Add(ucntrlUsuario)
+        FrmIniciarSesion.principal.Controls.Add(ucntrlUsuario)
         ucntrlUsuario.Location = New Point(120, 0)
         ucntrlUsuario.Show()
 

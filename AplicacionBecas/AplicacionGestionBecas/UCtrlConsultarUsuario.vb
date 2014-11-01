@@ -41,4 +41,6 @@ Public Class UCtrlConsultarUsuario
         ucntrl.Location = New Point(120, 0)
         ucntrl.Show()
     End Sub
+
+
 End Class
