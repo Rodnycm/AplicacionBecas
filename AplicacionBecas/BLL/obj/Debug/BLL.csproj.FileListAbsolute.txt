@@ -16,12 +16,3 @@ C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.dll
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.pdb
-R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\BLL.dll
-R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\BLL.pdb
-R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\DAL.dll
-R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\EntitiesLayer.dll
-R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\DAL.pdb
-R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\EntitiesLayer.pdb
-R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
-R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.dll
-R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.pdb
