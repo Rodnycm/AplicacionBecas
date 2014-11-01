@@ -38,11 +38,17 @@ Public Class uCtrlModificarRol
 
     Public Sub listarPermisos()
 
-        listaPermisos = objGestorRol.consultarPermisos()
-        For i As Integer = 0 To listaPermisos.Count - 1
-            CLBPermisos.Items.Add(listaPermisos.Item(i).Nombre)
+        Try
+            listaPermisos = objGestorRol.consultarPermisos()
+            For i As Integer = 0 To listaPermisos.Count - 1
+                CLBPermisos.Items.Add(listaPermisos.Item(i).Nombre)
 
-        Next
+            Next
+        Catch ex As Exception
+            MsgBox("No Tiene Permisos asignados")
+
+        End Try
+        
     End Sub
 
 
@@ -52,7 +58,7 @@ Public Class uCtrlModificarRol
     '''<name> Parámetros que recibe el método </name> 
     Private Sub uCtrlModificarRol_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         listarPermisos()
-        CompararPermisos()
+        ''CompararPermisos()
     End Sub
     ''' <summary>
     ''' Este Metodo compara y pone un check a los permisos que este rol tenga asignados. 
