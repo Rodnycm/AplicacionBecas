@@ -6,7 +6,45 @@ AplicacionGestionBecas
 </name>
 </assembly>
 <members>
-<member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_BecasDataTable">
+<member name="M:AplicacionGestionBecas.uCtrlEliminarRol.btnCancelar_Click(System.Object,System.EventArgs)">
+	<summary> Este Metodo esconde el usuario de control de eliminar Rol</summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlEliminarRol.recieveData(System.String,System.Int32)">
+	<summary>REcibe el dato del rol a eliminar </summary>
+	<author>Rodny Castro Mathews </author>
+	<param name="pnombre"> Nombre del Rol a eliminar  </param>
+</member><member name="M:AplicacionGestionBecas.uCtrlEliminarRol.btnAñadir_Click(System.Object,System.EventArgs)">
+	<summary>Elimina El rol seleccionado </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ListarRoles">
+	<summary> Este metodo lista los roles</summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ListarRol_Load(System.Object,System.EventArgs)">
+	<summary>Este metodo hace que apenas se abra el usuario de control le liste los roles </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.modificarRol(System.Int32)">
+	<summary>Metodo  modifica el rol seleccionado</summary>
+	<author>Rodny Castro Mathews </author>
+ '''<param name="numfila"> numero de fila en el que se encuentra el rol a modificar  </param>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.eliminarRol(System.Int32)">
+	<summary>Este metodo elimina el rol seleccionado </summary>
+	<author>Rodny Castro Mathews </author>
+	<param name="numfila"> Numero de fila del rol a eliminar  </param>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.consultarRol(System.Int32)">
+	<summary>Este metodo consulta el rol seleccionado </summary>
+	<author>Rodny Castro Mathews </author>
+	<param name="numfila"> Numero de fila de rol a consultar  </param>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.DGVRol_EditingControlShowing(System.Object,System.Windows.Forms.DataGridViewEditingControlShowingEventArgs)">
+	<summary>
+	</summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ComboBox_SelectionChangeCommitted(System.Object,System.EventArgs)">
+	<summary> Este metodo indica si hay que eliminar,ver,modificar dependiendo de lo que escoja </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.btnCrearRoles_Click(System.Object,System.EventArgs)">
+	<summary>Este metodo llama al usuario de control de crear rol </summary>
+	<author>Rodny Castro Mathews </author>
+</member><member name="T:AplicacionGestionBecas.DB_Proyecto2DataSetConsultarAcciones.Tb_BecasDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -686,44 +724,6 @@ Used to sort self-referenced table's rows
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
-</member><member name="M:AplicacionGestionBecas.uCtrlEliminarRol.btnCancelar_Click(System.Object,System.EventArgs)">
-	<summary> Este Metodo esconde el usuario de control de eliminar Rol</summary>
-	<author>Rodny Castro Mathews </author>
-</member><member name="M:AplicacionGestionBecas.uCtrlEliminarRol.recieveData(System.String,System.Int32)">
-	<summary>REcibe el dato del rol a eliminar </summary>
-	<author>Rodny Castro Mathews </author>
-	<param name="pnombre"> Nombre del Rol a eliminar  </param>
-</member><member name="M:AplicacionGestionBecas.uCtrlEliminarRol.btnAñadir_Click(System.Object,System.EventArgs)">
-	<summary>Elimina El rol seleccionado </summary>
-	<author>Rodny Castro Mathews </author>
-</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ListarRoles">
-	<summary> Este metodo lista los roles</summary>
-	<author>Rodny Castro Mathews </author>
-</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ListarRol_Load(System.Object,System.EventArgs)">
-	<summary>Este metodo hace que apenas se abra el usuario de control le liste los roles </summary>
-	<author>Rodny Castro Mathews </author>
-</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.modificarRol(System.Int32)">
-	<summary>Metodo  modifica el rol seleccionado</summary>
-	<author>Rodny Castro Mathews </author>
- '''<param name="numfila"> numero de fila en el que se encuentra el rol a modificar  </param>
-</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.eliminarRol(System.Int32)">
-	<summary>Este metodo elimina el rol seleccionado </summary>
-	<author>Rodny Castro Mathews </author>
-	<param name="numfila"> Numero de fila del rol a eliminar  </param>
-</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.consultarRol(System.Int32)">
-	<summary>Este metodo consulta el rol seleccionado </summary>
-	<author>Rodny Castro Mathews </author>
-	<param name="numfila"> Numero de fila de rol a consultar  </param>
-</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.DGVRol_EditingControlShowing(System.Object,System.Windows.Forms.DataGridViewEditingControlShowingEventArgs)">
-	<summary>
-	</summary>
-	<author>Rodny Castro Mathews </author>
-</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ComboBox_SelectionChangeCommitted(System.Object,System.EventArgs)">
-	<summary> Este metodo indica si hay que eliminar,ver,modificar dependiendo de lo que escoja </summary>
-	<author>Rodny Castro Mathews </author>
-</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.btnCrearRoles_Click(System.Object,System.EventArgs)">
-	<summary>Este metodo llama al usuario de control de crear rol </summary>
-	<author>Rodny Castro Mathews </author>
 </member><member name="M:AplicacionGestionBecas.uCtrlConsultarBeneficio.uCtrlConsultarBeneficio_Load(System.Object,System.EventArgs)">
 	<summary>
  Trae del Gestor, una instancia de un beneficio y lo muestra en un datagrid.
