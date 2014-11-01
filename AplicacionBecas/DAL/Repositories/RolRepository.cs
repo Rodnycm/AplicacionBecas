@@ -44,7 +44,7 @@ namespace DAL
         /// <summary>
         /// agrega a una lista los roles a insertar
         /// </summary>
-        /// <param name="entity">el rol aeliminar</param>
+        /// <param name="entity">el rol a eliminar</param>
         public void Insert(Rol entity)
         {
             _insertItems.Add(entity);
@@ -88,6 +88,7 @@ namespace DAL
                 {
                     pRol.Add(new Rol
                     {
+                        Id = Convert.ToInt32(dr["IdRol"]),
                         Nombre = dr["Nombre"].ToString()
                     });
                 }
@@ -111,6 +112,7 @@ namespace DAL
 
                 objRol = new Rol
                 {
+                    Id = Convert.ToInt32(dr["IdRol"]),
                     Nombre = dr["Nombre"].ToString()
                 };
             }
@@ -144,6 +146,7 @@ namespace DAL
 
                     objRol = new Rol
                     {
+                        Id = Convert.ToInt32(dr["IdRol"]),
                         Nombre = dr["Nombre"].ToString()
                     };
                 }
@@ -254,7 +257,8 @@ namespace DAL
             {
                 SqlCommand cmd = new SqlCommand();
 
-                cmd.Parameters.Add(new SqlParameter("@nombre", objRol.Nombre));
+                cmd.Parameters.Add(new SqlParameter("@IdRol", objRol.Id));
+                cmd.Parameters.Add(new SqlParameter("@Nombre", objRol.Nombre));
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_modificarRol");
 
             }
@@ -272,7 +276,7 @@ namespace DAL
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                cmd.Parameters.Add(new SqlParameter("@nombre", objRol.Nombre));
+                cmd.Parameters.Add(new SqlParameter("@IdRol", objRol.Id));
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_eliminarRol");
 
             }

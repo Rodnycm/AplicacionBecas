@@ -92,13 +92,80 @@ namespace DAL
                 {
                     pPermiso.Add(new Permiso
                     {
-                        //Id = Convert.ToInt32(dr["idPermiso"]),
+                        Id = Convert.ToInt32(dr["idPermiso"]),
                         Nombre = dr["Nombre"].ToString()
                     });
                 }
             }
 
             return pPermiso;
+        }
+
+     
+        public IEnumerable<Permiso> GetPermisosPorRol(int id)
+        {
+            List<Permiso> pPermiso = null;
+
+          //  try
+          //  {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Parameters.Add(new SqlParameter("@IdRol", id));
+
+                var ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_consultarPermisosPorRol");
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    pPermiso = new List<Permiso>();
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        pPermiso.Add(new Permiso
+                        {
+                            Id = Convert.ToInt32(dr["idPermiso"]),
+                            Nombre = dr["Nombre"].ToString(),
+                            Descripción = dr["Descripción"].ToString()
+                        });
+                    }
+                }
+            //}
+
+          //  catch (Exception ex)
+          // {
+          //      Console.Write(ex);
+          //  }
+
+
+            return pPermiso;
+        }
+
+        public IEnumerable<Int32> GetIdRolesPermisos(int idPermiso,int idRol)
+        {
+            List<Int32> plistaIdRolesPermisos = null;
+
+            //  try
+            //  {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Parameters.Add(new SqlParameter("@IdPermiso", idPermiso));
+            cmd.Parameters.Add(new SqlParameter("@IdRol", idRol));
+
+            var ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_consultarRolesPermisos");
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                plistaIdRolesPermisos = new List<Int32>();
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    plistaIdRolesPermisos.Add(Convert.ToInt32(dr["IdRolesPermisos"]));    
+                }
+            }
+            //}
+
+            //  catch (Exception ex)
+            // {
+            //      Console.Write(ex);
+            //  }
+
+
+            return plistaIdRolesPermisos;
         }
         /// <summary>
         /// Consulta el permiso por el nombre
@@ -237,6 +304,50 @@ namespace DAL
 
         }
 
+
+        public void InsertPermisoAUnRol(int IdPermiso, int pIdRol)
+        {
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+
+                cmd.Parameters.Add(new SqlParameter("@IdRol", pIdRol));
+                cmd.Parameters.Add(new SqlParameter("@IdPermiso", IdPermiso));
+
+                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_AsignarPermisosAUnRol");
+                
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+        }
+
+        public void EliminarPermisoAUnRol(Int32 idRolPermiso)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Parameters.Add(new SqlParameter("@IdRolesPermisos", idRolPermiso));
+                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_eliminarPermisoAUnRol");
+
+            }
+            catch (SqlException ex)
+            {
+                //logear la excepcion a la bd con un Exception
+                // throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
+
+            }
+            catch (Exception ex)
+            {
+                //logear la excepcion a la bd con un Exception
+                // throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
+            }
+        }
         /// <summary>
         /// Modifica un permiso a la BD
         /// </summary>

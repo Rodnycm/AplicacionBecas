@@ -22,9 +22,9 @@ Partial Class uCtrlListarRol
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uCtrlListarRol))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvRoles = New System.Windows.Forms.DataGridView()
         Me.dtaNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ComboBox = New System.Windows.Forms.ComboBox()
@@ -33,18 +33,18 @@ Partial Class uCtrlListarRol
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.PbRoles = New System.Windows.Forms.PictureBox()
         Me.btnCrearRol = New System.Windows.Forms.Button()
-        Me.DGVRol = New System.Windows.Forms.DataGridView()
-        Me.dtNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dtaOpciones = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.PbUsuarios = New System.Windows.Forms.PictureBox()
-        Me.btnBuscarRol = New System.Windows.Forms.Button()
         Me.txtBuscarRol = New System.Windows.Forms.TextBox()
         Me.lblBuscarRol = New System.Windows.Forms.Label()
         Me.btnCrearRoles = New System.Windows.Forms.Button()
+        Me.DGVRol = New System.Windows.Forms.DataGridView()
+        Me.dtaId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dtaOpciones = New System.Windows.Forms.DataGridViewComboBoxColumn()
         CType(Me.dgvRoles, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbRoles, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGVRol, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGVRol, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvRoles
@@ -52,14 +52,14 @@ Partial Class uCtrlListarRol
         Me.dgvRoles.BackgroundColor = System.Drawing.Color.White
         Me.dgvRoles.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvRoles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Maroon
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvRoles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Maroon
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRoles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRoles.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dtaNombre})
         Me.dgvRoles.GridColor = System.Drawing.Color.White
@@ -140,42 +140,6 @@ Partial Class uCtrlListarRol
         Me.btnCrearRol.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCrearRol.UseVisualStyleBackColor = True
         '
-        'DGVRol
-        '
-        Me.DGVRol.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DGVRol.BackgroundColor = System.Drawing.Color.White
-        Me.DGVRol.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DGVRol.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGVRol.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DGVRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVRol.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dtNombre, Me.dtaOpciones})
-        Me.DGVRol.GridColor = System.Drawing.Color.White
-        Me.DGVRol.Location = New System.Drawing.Point(23, 186)
-        Me.DGVRol.Name = "DGVRol"
-        Me.DGVRol.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DGVRol.RowHeadersVisible = False
-        Me.DGVRol.Size = New System.Drawing.Size(793, 294)
-        Me.DGVRol.TabIndex = 26
-        '
-        'dtNombre
-        '
-        Me.dtNombre.HeaderText = "Nombre"
-        Me.dtNombre.Name = "dtNombre"
-        Me.dtNombre.ReadOnly = True
-        '
-        'dtaOpciones
-        '
-        Me.dtaOpciones.HeaderText = "Opciones"
-        Me.dtaOpciones.Items.AddRange(New Object() {"Ver", "Editar", "Eliminar"})
-        Me.dtaOpciones.Name = "dtaOpciones"
-        '
         'PbUsuarios
         '
         Me.PbUsuarios.BackgroundImage = CType(resources.GetObject("PbUsuarios.BackgroundImage"), System.Drawing.Image)
@@ -186,24 +150,11 @@ Partial Class uCtrlListarRol
         Me.PbUsuarios.TabIndex = 25
         Me.PbUsuarios.TabStop = False
         '
-        'btnBuscarRol
-        '
-        Me.btnBuscarRol.BackColor = System.Drawing.Color.White
-        Me.btnBuscarRol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnBuscarRol.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscarRol.ForeColor = System.Drawing.Color.White
-        Me.btnBuscarRol.Location = New System.Drawing.Point(219, 120)
-        Me.btnBuscarRol.Name = "btnBuscarRol"
-        Me.btnBuscarRol.Size = New System.Drawing.Size(70, 30)
-        Me.btnBuscarRol.TabIndex = 24
-        Me.btnBuscarRol.Text = "Buscar"
-        Me.btnBuscarRol.UseVisualStyleBackColor = False
-        '
         'txtBuscarRol
         '
         Me.txtBuscarRol.Location = New System.Drawing.Point(113, 122)
         Me.txtBuscarRol.Name = "txtBuscarRol"
-        Me.txtBuscarRol.Size = New System.Drawing.Size(100, 20)
+        Me.txtBuscarRol.Size = New System.Drawing.Size(222, 20)
         Me.txtBuscarRol.TabIndex = 23
         '
         'lblBuscarRol
@@ -222,7 +173,7 @@ Partial Class uCtrlListarRol
         Me.btnCrearRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCrearRoles.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCrearRoles.ForeColor = System.Drawing.Color.White
-        Me.btnCrearRoles.Location = New System.Drawing.Point(533, 46)
+        Me.btnCrearRoles.Location = New System.Drawing.Point(598, 30)
         Me.btnCrearRoles.Name = "btnCrearRoles"
         Me.btnCrearRoles.Size = New System.Drawing.Size(222, 79)
         Me.btnCrearRoles.TabIndex = 21
@@ -230,22 +181,62 @@ Partial Class uCtrlListarRol
         Me.btnCrearRoles.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCrearRoles.UseVisualStyleBackColor = True
         '
-        'ListarRol
+        'DGVRol
+        '
+        Me.DGVRol.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGVRol.BackgroundColor = System.Drawing.Color.White
+        Me.DGVRol.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGVRol.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGVRol.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.DGVRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVRol.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dtaId, Me.DataGridViewTextBoxColumn1, Me.dtaOpciones})
+        Me.DGVRol.GridColor = System.Drawing.Color.White
+        Me.DGVRol.Location = New System.Drawing.Point(23, 186)
+        Me.DGVRol.Name = "DGVRol"
+        Me.DGVRol.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DGVRol.RowHeadersVisible = False
+        Me.DGVRol.Size = New System.Drawing.Size(797, 294)
+        Me.DGVRol.TabIndex = 27
+        '
+        'dtaId
+        '
+        Me.dtaId.HeaderText = "Id"
+        Me.dtaId.Name = "dtaId"
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Nombre"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'dtaOpciones
+        '
+        Me.dtaOpciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.dtaOpciones.HeaderText = "Opciones"
+        Me.dtaOpciones.Items.AddRange(New Object() {"Ver", "Eliminar", "Editar"})
+        Me.dtaOpciones.Name = "dtaOpciones"
+        '
+        'uCtrlListarRol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.DGVRol)
         Me.Controls.Add(Me.PbUsuarios)
-        Me.Controls.Add(Me.btnBuscarRol)
         Me.Controls.Add(Me.txtBuscarRol)
         Me.Controls.Add(Me.lblBuscarRol)
         Me.Controls.Add(Me.btnCrearRoles)
-        Me.Name = "ListarRol"
+        Me.Name = "uCtrlListarRol"
         Me.Size = New System.Drawing.Size(947, 530)
         CType(Me.dgvRoles, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbRoles, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGVRol, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbUsuarios, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGVRol, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -260,13 +251,13 @@ Partial Class uCtrlListarRol
     Friend WithEvents txtBuscar As System.Windows.Forms.TextBox
     Friend WithEvents lblBuscar As System.Windows.Forms.Label
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
-    Friend WithEvents DGVRol As System.Windows.Forms.DataGridView
-    Friend WithEvents dtNombre As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents dtaOpciones As System.Windows.Forms.DataGridViewComboBoxColumn
     Friend WithEvents PbUsuarios As System.Windows.Forms.PictureBox
-    Friend WithEvents btnBuscarRol As System.Windows.Forms.Button
     Friend WithEvents txtBuscarRol As System.Windows.Forms.TextBox
     Friend WithEvents lblBuscarRol As System.Windows.Forms.Label
     Friend WithEvents btnCrearRoles As System.Windows.Forms.Button
+    Friend WithEvents DGVRol As System.Windows.Forms.DataGridView
+    Friend WithEvents dtaId As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dtaOpciones As System.Windows.Forms.DataGridViewComboBoxColumn
 
 End Class
