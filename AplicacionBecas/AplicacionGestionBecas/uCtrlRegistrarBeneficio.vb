@@ -1,6 +1,7 @@
 ﻿Public Class uCtrlRegistrarBeneficio
 
     Dim uCntrlBuscarBeneficio As uCntrlBuscarBeneficio
+    Dim mBlnFormDragging As Boolean
 
     ''' <summary>
     ''' Setea una instancia del UsrControlBuscarBeneficio
@@ -63,4 +64,39 @@
         uCntrlBuscarBeneficio.dtaBuscarBeneficio.Rows.Clear()
         uCntrlBuscarBeneficio.listarBeneficios()
     End Sub
+
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+
+        Me.Hide()
+        uCntrlBuscarBeneficio.dtaBuscarBeneficio.Rows.Clear()
+        uCntrlBuscarBeneficio.listarBeneficios()
+
+    End Sub
+
+
+    Private Sub uCtrlRegistrarBeneficio_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
+
+        If mBlnFormDragging = True Then
+
+            Dim position As Point = frmPrincipal.PointToClient(MousePosition)
+            Me.Location = New Point(position)
+
+        End If
+
+    End Sub
+
+    Private Sub uCtrlRegistrarBeneficio_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
+
+        mBlnFormDragging = False
+        Dim position As Point = frmPrincipal.PointToClient(MousePosition)
+        Location = New Point(position)
+
+    End Sub
+
+    Public Sub uCtrlRegistrarBeneficio_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
+
+        mBlnFormDragging = True
+
+    End Sub
+
 End Class

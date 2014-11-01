@@ -32,7 +32,6 @@ Partial Class uCntrlBuscarBeneficio
         Me.dtaAplicabilidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dtaOpciones = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.btnMantenimiento = New System.Windows.Forms.Button()
         Me.pctbxBeneficios = New System.Windows.Forms.PictureBox()
@@ -45,7 +44,7 @@ Partial Class uCntrlBuscarBeneficio
         '
         Me.dtaBuscarBeneficio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dtaBuscarBeneficio.BackgroundColor = System.Drawing.Color.White
-        Me.dtaBuscarBeneficio.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dtaBuscarBeneficio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dtaBuscarBeneficio.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
@@ -96,20 +95,11 @@ Partial Class uCntrlBuscarBeneficio
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'btnBuscar
-        '
-        Me.btnBuscar.Location = New System.Drawing.Point(149, 18)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 28)
-        Me.btnBuscar.TabIndex = 24
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(247, 15)
+        Me.txtBuscar.Location = New System.Drawing.Point(156, 96)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(153, 31)
+        Me.txtBuscar.Size = New System.Drawing.Size(678, 31)
         Me.txtBuscar.TabIndex = 25
         '
         'btnMantenimiento
@@ -128,6 +118,7 @@ Partial Class uCntrlBuscarBeneficio
         '
         'pctbxBeneficios
         '
+        Me.pctbxBeneficios.BackgroundImage = Global.AplicacionGestionBecas.My.Resources.Resources.tablaFinalGrandeAzul
         Me.pctbxBeneficios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pctbxBeneficios.Location = New System.Drawing.Point(156, 197)
         Me.pctbxBeneficios.Name = "pctbxBeneficios"
@@ -140,7 +131,6 @@ Partial Class uCntrlBuscarBeneficio
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 23.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.txtBuscar)
-        Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.dtaBuscarBeneficio)
         Me.Controls.Add(Me.btnMantenimiento)
         Me.Controls.Add(Me.pctbxBeneficios)
@@ -161,7 +151,6 @@ Partial Class uCntrlBuscarBeneficio
     Friend WithEvents dtaBuscarBeneficio As System.Windows.Forms.DataGridView
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents txtBuscar As System.Windows.Forms.TextBox
-    Friend WithEvents btnBuscar As System.Windows.Forms.Button
     Friend WithEvents dtaId As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents dtaNombre As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents dtaPorcentaje As System.Windows.Forms.DataGridViewTextBoxColumn

@@ -51,10 +51,14 @@ namespace BLL
                     throw new ApplicationException(sb.ToString());
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+
+                String error = e.ToString();
+
+                System.Console.Write(error);
+                throw new ApplicationException("Noooooo");
             }
         }
         /// <summary>

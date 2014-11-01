@@ -70,16 +70,6 @@ namespace EntitiesLayer
 
         public IEnumerable<RuleViolation> GetRuleViolations()
         {
-            String patronNombre = "/^[a-z ,.'-]+$/i";
-            String patronAplicabilidad = "/^[a-z ,.'-]+$/i";
-
-            Regex regxNombre = new Regex(patronNombre);
-            Regex regxAplicabilidad = new Regex(patronAplicabilidad);
-
-            Match nombreMatch = regxNombre.Match(Nombre);
-            Match aplicabilidadMatch = regxAplicabilidad.Match(Aplicacion);
-
-
 
             if (String.IsNullOrEmpty(Nombre))
             {
@@ -96,14 +86,13 @@ namespace EntitiesLayer
                 yield return new RuleViolation("Aplicabilidad Requerida", "Aplicabilidad");
             }
 
-            if (!(Regex.IsMatch(Aplicacion, "^[a-zA-Z]+$")))
+            if (!(Regex.IsMatch(Aplicacion, "^[\\p{L} .'-]+$")))
             {
                 yield return new RuleViolation("Solo se permiten letras en la aplicabilidad", "Aplicacion");
             }
 
-            if (!(Regex.IsMatch(Nombre, "^[a-zA-Z]+$")))
+            if (!(Regex.IsMatch(Nombre, "^[\\p{L} .'-]+$")))
             {
-
                 yield return new RuleViolation("Solo se permiten letras en el nombre", "Nombre");
                 yield break;
             }
