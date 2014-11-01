@@ -39,3 +39,5 @@ C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debu
 C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.dll
 C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.pdb
 >>>>>>> origin/Backi
+R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\TIL.dll
+R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\TIL.pdb
