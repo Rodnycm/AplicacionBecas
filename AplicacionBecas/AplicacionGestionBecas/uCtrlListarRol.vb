@@ -17,23 +17,21 @@ Public Class uCtrlListarRol
         Try
             For i As Integer = 0 To listaRoles.Count - 1
 
-<<<<<<< HEAD
+                    DGVRol.Rows.Add(1)
+                    DGVRol.Rows(i).Cells(0).Value = listaRoles.Item(i).Id()
+                    DGVRol.Rows(i).Cells(1).Value = listaRoles.Item(i).Nombre()
+                    DGVRol.Columns("dtaId").Visible = False
+                Next
+            Catch ex As Exception
+                MsgBox("Debe Crear Un Rol")
+            End Try
+
+            For i As Integer = 0 To listaRoles.Count - 1
+
                 DGVRol.Rows.Add(1)
                 DGVRol.Rows(i).Cells(0).Value = listaRoles.Item(i).Id()
                 DGVRol.Rows(i).Cells(1).Value = listaRoles.Item(i).Nombre()
                 DGVRol.Columns("dtaId").Visible = False
-            Next
-        Catch ex As Exception
-            MsgBox("Debe Crear Un Rol")
-        End Try
-        
-=======
-        For i As Integer = 0 To listaRoles.Count - 1
-
-            DGVRol.Rows.Add(1)
-            DGVRol.Rows(i).Cells(0).Value = listaRoles.Item(i).Id()
-            DGVRol.Rows(i).Cells(1).Value = listaRoles.Item(i).Nombre()
-            DGVRol.Columns("dtaId").Visible = False
             Next
 
         Catch
