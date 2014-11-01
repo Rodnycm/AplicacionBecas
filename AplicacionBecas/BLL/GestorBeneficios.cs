@@ -54,12 +54,10 @@ namespace BLL
             }
             catch (Exception e)
             {
-
-
                 String error = e.ToString();
 
-                System.Console.Write(error);
-                throw new ApplicationException("Noooooo");
+                Alerts.Show(error);
+
             }
         }
         /// <summary>
