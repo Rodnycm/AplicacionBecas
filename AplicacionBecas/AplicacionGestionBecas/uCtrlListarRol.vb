@@ -14,13 +14,24 @@ Public Class uCtrlListarRol
         
         Dim listaRoles As New List(Of Rol)
         listaRoles = objGestorRol.consultarRoles()
+        Try
+            For i As Integer = 0 To listaRoles.Count - 1
 
-        For i As Integer = 0 To listaRoles.Count - 1
+                    DGVRol.Rows.Add(1)
+                    DGVRol.Rows(i).Cells(0).Value = listaRoles.Item(i).Id()
+                    DGVRol.Rows(i).Cells(1).Value = listaRoles.Item(i).Nombre()
+                    DGVRol.Columns("dtaId").Visible = False
+                Next
+            Catch ex As Exception
+                MsgBox("Debe Crear Un Rol")
+            End Try
 
-            DGVRol.Rows.Add(1)
-            DGVRol.Rows(i).Cells(0).Value = listaRoles.Item(i).Id()
-            DGVRol.Rows(i).Cells(1).Value = listaRoles.Item(i).Nombre()
-            DGVRol.Columns("dtaId").Visible = False
+            For i As Integer = 0 To listaRoles.Count - 1
+
+                DGVRol.Rows.Add(1)
+                DGVRol.Rows(i).Cells(0).Value = listaRoles.Item(i).Id()
+                DGVRol.Rows(i).Cells(1).Value = listaRoles.Item(i).Nombre()
+                DGVRol.Columns("dtaId").Visible = False
             Next
 
         Catch

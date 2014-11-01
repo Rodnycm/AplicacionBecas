@@ -26,15 +26,20 @@ Class uCntrlConsultarRol
     End Sub
 
     Sub listarPermisos()
+        Try
 
-        listaPermisos = objGestorRol.consultarPermisosPorRol(idRol)
+            listaPermisos = objGestorRol.consultarPermisosPorRol(idRol)
 
-        ' CLBPermisos.BeginUpdate()
-        For i As Integer = 0 To listaPermisos.Count - 1
-            CLBPermisos.Items.Add(listaPermisos.Item(i).Nombre)
+            ' CLBPermisos.BeginUpdate()
+            For i As Integer = 0 To listaPermisos.Count - 1
+                CLBPermisos.Items.Add(listaPermisos.Item(i).Nombre)
 
-        Next
-        ' CLBPermisos.EndUpdate()
+            Next
+            ' CLBPermisos.EndUpdate()
+        Catch ex As Exception
+            MsgBox("No tiene Permisos Asignados")
+        End Try
+        
     End Sub
 
     Public Sub recieveData(ByVal pnombre As String, ByVal pidRol As Integer)
