@@ -62,6 +62,7 @@
         Me.Hide()
         frmPrincipal.Controls.Add(uCntrlBuscarBeneficio)
         uCntrlBuscarBeneficio.Show()
+        uCntrlBuscarBeneficio.Location = New Point(130, 50)
     End Sub
 
     Private Sub btnBecas_Click(sender As Object, e As EventArgs) Handles btnBecas.Click
