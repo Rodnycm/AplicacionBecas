@@ -79,6 +79,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_Proyecto2DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DB_Proyecto2DataSetConsultarAcciones.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_Proyecto2DataSetConsultarAcciones.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -136,12 +141,6 @@
       <DependentUpon>uCtrlConsultarBeneficio.vb</DependentUpon>
     </Compile>
     <Compile Include="uCtrlConsultarBeneficio.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uCtrlConsultarBitacoraAcciones.Designer.vb">
-      <DependentUpon>uCtrlConsultarBitacoraAcciones.vb</DependentUpon>
-    </Compile>
-    <Compile Include="uCtrlConsultarBitacoraAcciones.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCtrlConsultarUsuario.Designer.vb">
@@ -282,6 +281,12 @@
     <Compile Include="uCtrlRegistrarBeneficio.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="uCtrlReporteAcciones.Designer.vb">
+      <DependentUpon>uCtrlReporteAcciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uCtrlReporteAcciones.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmPrincipal.resx">
@@ -311,9 +316,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uCtrlConsultarBeneficio.resx">
       <DependentUpon>uCtrlConsultarBeneficio.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uCtrlConsultarBitacoraAcciones.resx">
-      <DependentUpon>uCtrlConsultarBitacoraAcciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCtrlConsultarUsuario.resx">
       <DependentUpon>UCtrlConsultarUsuario.vb</DependentUpon>
@@ -384,6 +386,9 @@
     <EmbeddedResource Include="uCtrlRegistrarBeneficio.resx">
       <DependentUpon>uCtrlRegistrarBeneficio.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="uCtrlReporteAcciones.resx">
+      <DependentUpon>uCtrlReporteAcciones.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="DB_Proyecto2DataSet.xsc">
@@ -396,6 +401,17 @@
     </None>
     <None Include="DB_Proyecto2DataSet.xss">
       <DependentUpon>DB_Proyecto2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_Proyecto2DataSetConsultarAcciones.xsc">
+      <DependentUpon>DB_Proyecto2DataSetConsultarAcciones.xsd</DependentUpon>
+    </None>
+    <None Include="DB_Proyecto2DataSetConsultarAcciones.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_Proyecto2DataSetConsultarAcciones.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_Proyecto2DataSetConsultarAcciones.xss">
+      <DependentUpon>DB_Proyecto2DataSetConsultarAcciones.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

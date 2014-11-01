@@ -5,12 +5,13 @@ using System.Text;
 using EntitiesLayer;
 using DAL;
 using System.Collections;
-
+using DAL.Repositories;
 
 namespace BLL
 {
-    public class GestorRol
+    public class GestorRol:IGestor
     {
+        public string actividad;
 
         /// <summary>
         /// Este metodo crea un nuevo rol
@@ -25,6 +26,8 @@ namespace BLL
                 //if (objRol.IsValid)
                 //{
                 RolRepository.Instance.Insert(objRol);
+                actividad = "Se ha Creado un Rol";
+                registrarAccion(actividad);
                 //    }
                 //    else
                 //    {
@@ -51,6 +54,8 @@ namespace BLL
 
             Rol objRol = ContenedorMantenimiento.Instance.crearObjetoRol(pidRol,pnombre);
             RolRepository.Instance.Update(objRol);
+            actividad = "Se ha modificado un Rol";
+            registrarAccion(actividad);
 
         }
 
@@ -82,6 +87,8 @@ namespace BLL
             Rol objRol = ContenedorMantenimiento.Instance.crearObjetoRol(pidRol,pnombre);
             //Rol objRol = new Rol { Id = idRol };
             RolRepository.Instance.Delete(objRol);
+            actividad = "Se ha Eliminado un Rol";
+            registrarAccion(actividad);
         }
 
         /// <summary>
@@ -138,7 +145,23 @@ namespace BLL
             //    }
         }
 
+        public void registrarAccion(string pactividad) {
 
+            RegistroAccion objRegistro;
+            DateTime fecha = DateTime.Today;
+            string nombreUsuario;
+            string nombreRol = "Decano";
+            string descripcion = pactividad;
+            //nombreUsuario = Globals.userName;
+            nombreUsuario = "Pedro";
+
+
+            objRegistro = new RegistroAccion(nombreUsuario, nombreRol, descripcion, fecha);
+
+            RegistroAccionRepository objRegistroRep = new RegistroAccionRepository();
+
+            objRegistroRep.InsertAccion(objRegistro);
+        }
 
     }
 }

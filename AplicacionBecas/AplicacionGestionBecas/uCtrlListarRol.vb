@@ -9,6 +9,9 @@ Public Class uCtrlListarRol
     '''<author>Rodny Castro Mathews </author> 
     Sub ListarRoles()
 
+        Try
+
+        
         Dim listaRoles As New List(Of Rol)
         listaRoles = objGestorRol.consultarRoles()
 
@@ -18,7 +21,11 @@ Public Class uCtrlListarRol
             DGVRol.Rows(i).Cells(0).Value = listaRoles.Item(i).Id()
             DGVRol.Rows(i).Cells(1).Value = listaRoles.Item(i).Nombre()
             DGVRol.Columns("dtaId").Visible = False
-        Next
+            Next
+
+        Catch
+            MsgBox("Debe agregar un rol")
+        End Try
     End Sub
     '''<summary>Este metodo hace que apenas se abra el usuario de control le liste los roles </summary>
     '''<author>Rodny Castro Mathews </author> 

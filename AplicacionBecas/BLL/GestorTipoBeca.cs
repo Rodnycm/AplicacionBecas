@@ -8,8 +8,12 @@ using DAL.Repositories;
 
 namespace BLL
 {
-    public class GestorTipoBeca
+    public class GestorTipoBeca:IGestor
     {
+        //ESTA VARIABLE ES LA ACTIVIDAD QUE SE REGISTRA PARA LA BITACORA DE ACCIONES, NO BORRAR
+        public string actividad;
+
+    
         ///<sumary>
         ///El metodo agregarTipoBeca recibe los parámetros necesarios para poder crear la instancia tipo beca
         ///Este envía los parámetros para poder crear un tipo de beca y recibe una instancia
@@ -30,6 +34,9 @@ namespace BLL
                 if (objTipoBeca.IsValid)
                 {
                     TipoBecaRepository.Instance.Insert(objTipoBeca);
+                    //Setea la actividad, llama al metodo registrar accion
+                     actividad = "Se ha registrado un Tipo De Beca";
+                    registrarAccion(actividad);
                 }
                 else
                 {
@@ -65,6 +72,25 @@ namespace BLL
         {
 
             TipoBecaRepository.Instance.Save();
+        }
+
+        public void registrarAccion(String pactividad) {
+
+            RegistroAccion objRegistro;
+            DateTime fecha = DateTime.Today;
+            string nombreUsuario;
+            string nombreRol = "Decano";
+            string descripcion = pactividad;
+            //nombreUsuario = Globals.userName;
+            nombreUsuario = "Pedro";
+
+
+            objRegistro = new RegistroAccion(nombreUsuario, nombreRol, descripcion, fecha);
+
+            RegistroAccionRepository objRegistroRep = new RegistroAccionRepository();
+
+            objRegistroRep.InsertAccion(objRegistro);
+
         }
     }
 }
