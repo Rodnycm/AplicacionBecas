@@ -79,6 +79,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_Proyecto2DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DB_Proyecto2DataSetConsultarRegistroAcciones.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_Proyecto2DataSetConsultarRegistroAcciones.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -138,10 +143,6 @@
     <Compile Include="uCtrlConsultarBeneficio.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uCtrlConsultarBitacoraAcciones.Designer.vb">
-      <DependentUpon>uCtrlConsultarBitacoraAcciones.vb</DependentUpon>
-    </Compile>
-    <Compile Include="uCtrlConsultarBitacoraAcciones.vb" />
     <Compile Include="UCtrlConsultarUsuario.Designer.vb">
       <DependentUpon>UCtrlConsultarUsuario.vb</DependentUpon>
     </Compile>
@@ -280,6 +281,12 @@
     <Compile Include="uCtrlRegistrarBeneficio.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="uCtrlReporteRegistroAcciones.Designer.vb">
+      <DependentUpon>uCtrlReporteRegistroAcciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uCtrlReporteRegistroAcciones.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmPrincipal.resx">
@@ -292,6 +299,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="uCntrlBuscarBeneficio.resx">
       <DependentUpon>uCntrlBuscarBeneficio.vb</DependentUpon>
     </EmbeddedResource>
@@ -309,9 +317,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uCtrlConsultarBeneficio.resx">
       <DependentUpon>uCtrlConsultarBeneficio.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uCtrlConsultarBitacoraAcciones.resx">
-      <DependentUpon>uCtrlConsultarBitacoraAcciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCtrlConsultarUsuario.resx">
       <DependentUpon>UCtrlConsultarUsuario.vb</DependentUpon>
@@ -382,6 +387,9 @@
     <EmbeddedResource Include="uCtrlRegistrarBeneficio.resx">
       <DependentUpon>uCtrlRegistrarBeneficio.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="uCtrlReporteRegistroAcciones.resx">
+      <DependentUpon>uCtrlReporteRegistroAcciones.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="DB_Proyecto2DataSet.xsc">
@@ -394,6 +402,17 @@
     </None>
     <None Include="DB_Proyecto2DataSet.xss">
       <DependentUpon>DB_Proyecto2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_Proyecto2DataSetConsultarRegistroAcciones.xsc">
+      <DependentUpon>DB_Proyecto2DataSetConsultarRegistroAcciones.xsd</DependentUpon>
+    </None>
+    <None Include="DB_Proyecto2DataSetConsultarRegistroAcciones.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_Proyecto2DataSetConsultarRegistroAcciones.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_Proyecto2DataSetConsultarRegistroAcciones.xss">
+      <DependentUpon>DB_Proyecto2DataSetConsultarRegistroAcciones.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
