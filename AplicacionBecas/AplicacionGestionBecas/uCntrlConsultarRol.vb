@@ -47,4 +47,8 @@ Class uCntrlConsultarRol
     Private Sub uCntrlConsultarRol_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         listarPermisos()
     End Sub
+
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Me.Dispose()
+    End Sub
 End Class
