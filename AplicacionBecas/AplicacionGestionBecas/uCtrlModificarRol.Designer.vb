@@ -22,11 +22,13 @@ Partial Class uCtrlModificarRol
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uCtrlModificarRol))
         Me.CLBPermisos = New System.Windows.Forms.CheckedListBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.lblNombre = New System.Windows.Forms.Label()
+        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'CLBPermisos
@@ -49,6 +51,7 @@ Partial Class uCtrlModificarRol
         '
         Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.Color.White
         Me.btnCancelar.Location = New System.Drawing.Point(396, 232)
@@ -62,6 +65,7 @@ Partial Class uCtrlModificarRol
         '
         Me.btnAceptar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnAceptar.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAceptar.ForeColor = System.Drawing.Color.White
         Me.btnAceptar.Location = New System.Drawing.Point(535, 232)
@@ -83,17 +87,30 @@ Partial Class uCtrlModificarRol
         Me.lblNombre.TabIndex = 15
         Me.lblNombre.Text = "Nombre"
         '
+        'btnCerrar
+        '
+        Me.btnCerrar.BackgroundImage = CType(resources.GetObject("btnCerrar.BackgroundImage"), System.Drawing.Image)
+        Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Location = New System.Drawing.Point(661, 3)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(21, 20)
+        Me.btnCerrar.TabIndex = 20
+        Me.btnCerrar.UseVisualStyleBackColor = True
+        '
         'uCtrlModificarRol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.CLBPermisos)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.lblNombre)
         Me.Name = "uCtrlModificarRol"
-        Me.Size = New System.Drawing.Size(685, 325)
+        Me.Size = New System.Drawing.Size(685, 320)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -103,5 +120,6 @@ Partial Class uCtrlModificarRol
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
     Friend WithEvents lblNombre As System.Windows.Forms.Label
+    Friend WithEvents btnCerrar As System.Windows.Forms.Button
 
 End Class

@@ -5,12 +5,13 @@ using System.Text;
 using EntitiesLayer;
 using DAL;
 using System.Collections;
-
+using DAL.Repositories;
 
 namespace BLL
 {
-    public class GestorRol
+    public class GestorRol:IGestor
     {
+        public string actividad;
 
         /// <summary>
         /// Este metodo crea un nuevo rol
@@ -25,6 +26,8 @@ namespace BLL
                 //if (objRol.IsValid)
                 //{
                 RolRepository.Instance.Insert(objRol);
+                actividad = "Se ha Creado un Rol";
+                registrarAccion(actividad);
                 //    }
                 //    else
                 //    {
@@ -46,23 +49,46 @@ namespace BLL
         /// Modifica el rol
         /// </summary>
         /// <param name="pnombre">nombre del rol a modificar</param>
-        public void modificarRol(string pnombre)
+        public void modificarRol(string pnombre, int pidRol)
         {
 
-            Rol objRol = ContenedorMantenimiento.Instance.crearObjetoRol(pnombre);
+            Rol objRol = ContenedorMantenimiento.Instance.crearObjetoRol(pidRol,pnombre);
             RolRepository.Instance.Update(objRol);
+            actividad = "Se ha modificado un Rol";
+            registrarAccion(actividad);
 
+        }
+
+        public void asignarPermisoAUnRol(int pidPermiso, int pidRol)
+        {
+            PermisoRepository.Instance.InsertPermisoAUnRol(pidPermiso, pidRol);
+
+        }
+
+        public IEnumerable<int> ConsultarIdPermisoROl(int pidPermiso, int pidRol)
+        {
+
+
+            return PermisoRepository.Instance.GetIdRolesPermisos(pidPermiso, pidRol);
+
+        }
+
+        public void eliminarPermisoAUnRol(int pIdPermisoROl)
+        {
+            PermisoRepository.Instance.EliminarPermisoAUnRol(pIdPermisoROl);
         }
         /// <summary>
         /// Elimina un rol
         /// </summary>
         /// <param name="pnombre">nombre del rol a modificar</param>
-        public void eliminarRol(String pnombre)
+        public void eliminarRol(String pnombre, int pidRol)
         {
             /////////////////////////////////////
-            Rol objRol = ContenedorMantenimiento.Instance.crearObjetoRol(pnombre);
+            Rol objRol = ContenedorMantenimiento.Instance.crearObjetoRol(pidRol,pnombre);
             //Rol objRol = new Rol { Id = idRol };
             RolRepository.Instance.Delete(objRol);
+            actividad = "Se ha Eliminado un Rol";
+            registrarAccion(actividad);
         }
 
         /// <summary>
@@ -81,6 +107,11 @@ namespace BLL
         public IEnumerable<Permiso> consultarPermisos()
         {
             return PermisoRepository.Instance.GetAll();
+        }
+
+        public IEnumerable<Permiso> consultarPermisosPorRol(int pidRol)
+        {
+            return PermisoRepository.Instance.GetPermisosPorRol(pidRol);
         }
 
         /// <summary>
@@ -114,7 +145,23 @@ namespace BLL
             //    }
         }
 
+        public void registrarAccion(string pactividad) {
 
+            RegistroAccion objRegistro;
+            DateTime fecha = DateTime.Today;
+            string nombreUsuario;
+            string nombreRol = "Decano";
+            string descripcion = pactividad;
+            //nombreUsuario = Globals.userName;
+            nombreUsuario = "Pedro";
+
+
+            objRegistro = new RegistroAccion(nombreUsuario, nombreRol, descripcion, fecha);
+
+            RegistroAccionRepository objRegistroRep = new RegistroAccionRepository();
+
+            objRegistroRep.InsertAccion(objRegistro);
+        }
 
     }
 }

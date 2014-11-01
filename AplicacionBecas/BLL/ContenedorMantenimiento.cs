@@ -96,6 +96,14 @@ namespace BLL
             return beneficio;
         }
 
+        public Rol crearObjetoRol(int pid, String pnombre)
+        {
+
+            Rol rol = new Rol(pnombre);
+            rol.Id = pid;
+            return rol;
+        }
+
         /// <summary>
         /// Crea un objeto rol
         /// </summary>

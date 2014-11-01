@@ -141,9 +141,7 @@
     <Compile Include="uCtrlConsultarBitacoraAcciones.Designer.vb">
       <DependentUpon>uCtrlConsultarBitacoraAcciones.vb</DependentUpon>
     </Compile>
-    <Compile Include="uCtrlConsultarBitacoraAcciones.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="uCtrlConsultarBitacoraAcciones.vb" />
     <Compile Include="UCtrlConsultarUsuario.Designer.vb">
       <DependentUpon>UCtrlConsultarUsuario.vb</DependentUpon>
     </Compile>

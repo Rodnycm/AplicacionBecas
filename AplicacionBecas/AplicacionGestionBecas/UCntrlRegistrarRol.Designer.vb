@@ -27,6 +27,8 @@ Partial Class UCntrlRegistrarRol
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.CLBPermisos = New System.Windows.Forms.CheckedListBox()
         Me.SuspendLayout()
         '
         'lblNombre
@@ -76,17 +78,39 @@ Partial Class UCntrlRegistrarRol
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
+        'btnCerrar
+        '
+        Me.btnCerrar.BackgroundImage = CType(resources.GetObject("btnCerrar.BackgroundImage"), System.Drawing.Image)
+        Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Location = New System.Drawing.Point(661, 3)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(21, 20)
+        Me.btnCerrar.TabIndex = 21
+        Me.btnCerrar.UseVisualStyleBackColor = True
+        '
+        'CLBPermisos
+        '
+        Me.CLBPermisos.BackColor = System.Drawing.Color.White
+        Me.CLBPermisos.FormattingEnabled = True
+        Me.CLBPermisos.Location = New System.Drawing.Point(345, 58)
+        Me.CLBPermisos.Name = "CLBPermisos"
+        Me.CLBPermisos.Size = New System.Drawing.Size(325, 154)
+        Me.CLBPermisos.TabIndex = 22
+        '
         'UCntrlRegistrarRol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.Controls.Add(Me.CLBPermisos)
+        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.lblNombre)
         Me.Name = "UCntrlRegistrarRol"
-        Me.Size = New System.Drawing.Size(685, 325)
+        Me.Size = New System.Drawing.Size(685, 319)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -95,5 +119,7 @@ Partial Class UCntrlRegistrarRol
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
+    Friend WithEvents btnCerrar As System.Windows.Forms.Button
+    Friend WithEvents CLBPermisos As System.Windows.Forms.CheckedListBox
 
 End Class

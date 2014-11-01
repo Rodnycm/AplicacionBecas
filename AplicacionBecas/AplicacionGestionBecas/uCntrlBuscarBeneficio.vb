@@ -5,11 +5,9 @@ Imports System.Drawing
 Public Class uCntrlBuscarBeneficio
 
     Private Sub PantallaConsultarBeneficio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            listarBeneficios()
-        Catch
-            MsgBox("Debe crear un beneficio")
-        End Try
+
+        listarBeneficios()
+
 
 
     End Sub
@@ -21,6 +19,7 @@ Public Class uCntrlBuscarBeneficio
     ''' <author>Mathias Muller</author>
     Public Sub listarBeneficios()
 
+        Try
 
             Dim listaBeneficios As New List(Of Beneficio)
             listaBeneficios = objGestorBeneficio.buscarBeneficios()
@@ -33,6 +32,11 @@ Public Class uCntrlBuscarBeneficio
                 dtaBuscarBeneficio.Columns("dtaId").Visible = False
 
             Next
+        Catch
+
+            MsgBox("Debe ingresar un beneficio")
+
+        End Try
 
     End Sub
     Private Sub btnMantenimiento_Click(sender As Object, e As EventArgs) Handles btnMantenimiento.Click

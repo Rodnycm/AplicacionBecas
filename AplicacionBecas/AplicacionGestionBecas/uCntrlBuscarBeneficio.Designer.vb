@@ -44,11 +44,11 @@ Partial Class uCntrlBuscarBeneficio
         '
         Me.dtaBuscarBeneficio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dtaBuscarBeneficio.BackgroundColor = System.Drawing.Color.White
-        Me.dtaBuscarBeneficio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.dtaBuscarBeneficio.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dtaBuscarBeneficio.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI Light", 9.0!)
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -57,11 +57,12 @@ Partial Class uCntrlBuscarBeneficio
         Me.dtaBuscarBeneficio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtaBuscarBeneficio.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dtaId, Me.dtaNombre, Me.dtaPorcentaje, Me.dtaAplicabilidad, Me.dtaOpciones})
         Me.dtaBuscarBeneficio.GridColor = System.Drawing.Color.White
-        Me.dtaBuscarBeneficio.Location = New System.Drawing.Point(156, 226)
+        Me.dtaBuscarBeneficio.Location = New System.Drawing.Point(40, 235)
+        Me.dtaBuscarBeneficio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dtaBuscarBeneficio.Name = "dtaBuscarBeneficio"
         Me.dtaBuscarBeneficio.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dtaBuscarBeneficio.RowHeadersVisible = False
-        Me.dtaBuscarBeneficio.Size = New System.Drawing.Size(906, 271)
+        Me.dtaBuscarBeneficio.Size = New System.Drawing.Size(947, 271)
         Me.dtaBuscarBeneficio.TabIndex = 23
         '
         'dtaId
@@ -97,10 +98,12 @@ Partial Class uCntrlBuscarBeneficio
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(156, 96)
+        Me.txtBuscar.Location = New System.Drawing.Point(31, 158)
+        Me.txtBuscar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(678, 31)
+        Me.txtBuscar.Size = New System.Drawing.Size(746, 23)
         Me.txtBuscar.TabIndex = 25
+        Me.txtBuscar.Text = "Buscar:"
         '
         'btnMantenimiento
         '
@@ -108,7 +111,8 @@ Partial Class uCntrlBuscarBeneficio
         Me.btnMantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMantenimiento.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMantenimiento.ForeColor = System.Drawing.Color.White
-        Me.btnMantenimiento.Location = New System.Drawing.Point(840, 48)
+        Me.btnMantenimiento.Location = New System.Drawing.Point(783, 106)
+        Me.btnMantenimiento.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnMantenimiento.Name = "btnMantenimiento"
         Me.btnMantenimiento.Size = New System.Drawing.Size(222, 79)
         Me.btnMantenimiento.TabIndex = 15
@@ -120,24 +124,25 @@ Partial Class uCntrlBuscarBeneficio
         '
         Me.pctbxBeneficios.BackgroundImage = Global.AplicacionGestionBecas.My.Resources.Resources.tablaFinalGrandeAzul
         Me.pctbxBeneficios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pctbxBeneficios.Location = New System.Drawing.Point(156, 197)
+        Me.pctbxBeneficios.Location = New System.Drawing.Point(30, 202)
+        Me.pctbxBeneficios.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.pctbxBeneficios.Name = "pctbxBeneficios"
-        Me.pctbxBeneficios.Size = New System.Drawing.Size(906, 300)
+        Me.pctbxBeneficios.Size = New System.Drawing.Size(975, 321)
         Me.pctbxBeneficios.TabIndex = 2
         Me.pctbxBeneficios.TabStop = False
         '
         'uCntrlBuscarBeneficio
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 23.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.txtBuscar)
         Me.Controls.Add(Me.dtaBuscarBeneficio)
         Me.Controls.Add(Me.btnMantenimiento)
         Me.Controls.Add(Me.pctbxBeneficios)
-        Me.Font = New System.Drawing.Font("Segoe UI Light", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.Font = New System.Drawing.Font("Segoe UI Light", 9.0!)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "uCntrlBuscarBeneficio"
-        Me.Size = New System.Drawing.Size(1321, 660)
+        Me.Size = New System.Drawing.Size(1019, 554)
         CType(Me.dtaBuscarBeneficio, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pctbxBeneficios, System.ComponentModel.ISupportInitialize).EndInit()
