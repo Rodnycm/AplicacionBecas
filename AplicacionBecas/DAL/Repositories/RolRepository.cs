@@ -44,7 +44,7 @@ namespace DAL
         /// <summary>
         /// agrega a una lista los roles a insertar
         /// </summary>
-        /// <param name="entity">el rol aeliminar</param>
+        /// <param name="entity">el rol a eliminar</param>
         public void Insert(Rol entity)
         {
             _insertItems.Add(entity);

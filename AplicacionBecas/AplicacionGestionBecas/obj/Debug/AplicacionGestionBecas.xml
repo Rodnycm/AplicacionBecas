@@ -230,14 +230,8 @@ AplicacionGestionBecas
 </member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ComboBox_SelectionChangeCommitted(System.Object,System.EventArgs)">
 	<summary> Este metodo indica si hay que eliminar,ver,modificar dependiendo de lo que escoja </summary>
 	<author>Rodny Castro Mathews </author>
-</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.ListarRol">
-	<summary>este metodo lista el rol a buscar </summary>
-	<author>Rodny Castro Mathews </author>
 </member><member name="M:AplicacionGestionBecas.uCtrlListarRol.btnCrearRoles_Click(System.Object,System.EventArgs)">
 	<summary>Este metodo llama al usuario de control de crear rol </summary>
-	<author>Rodny Castro Mathews </author>
-</member><member name="M:AplicacionGestionBecas.uCtrlListarRol.btnBuscarRol_Click(System.Object,System.EventArgs)">
-	<summary>Este boton Busca el rol digitado </summary>
 	<author>Rodny Castro Mathews </author>
 </member><member name="M:AplicacionGestionBecas.uCtrlConsultarBeneficio.uCtrlConsultarBeneficio_Load(System.Object,System.EventArgs)">
 	<summary>

@@ -31,16 +31,22 @@ Public Class uCtrlListarRol
     ''' '''<param name="numfila"> numero de fila en el que se encuentra el rol a modificar  </param>  
     Private Sub modificarRol(numfila As Integer)
 
-        Dim value1 As Object = DGVRol.Rows(numfila).Cells(1).Value
-        Dim idROl As Integer = DGVRol.Rows(numfila).Cells(0).Value
-        Dim uCtrlModRol As New uCtrlModificarRol()
-        uCtrlModRol.recieveData(value1, idROl)
-        uCtrlModRol.txtNombre.Text = CType(value1, String)
-        uCtrlModRol.getFrmBuscar(Me)
-        frmPrincipal.Controls.Add(uCtrlModRol)
-        uCtrlModRol.Show()
-        uCtrlModRol.BringToFront()
-        uCtrlModRol.Location = New Point(250, 170)
+        Try
+            Dim value1 As Object = DGVRol.Rows(numfila).Cells(1).Value
+            Dim idROl As Integer = DGVRol.Rows(numfila).Cells(0).Value
+            Dim uCtrlModRol As New uCtrlModificarRol()
+            uCtrlModRol.recieveData(value1, idROl)
+            uCtrlModRol.txtNombre.Text = CType(value1, String)
+            uCtrlModRol.getFrmBuscar(Me)
+            frmPrincipal.Controls.Add(uCtrlModRol)
+            uCtrlModRol.Show()
+            uCtrlModRol.BringToFront()
+            uCtrlModRol.Location = New Point(250, 170)
+
+        Catch ex As Exception
+
+        End Try
+        
 
     End Sub
 
@@ -48,15 +54,20 @@ Public Class uCtrlListarRol
     '''<author>Rodny Castro Mathews </author> 
     '''<param name="numfila"> Numero de fila del rol a eliminar  </param> 
     Private Sub eliminarRol(numfila As Integer)
+        Try
+            Dim value1 As Object = DGVRol.Rows(numfila).Cells(1).Value
+            Dim idROl As Integer = DGVRol.Rows(numfila).Cells(0).Value
+            Dim uCtrlEliRol As New uCtrlEliminarRol()
+            uCtrlEliRol.recieveData(value1, idROl)
+            frmPrincipal.Controls.Add(uCtrlEliRol)
+            uCtrlEliRol.Show()
+            uCtrlEliRol.Location = New Point(256, 226)
+            uCtrlEliRol.BringToFront()
 
-        Dim value1 As Object = DGVRol.Rows(numfila).Cells(1).Value
-        Dim idROl As Integer = DGVRol.Rows(numfila).Cells(0).Value
-        Dim uCtrlEliRol As New uCtrlEliminarRol()
-        uCtrlEliRol.recieveData(value1, idROl)
-        frmPrincipal.Controls.Add(uCtrlEliRol)
-        uCtrlEliRol.Show()
-        uCtrlEliRol.Location = New Point(250, 170)
-        uCtrlEliRol.BringToFront()
+        Catch ex As Exception
+
+        End Try
+        
 
     End Sub
 
@@ -64,17 +75,22 @@ Public Class uCtrlListarRol
     '''<author>Rodny Castro Mathews </author> 
     '''<param name="numfila"> Numero de fila de rol a consultar  </param> 
     Private Sub consultarRol(numfila As Integer)
+        Try
 
-        Dim value1 As Object = DGVRol.Rows(numfila).Cells(1).Value
-        Dim idROl As Integer = DGVRol.Rows(numfila).Cells(0).Value
-        Dim uCtrlConsulRol As New uCntrlConsultarRol()
-        uCtrlConsulRol.enseñarDatos(value1)
-        uCtrlConsulRol.recieveData(value1, idROl)
-        uCtrlConsulRol.txtNombre.Text = value1
-        frmPrincipal.Controls.Add(uCtrlConsulRol)
-        uCtrlConsulRol.Show()
-        uCtrlConsulRol.BringToFront()
-        uCtrlConsulRol.Location = New Point(250, 170)
+            Dim value1 As Object = DGVRol.Rows(numfila).Cells(1).Value
+            Dim idROl As Integer = DGVRol.Rows(numfila).Cells(0).Value
+            Dim uCtrlConsulRol As New uCntrlConsultarRol()
+            uCtrlConsulRol.enseñarDatos(value1)
+            uCtrlConsulRol.recieveData(value1, idROl)
+            uCtrlConsulRol.txtNombre.Text = value1
+            frmPrincipal.Controls.Add(uCtrlConsulRol)
+            uCtrlConsulRol.Show()
+            uCtrlConsulRol.BringToFront()
+            uCtrlConsulRol.Location = New Point(250, 170)
+
+        Catch ex As Exception
+        End Try
+        
     End Sub
 
     '''<summary> </summary>
@@ -116,17 +132,6 @@ Public Class uCtrlListarRol
 
     End Sub
 
-    '''<summary>este metodo lista el rol a buscar </summary>
-    '''<author>Rodny Castro Mathews </author> 
-    Sub ListarRol()
-
-        Dim Rol As New Rol
-        Rol = objGestorRol.consultarRolPorNombre(txtBuscarRol.Text)
-        DGVRol.Rows.Clear()
-        DGVRol.Rows.Add(1)
-        DGVRol.Rows(0).Cells(1).Value = Rol.Nombre()
-    End Sub
-
     '''<summary>Este metodo llama al usuario de control de crear rol </summary>
     '''<author>Rodny Castro Mathews </author> 
     Private Sub btnCrearRoles_Click(sender As Object, e As EventArgs) Handles btnCrearRoles.Click
@@ -137,18 +142,20 @@ Public Class uCtrlListarRol
         uCtrlRol.Location = New Point(250, 170)
     End Sub
 
-    '''<summary>Este boton Busca el rol digitado </summary>
-    '''<author>Rodny Castro Mathews </author> 
-    Private Sub btnBuscarRol_Click(sender As Object, e As EventArgs) Handles btnBuscarRol.Click
-        If txtBuscarRol.Text = Nothing Then
+
+    Private Sub txtBuscarRol_TextChanged(sender As Object, e As EventArgs) Handles txtBuscarRol.TextChanged
+        Dim parametro As String = txtBuscarRol.Text
+
+        Try
+            Dim Rol As New Rol
+            Rol = objGestorRol.consultarRolPorNombre(txtBuscarRol.Text)
+            DGVRol.Rows.Clear()
+            DGVRol.Rows.Add(1)
+            DGVRol.Rows(0).Cells(1).Value = Rol.Nombre()
+
+        Catch ex As Exception
             DGVRol.Rows.Clear()
             ListarRoles()
-        Else
-            DGVRol.Rows.Clear()
-            ListarRol()
-
-        End If
-
+        End Try
     End Sub
-
 End Class
