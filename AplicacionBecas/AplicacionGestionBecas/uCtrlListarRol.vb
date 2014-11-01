@@ -101,7 +101,7 @@ Public Class uCtrlListarRol
             Dim combo As ComboBox = CType(e.Control, ComboBox)
             If (combo IsNot Nothing) Then
                 ' Remove an existing event-handler, if present, to avoid 
-                ' adding multiple handlers when the editing control is reused.
+                ' adding multiple handlers when the  editing control is reused.
                 RemoveHandler combo.SelectionChangeCommitted, New EventHandler(AddressOf ComboBox_SelectionChangeCommitted)
 
                 ' Add the event handler. 
