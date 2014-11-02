@@ -84,6 +84,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_Proyecto2DataSetConsultarRegistroAcciones.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FrmIniciarSesion.Designer.vb">
+      <DependentUpon>FrmIniciarSesion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIniciarSesion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -119,10 +125,22 @@
     <Compile Include="uCntrlConsultarRol.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UcntrlIniciar.Designer.vb">
+      <DependentUpon>UcntrlIniciar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UcntrlIniciar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UCntrlRegistrarRol.Designer.vb">
       <DependentUpon>UCntrlRegistrarRol.vb</DependentUpon>
     </Compile>
     <Compile Include="UCntrlRegistrarRol.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UctrlAlerta.Designer.vb">
+      <DependentUpon>UctrlAlerta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UctrlAlerta.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="uCtrlBitacoraAcciones.Designer.vb">
@@ -275,6 +293,12 @@
     <Compile Include="UctrlModificarUsuario.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UctrlRecuperarContraseña.Designer.vb">
+      <DependentUpon>UctrlRecuperarContraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UctrlRecuperarContraseña.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="uCtrlRegistrarBeneficio.Designer.vb">
       <DependentUpon>uCtrlRegistrarBeneficio.vb</DependentUpon>
     </Compile>
@@ -289,6 +313,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmIniciarSesion.resx">
+      <DependentUpon>FrmIniciarSesion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
@@ -306,8 +333,14 @@
     <EmbeddedResource Include="uCntrlConsultarRol.resx">
       <DependentUpon>uCntrlConsultarRol.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UcntrlIniciar.resx">
+      <DependentUpon>UcntrlIniciar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCntrlRegistrarRol.resx">
       <DependentUpon>UCntrlRegistrarRol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UctrlAlerta.resx">
+      <DependentUpon>UctrlAlerta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uCtrlBitacoraAcciones.resx">
       <DependentUpon>uCtrlBitacoraAcciones.vb</DependentUpon>
@@ -383,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UctrlModificarUsuario.resx">
       <DependentUpon>UctrlModificarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UctrlRecuperarContraseña.resx">
+      <DependentUpon>UctrlRecuperarContraseña.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uCtrlRegistrarBeneficio.resx">
       <DependentUpon>uCtrlRegistrarBeneficio.vb</DependentUpon>

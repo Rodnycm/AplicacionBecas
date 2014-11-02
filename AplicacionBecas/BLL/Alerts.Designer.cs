@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Alerts));
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAlerta = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -49,17 +49,17 @@
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // label1
+            // lblAlerta
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 17);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "label1";
+            this.lblAlerta.AutoSize = true;
+            this.lblAlerta.BackColor = System.Drawing.Color.Transparent;
+            this.lblAlerta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAlerta.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlerta.Location = new System.Drawing.Point(12, 63);
+            this.lblAlerta.Name = "lblAlerta";
+            this.lblAlerta.Size = new System.Drawing.Size(39, 17);
+            this.lblAlerta.TabIndex = 12;
+            this.lblAlerta.Text = "label1";
             // 
             // label2
             // 
@@ -81,7 +81,7 @@
             this.ClientSize = new System.Drawing.Size(330, 166);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAlerta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(600, 300);
             this.Name = "Alerts";
@@ -94,7 +94,7 @@
         #endregion
 
         internal System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAlerta;
         internal System.Windows.Forms.Label label2;
     }
 }

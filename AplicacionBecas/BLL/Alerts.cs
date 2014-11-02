@@ -22,7 +22,7 @@ namespace BLL
         public static DialogResult Show(String Text)
         {
             alerta = new Alerts();
-            alerta.label1.Text = Text;
+            alerta.lblAlerta.Text = Text;
             alerta.btnAceptar.Text = "Aceptar";
             alerta.ShowDialog();
             alerta.BringToFront();
