@@ -6,19 +6,15 @@ using System.Threading.Tasks;
 using EntitiesLayer;
 using DAL.Repositories;
 using System.Security.Cryptography;
-
+using DAL;
 namespace BLL
 {
+
+
     public class GestorUsuario
     {
-        //public ContenedorMantenimiento contenedor = new ContenedorMantenimiento();
+       
         public String key = "MiLLave";
-        private static int DEFAULT_MIN_PASSWORD_LENGTH = 8;
-        private static int DEFAULT_MAX_PASSWORD_LENGTH = 10;
-        private static string PASSWORD_CHARS_LCASE = "abcdefgijkmnopqrstwxyz";
-        private static string PASSWORD_CHARS_UCASE = "ABCDEFGHJKLMNPQRSTWXYZ";
-        private static string PASSWORD_CHARS_NUMERIC = "23456789";
-        //private static alertas alertas = new alertas();
 
         //<summary> Método que se encarga de crear un nuevo usuario</summary>
         //<author> Gabriela Gutiérrez Corrales </author> 
@@ -32,34 +28,38 @@ namespace BLL
         //<param name = "prol "> variable de tipo String que almacena el nombre del rol del usuario  </param>
         //<param name = "pgenero"> variable de tipo int que almacena el género del usuario  </param>
         //<param name = "pcorreoElectronico"> variable de tipo String que almacena el correo electrónico del usuario  </param>
+        //<param name = "pcontraseña"> variable de tipo String que almacena la contraseña del usuario  </param>
+        //<param name = "pconfirmación "> variable de tipo String que almacena la confirmación de la contraseña del usuario  </param>
         //<returns> No retorna valor.</returns> 
 
-        public void crearUsuario(string ppNombre, String psNombre, String ppApellido, String psApellido, String pidentificacion, String ptelefono, DateTime pfechaNacimiento, String prol, int pgenero, String pcorreoElectronico)
+        public void crearUsuario(string ppNombre, String psNombre, String ppApellido, String psApellido, String pidentificacion, String ptelefono, DateTime pfechaNacimiento, String prol, int pgenero, String pcorreoElectronico, String pcontraseña, String pconfirmacion)
         {
             try
             {
                 DateTime fecha = pfechaNacimiento.Date;
                 Rol objRol = RolRepository.Instance.GetByNombre(prol);
-                String contraseña = Generate(8, 10);
-                String contraseñaEncriptada = encriptar(contraseña);
-                Usuario objetoUsuario = ContenedorMantenimiento.Instance.crearUsuario(ppNombre, psNombre, ppApellido, psApellido, pidentificacion, ptelefono, fecha, objRol, pgenero, pcorreoElectronico, contraseñaEncriptada);
-                if (objetoUsuario.IsValid)
+                Boolean sonIguales = validarContraseñasIdenticas(pcontraseña, pconfirmacion);
+                if (sonIguales == true)
                 {
-                    UsuarioRepository.Instance.Insert(objetoUsuario);
+                    String contraseñaEncriptada = encriptar(pcontraseña);
+                    Usuario objetoUsuario = ContenedorMantenimiento.Instance.crearUsuario(ppNombre, psNombre, ppApellido, psApellido, pidentificacion, ptelefono, fecha, objRol, pgenero, pcorreoElectronico, contraseñaEncriptada);
+                    if (objetoUsuario.IsValid)
+                    {
+                        UsuarioRepository.Instance.Insert(objetoUsuario);
+                    }
+                    else
+                    {
+                        StringBuilder sb = new StringBuilder();
+                        foreach (RuleViolation rv in objetoUsuario.GetRuleViolations())
+                        {
+                            sb.Append(rv.ErrorMessage);
+                        }
+                        throw new ApplicationException(sb.ToString());
+                    }
                 }
                 else
                 {
-                    StringBuilder sb = new StringBuilder();
-                    foreach (RuleViolation rv in objetoUsuario.GetRuleViolations())
-                    {
-                        sb.Append(rv.ErrorMessage);
-                    }
-                    //new ApplicationException(sb.ToString());
-                    //alertas.LblAlerta.Text = sb.ToString();
-                    //alertas.BringToFront();
-                    //alertas.Show();
-
-
+                    throw new ApplicationException("Las contraseñas ingresadas no son idénticas");
                 }
             }
             catch (Exception)
@@ -67,6 +67,7 @@ namespace BLL
                 throw;
             }
         }
+
         //<summary> Método que se encarga de validar si las contraseñas ingresadas por el usuario son idénticas</summary>
         //<author> Gabriela Gutiérrez Corrales </author> 
         //<param name = "pcontraseña ">  variable de tipo String que almacena la contraseña ingresada por el usuario  </param>
@@ -168,179 +169,6 @@ namespace BLL
         }
 
 
-        //<summary> Método que se encarga de generar la contraseña de un usuario</summary>
-        //<author> Gabriela Gutiérrez Corrales </author> 
-        //<param name= "minLength"> Parametro que almacena la logitud minima de la contraseña  </param>
-        //<param name= "maxLength"> Parametro que almacena la longitud maxima de la contraseña </param>
-        //<returns> Retorna una contraseña autogenerada </returns> 
-
-        public static string Generate()
-        {
-            return Generate(DEFAULT_MIN_PASSWORD_LENGTH,
-                            DEFAULT_MAX_PASSWORD_LENGTH);
-        }
-
-        public static string Generate(int length)
-        {
-            return Generate(length, length);
-        }
-
-        public static string Generate(int minLength,
-                                  int maxLength)
-        {
-            // Make sure that input parameters are valid.
-            if (minLength <= 0 || maxLength <= 0 || minLength > maxLength)
-            {
-
-
-                return null;
-            }
-
-            char[][] charGroups = new char[][] 
-        {
-            PASSWORD_CHARS_LCASE.ToCharArray(),
-            PASSWORD_CHARS_UCASE.ToCharArray(),
-            PASSWORD_CHARS_NUMERIC.ToCharArray(),
-           
-        };
-
-            int[] charsLeftInGroup = new int[charGroups.Length];
-
-            // Initially, all characters in each group are not used.
-            for (int i = 0; i < charsLeftInGroup.Length; i++)
-                charsLeftInGroup[i] = charGroups[i].Length;
-
-            // Use this array to track (iterate through) unused character groups.
-            int[] leftGroupsOrder = new int[charGroups.Length];
-
-            // Initially, all character groups are not used.
-            for (int i = 0; i < leftGroupsOrder.Length; i++)
-                leftGroupsOrder[i] = i;
-
-            // Because we cannot use the default randomizer, which is based on the
-            // current time (it will produce the same "random" number within a
-            // second), we will use a random number generator to seed the
-            // randomizer.
-
-            // Use a 4-byte array to fill it with random bytes and convert it then
-            // to an integer value.
-            byte[] randomBytes = new byte[4];
-
-            // Generate 4 random bytes.
-            RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
-            rng.GetBytes(randomBytes);
-
-            // Convert 4 bytes into a 32-bit integer value.
-            int seed = (randomBytes[0] & 0x7f) << 24 |
-                        randomBytes[1] << 16 |
-                        randomBytes[2] << 8 |
-                        randomBytes[3];
-
-            // Now, this is real randomization.
-            Random random = new Random(seed);
-
-            // This array will hold password characters.
-            char[] password = null;
-
-            // Allocate appropriate memory for the password.
-            if (minLength < maxLength)
-                password = new char[random.Next(minLength, maxLength + 1)];
-            else
-                password = new char[minLength];
-
-            // Index of the next character to be added to password.
-            int nextCharIdx;
-
-            // Index of the next character group to be processed.
-            int nextGroupIdx;
-
-            // Index which will be used to track not processed character groups.
-            int nextLeftGroupsOrderIdx;
-
-            // Index of the last non-processed character in a group.
-            int lastCharIdx;
-
-            // Index of the last non-processed group.
-            int lastLeftGroupsOrderIdx = leftGroupsOrder.Length - 1;
-
-            // Generate password characters one at a time.
-            for (int i = 0; i < password.Length; i++)
-            {
-                // If only one character group remained unprocessed, process it;
-                // otherwise, pick a random character group from the unprocessed
-                // group list. To allow a special character to appear in the
-                // first position, increment the second parameter of the Next
-                // function call by one, i.e. lastLeftGroupsOrderIdx + 1.
-                if (lastLeftGroupsOrderIdx == 0)
-                    nextLeftGroupsOrderIdx = 0;
-                else
-                    nextLeftGroupsOrderIdx = random.Next(0,
-                                                         lastLeftGroupsOrderIdx);
-
-                // Get the actual index of the character group, from which we will
-                // pick the next character.
-                nextGroupIdx = leftGroupsOrder[nextLeftGroupsOrderIdx];
-
-                // Get the index of the last unprocessed characters in this group.
-                lastCharIdx = charsLeftInGroup[nextGroupIdx] - 1;
-
-                // If only one unprocessed character is left, pick it; otherwise,
-                // get a random character from the unused character list.
-                if (lastCharIdx == 0)
-                    nextCharIdx = 0;
-                else
-                    nextCharIdx = random.Next(0, lastCharIdx + 1);
-
-                // Add this character to the password.
-                password[i] = charGroups[nextGroupIdx][nextCharIdx];
-
-                // If we processed the last character in this group, start over.
-                if (lastCharIdx == 0)
-                    charsLeftInGroup[nextGroupIdx] =
-                                              charGroups[nextGroupIdx].Length;
-                // There are more unprocessed characters left.
-                else
-                {
-                    // Swap processed character with the last unprocessed character
-                    // so that we don't pick it until we process all characters in
-                    // this group.
-                    if (lastCharIdx != nextCharIdx)
-                    {
-                        char temp = charGroups[nextGroupIdx][lastCharIdx];
-                        charGroups[nextGroupIdx][lastCharIdx] =
-                                    charGroups[nextGroupIdx][nextCharIdx];
-                        charGroups[nextGroupIdx][nextCharIdx] = temp;
-                    }
-                    // Decrement the number of unprocessed characters in
-                    // this group.
-                    charsLeftInGroup[nextGroupIdx]--;
-                }
-
-                // If we processed the last group, start all over.
-                if (lastLeftGroupsOrderIdx == 0)
-                    lastLeftGroupsOrderIdx = leftGroupsOrder.Length - 1;
-                // There are more unprocessed groups left.
-                else
-                {
-                    // Swap processed group with the last unprocessed group
-                    // so that we don't pick it until we process all groups.
-                    if (lastLeftGroupsOrderIdx != nextLeftGroupsOrderIdx)
-                    {
-                        int temp = leftGroupsOrder[lastLeftGroupsOrderIdx];
-                        leftGroupsOrder[lastLeftGroupsOrderIdx] =
-                                    leftGroupsOrder[nextLeftGroupsOrderIdx];
-                        leftGroupsOrder[nextLeftGroupsOrderIdx] = temp;
-                    }
-                    // Decrement the number of unprocessed groups.
-                    lastLeftGroupsOrderIdx--;
-                }
-            }
-
-            // Convert password characters into a string and return the result.
-            return new string(password);
-        }
-
-
         //<summary> Método que se encarga de guardar los cambios de un usuario</summary>
         //<author> Gabriela Gutiérrez Corrales </author> 
         //<param> No recibe parametros  </param>
@@ -397,7 +225,7 @@ namespace BLL
         //<param name = "pconfirmación "> variable de tipo String que almacena la confirmación de la contraseña del usuario  </param>
         //<returns> No retorna valor.</returns> 
 
-        public void modificarUsuario(String ppNombre, String psNombre, String ppApellido, String psApellido, String pidentificacion, String ptelefono, DateTime pfechaNacimiento, String prol, int pgenero, String pcorreoElectronico, String pcontraseña, String pconfirmacion, int pidUsuario)
+        public void modificarUsuario(string ppNombre, String psNombre, String ppApellido, String psApellido, String pidentificacion, String ptelefono, DateTime pfechaNacimiento, String prol, int pgenero, String pcorreoElectronico, String pcontraseña, String pconfirmacion, String pparametro)
         {
             try
             {
@@ -410,7 +238,6 @@ namespace BLL
                     Usuario objetoUsuario = ContenedorMantenimiento.Instance.crearUsuario(ppNombre, psNombre, ppApellido, psApellido, pidentificacion, ptelefono, fecha, objRol, pgenero, pcorreoElectronico, contraseñaEncriptada);
                     if (objetoUsuario.IsValid)
                     {
-                        objetoUsuario.Id = pidUsuario;
                         UsuarioRepository.Instance.UpdateUsuario(objetoUsuario);
                     }
                     else
@@ -432,37 +259,6 @@ namespace BLL
             {
                 throw;
             }
-        }
-
-        //<summary> Método que se encarga de iniciar sesión en el sistema</summary>
-        //<author> Gabriela Gutiérrez Corrales </author> 
-        //<param name = "pnombreUsuario"> variable de tipo String que almacena el correo electrónico del usuario  </param>
-        //<param name= "pcontraseña" > variable de tipo String que almacena la contraseña del usuario  </param>
-        //<returns> Retorna una lista con los usuarios que cohinciden con el nombre de usuario ingresado</returns> 
-
-        public List<Usuario> iniciarSesion(String pnombreUsuario, String pcontraseña)
-        {
-            Usuario objUsuario;
-            String contraseñaEncriptada = encriptar(pcontraseña);
-            List<Usuario> listaUsuarios = new List<Usuario>();
-
-            objUsuario = UsuarioRepository.Instance.iniciarSesion(pnombreUsuario);
-            if (!(objUsuario == null))
-            {
-                if (objUsuario.contraseña.Equals(contraseñaEncriptada))
-                {
-                    listaUsuarios.Add(objUsuario);
-                }
-            }
-            return listaUsuarios;
-        }
-
-
-        public void generarContraseña()
-        {
-
-
-
         }
     }
 }
