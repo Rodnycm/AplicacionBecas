@@ -780,12 +780,25 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
 </member><member name="M:AplicacionGestionBecas.UCntrlRegistrarRol.btnAceptar_Click(System.Object,System.EventArgs)">
 	<summary>crea un nuevo Rol en el sistema </summary>
 	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.UCntrlRegistrarRol.getFrmBuscar(AplicacionGestionBecas.uCtrlListarRol)">
+	<summary>
+ Este metodo consigue la lista de roles
+ </summary>
+	<param name="plistarRoles"></param>
+	<remarks></remarks>
 </member><member name="M:AplicacionGestionBecas.UCntrlRegistrarRol.btnCancelar_Click(System.Object,System.EventArgs)">
 	<summary>Este metodo oculta el usuario de control de registrar Rol </summary>
 	<author>Rodny Castro Mathews </author>
 </member><member name="M:AplicacionGestionBecas.UCntrlRegistrarRol.MostrarMenuMant">
 	<summary>Este metodo muestr el menu de mantenimiento </summary>
 	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.UCntrlRegistrarRol.btnCerrar_Click(System.Object,System.EventArgs)">
+	<summary>
+ Este metodo cierra Esta ventana
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
 </member><member name="M:AplicacionGestionBecas.uCtrlMenuMantenimiento.btnCursos_Click(System.Object,System.EventArgs)">
 	<summary>Metodo que se ejecuta cuando el usuario da click al boton cursos, muestra 
  al usuario el menu de cursos</summary>
@@ -832,9 +845,21 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
 	<summary>Este metodo enseña los valores del Rol </summary>
 	<author>Rodny Castro Mathews </author>
 	<param name="pnombre"> Nombre del Rol a eliminar  </param>
+</member><member name="M:AplicacionGestionBecas.uCntrlConsultarRol.listarPermisos">
+	<summary>
+ Este metodo lista los permisos de este rol
+ </summary>
+	<remarks></remarks>
 </member><member name="M:AplicacionGestionBecas.uCntrlConsultarRol.uCntrlConsultarRol_Load(System.Object,System.EventArgs)">
 	<summary>Este metodo hace que apenas se abra el usuario de control se listen los permisos </summary>
 	<author>Rodny Castro Mathews </author>
+</member><member name="M:AplicacionGestionBecas.uCntrlConsultarRol.btnCerrar_Click(System.Object,System.EventArgs)">
+	<summary>
+ Este metodo cierra esta ventana
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
 </member><member name="M:AplicacionGestionBecas.uCtrlCrearCarrera.btnColor_Click(System.Object,System.EventArgs)">
 	<summary>Metodo que se ejecuta cuando el usuario da click al boton seleccionar color, este metodo 
  muestra al usuario una paleta de colores</summary>

@@ -24,17 +24,23 @@ Class uCntrlConsultarRol
 
         listarRoles = plistarRoles
     End Sub
-
+    ''' <summary>
+    ''' Este metodo lista los permisos de este rol
+    ''' </summary>
+    ''' <remarks></remarks>
     Sub listarPermisos()
+        Try
 
-        listaPermisos = objGestorRol.consultarPermisosPorRol(idRol)
+            listaPermisos = objGestorRol.consultarPermisosPorRol(idRol)
 
-        ' CLBPermisos.BeginUpdate()
-        For i As Integer = 0 To listaPermisos.Count - 1
-            CLBPermisos.Items.Add(listaPermisos.Item(i).Nombre)
+            For i As Integer = 0 To listaPermisos.Count - 1
+                CLBPermisos.Items.Add(listaPermisos.Item(i).Nombre)
 
-        Next
-        ' CLBPermisos.EndUpdate()
+            Next
+        Catch ex As Exception
+            MsgBox("No tiene permisos asignados")
+        End Try
+        
     End Sub
 
     Public Sub recieveData(ByVal pnombre As String, ByVal pidRol As Integer)
@@ -47,8 +53,15 @@ Class uCntrlConsultarRol
     Private Sub uCntrlConsultarRol_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         listarPermisos()
     End Sub
-
+    ''' <summary>
+    ''' Este metodo cierra esta ventana
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        listarRoles.DGVRol.Rows.Clear()
+        listarRoles.ListarRoles()
         Me.Dispose()
     End Sub
 End Class

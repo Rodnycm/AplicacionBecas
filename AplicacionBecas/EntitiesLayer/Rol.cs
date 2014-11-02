@@ -61,6 +61,23 @@ namespace EntitiesLayer
             listaPermisos = plistaPermisos;
         }
 
+        public bool IsValid
+        {
+            get { return (GetRuleViolations().Count() == 0); }
+        }
+
+
+        public IEnumerable<RuleViolation> GetRuleViolations()
+        {
+            if (String.IsNullOrEmpty(Nombre))
+            {
+                yield return new RuleViolation("Nombre Requerido", "Nombre");
+            }
+
+
+            yield break;
+        }
+
 
     }
 }

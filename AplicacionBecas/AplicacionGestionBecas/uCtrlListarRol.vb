@@ -49,7 +49,6 @@ Public Class uCtrlListarRol
             uCtrlModRol.Show()
             uCtrlModRol.BringToFront()
             uCtrlModRol.Location = New Point(250, 170)
-
         Catch ex As Exception
 
         End Try
@@ -66,11 +65,11 @@ Public Class uCtrlListarRol
             Dim idROl As Integer = DGVRol.Rows(numfila).Cells(0).Value
             Dim uCtrlEliRol As New uCtrlEliminarRol()
             uCtrlEliRol.recieveData(value1, idROl)
+            uCtrlEliRol.getFrmBuscar(Me)
             frmPrincipal.Controls.Add(uCtrlEliRol)
             uCtrlEliRol.Show()
             uCtrlEliRol.Location = New Point(256, 226)
             uCtrlEliRol.BringToFront()
-
         Catch ex As Exception
 
         End Try
@@ -90,11 +89,11 @@ Public Class uCtrlListarRol
             uCtrlConsulRol.enseñarDatos(value1)
             uCtrlConsulRol.recieveData(value1, idROl)
             uCtrlConsulRol.txtNombre.Text = value1
+            uCtrlConsulRol.getFrmBuscar(Me)
             frmPrincipal.Controls.Add(uCtrlConsulRol)
             uCtrlConsulRol.Show()
             uCtrlConsulRol.BringToFront()
             uCtrlConsulRol.Location = New Point(250, 170)
-
         Catch ex As Exception
         End Try
         
@@ -143,6 +142,7 @@ Public Class uCtrlListarRol
     '''<author>Rodny Castro Mathews </author> 
     Private Sub btnCrearRoles_Click(sender As Object, e As EventArgs) Handles btnCrearRoles.Click
         uCtrlRol = New UCntrlRegistrarRol()
+        uCtrlRol.getFrmBuscar(Me)
         frmPrincipal.Controls.Add(uCtrlRol)
         uCtrlRol.BringToFront()
         uCtrlRol.Show()
@@ -165,4 +165,5 @@ Public Class uCtrlListarRol
             ListarRoles()
         End Try
     End Sub
+
 End Class

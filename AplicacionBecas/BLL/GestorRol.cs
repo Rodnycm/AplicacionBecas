@@ -13,55 +13,79 @@ namespace BLL
     {
         public string actividad;
 
-        /// <summary>
-        /// Este metodo crea un nuevo rol
-        /// </summary>
-        /// <param name="pnombre">Nombre del rol</param>
         public void agregarRol(string pnombre)
         {
             try
             {
-
                 Rol objRol = ContenedorMantenimiento.Instance.crearObjetoRol(pnombre);
-                //if (objRol.IsValid)
-                //{
-                RolRepository.Instance.Insert(objRol);
-                actividad = "Se ha Creado un Rol";
-                registrarAccion(actividad);
-                //    }
-                //    else
-                //    {
-                //        StringBuilder sb = new StringBuilder();
-                //        foreach (RuleViolation rv in objMusculo.GetRuleViolations())
-                //        {
-                //            sb.AppendLine(rv.ErrorMessage);
-                //        }
-                //        throw new ApplicationException(sb.ToString());
-                //    }
+                if (objRol.IsValid)
+                {
+                    RolRepository.Instance.Insert(objRol);
+                    actividad = "Se ha creado un Rol";
+                    registrarAccion(actividad);
+                }
+                else
+                {
+                    StringBuilder sb = new StringBuilder();
+                    foreach (RuleViolation rv in objRol.GetRuleViolations())
+                    {
+                        sb.Append(rv.ErrorMessage + "\n");
+                    }
+                    Alerts.Show(sb.ToString());
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                string message = ex.ToString();
+                Alerts.Show(message);
             }
         }
+
+        
         /// <summary>
-        /// Modifica el rol
+        /// Este metodo Modifica un rol
         /// </summary>
-        /// <param name="pnombre">nombre del rol a modificar</param>
+        /// <param name="pnombre">El nombre del rol</param>
+        /// <param name="pidRol">El id del rol</param>
         public void modificarRol(string pnombre, int pidRol)
         {
-
-            Rol objRol = ContenedorMantenimiento.Instance.crearObjetoRol(pidRol,pnombre);
-            RolRepository.Instance.Update(objRol);
-            actividad = "Se ha modificado un Rol";
-            registrarAccion(actividad);
-
+            try
+            {
+                Rol objRol = ContenedorMantenimiento.Instance.crearObjetoRol(pidRol, pnombre);
+                if (objRol.IsValid)
+                {
+                    RolRepository.Instance.Update(objRol);
+                    actividad = "Se ha modificado un Rol";
+                    registrarAccion(actividad);
+                }
+                else
+                {
+                    StringBuilder sb = new StringBuilder();
+                    foreach (RuleViolation rv in objRol.GetRuleViolations())
+                    {
+                        sb.Append(rv.ErrorMessage + "\n");
+                    }
+                    Alerts.Show(sb.ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                string message = ex.ToString();
+                Alerts.Show(message);
+            }
         }
 
+
+        /// <summary>
+        /// Este metodo asigna un permiso a algun rol
+        /// </summary>
+        /// <param name="pidPermiso"></param>
+        /// <param name="pidRol"></param>
         public void asignarPermisoAUnRol(int pidPermiso, int pidRol)
         {
             PermisoRepository.Instance.InsertPermisoAUnRol(pidPermiso, pidRol);
+            actividad = "Se ha Asignado un permiso al Rol" + pidRol;
+            registrarAccion(actividad);
 
         }
 
@@ -77,15 +101,14 @@ namespace BLL
         {
             PermisoRepository.Instance.EliminarPermisoAUnRol(pIdPermisoROl);
         }
-        /// <summary>
-        /// Elimina un rol
-        /// </summary>
-        /// <param name="pnombre">nombre del rol a modificar</param>
+       /// <summary>
+       /// Elimina un rol
+       /// </summary>
+       /// <param name="pnombre">Nombre del rol</param>
+       /// <param name="pidRol">Id del Rol</param>
         public void eliminarRol(String pnombre, int pidRol)
         {
-            /////////////////////////////////////
             Rol objRol = ContenedorMantenimiento.Instance.crearObjetoRol(pidRol,pnombre);
-            //Rol objRol = new Rol { Id = idRol };
             RolRepository.Instance.Delete(objRol);
             actividad = "Se ha Eliminado un Rol";
             registrarAccion(actividad);
