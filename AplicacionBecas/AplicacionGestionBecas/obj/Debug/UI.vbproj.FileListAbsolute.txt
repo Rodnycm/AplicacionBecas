@@ -189,3 +189,7 @@ C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGe
 C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\AplicacionGestionBecas.exe
 C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\AplicacionGestionBecas.xml
 C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\AplicacionGestionBecas.pdb
+C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\bin\Debug\AplicacionGestionBecas.exe.config
+C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\AplicacionGestionBecas.exe
+C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\AplicacionGestionBecas.xml
+C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\AplicacionGestionBecas.pdb
