@@ -155,6 +155,7 @@ namespace DAL
 
             catch (Exception ex)
             {
+                throw ex;
                 Console.Write(ex);
             }
 
