@@ -156,7 +156,7 @@ namespace DAL
             catch (Exception ex)
             {
                 throw ex;
-                Console.Write(ex);
+          
             }
 
 
@@ -200,11 +200,11 @@ namespace DAL
                 }
                 catch (TransactionAbortedException ex)
                 {
-
+                    throw ex;
                 }
                 catch (ApplicationException ex)
                 {
-
+                    throw ex;
                 }
                 finally
                 {
@@ -242,7 +242,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
 
         }
@@ -265,7 +265,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
         }
         /// <summary>
@@ -283,12 +283,14 @@ namespace DAL
             }
             catch (SqlException ex)
             {
+                throw ex;
                 //logear la excepcion a la bd con un Exception
                 //throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
 
             }
             catch (Exception ex)
             {
+                throw ex;
                 //logear la excepcion a la bd con un Exception
                 //throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
             }

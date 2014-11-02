@@ -41,6 +41,11 @@ namespace BLL
             result = DialogResult.Yes; alerta.Close();
         }
 
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            result = DialogResult.Yes; alerta.Close();
+        }
+
 
     }
 }

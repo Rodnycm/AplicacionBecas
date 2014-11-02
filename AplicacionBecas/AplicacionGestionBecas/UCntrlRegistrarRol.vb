@@ -50,5 +50,4 @@ Public Class UCntrlRegistrarRol
         Me.Dispose()
     End Sub
 
-
 End Class
