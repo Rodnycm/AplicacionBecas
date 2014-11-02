@@ -42,9 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alerts.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Alerts.cs" />
     <Compile Include="Alerts.Designer.cs">
       <DependentUpon>Alerts.cs</DependentUpon>
     </Compile>
@@ -72,6 +70,10 @@
     <ProjectReference Include="..\EntitiesLayer\EntitiesLayer.csproj">
       <Project>{a4bca628-fabe-4669-bd1f-dd99f26d9b68}</Project>
       <Name>EntitiesLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TIL\TIL.csproj">
+      <Project>{858169a9-a04e-4476-82e2-2da5fdda4802}</Project>
+      <Name>TIL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

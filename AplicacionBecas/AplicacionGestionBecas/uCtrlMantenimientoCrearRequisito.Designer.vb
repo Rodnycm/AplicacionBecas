@@ -23,113 +23,117 @@ Partial Class uCtrlMantenimientoCrearRequisito
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uCtrlMantenimientoCrearRequisito))
-        Me.lblNombre = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.txtDescripcion = New System.Windows.Forms.TextBox()
-        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.btnAceptar = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblNombre = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'lblNombre
+        'Label3
         '
-        Me.lblNombre.AutoSize = True
-        Me.lblNombre.BackColor = System.Drawing.Color.Transparent
-        Me.lblNombre.Font = New System.Drawing.Font("Segoe UI Light", 13.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(38, 90)
-        Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(72, 25)
-        Me.lblNombre.TabIndex = 0
-        Me.lblNombre.Text = "Nombre"
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(3, 9)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(55, 25)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Crear"
+        '
+        'btnAceptar
+        '
+        Me.btnAceptar.BackColor = System.Drawing.Color.White
+        Me.btnAceptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAceptar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAceptar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.btnAceptar.Location = New System.Drawing.Point(375, 263)
+        Me.btnAceptar.Name = "btnAceptar"
+        Me.btnAceptar.Size = New System.Drawing.Size(89, 29)
+        Me.btnAceptar.TabIndex = 18
+        Me.btnAceptar.Text = "Aceptar"
+        Me.btnAceptar.UseVisualStyleBackColor = False
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.BackColor = System.Drawing.Color.White
+        Me.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.btnCancelar.Location = New System.Drawing.Point(274, 263)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(89, 29)
+        Me.btnCancelar.TabIndex = 17
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = False
+        '
+        'txtDescripcion
+        '
+        Me.txtDescripcion.Location = New System.Drawing.Point(129, 131)
+        Me.txtDescripcion.Multiline = True
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(144, 96)
+        Me.txtDescripcion.TabIndex = 16
+        '
+        'txtNombre
+        '
+        Me.txtNombre.Location = New System.Drawing.Point(129, 60)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(144, 20)
+        Me.txtNombre.TabIndex = 15
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Light", 13.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(38, 161)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Light", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(27, 127)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(95, 25)
-        Me.Label2.TabIndex = 1
+        Me.Label2.Size = New System.Drawing.Size(94, 23)
+        Me.Label2.TabIndex = 14
         Me.Label2.Text = "Descripción"
         '
-        'txtNombre
+        'lblNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(140, 94)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(144, 20)
-        Me.txtNombre.TabIndex = 2
+        Me.lblNombre.AutoSize = True
+        Me.lblNombre.BackColor = System.Drawing.Color.Transparent
+        Me.lblNombre.Font = New System.Drawing.Font("Segoe UI Light", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombre.Location = New System.Drawing.Point(27, 56)
+        Me.lblNombre.Name = "lblNombre"
+        Me.lblNombre.Size = New System.Drawing.Size(71, 23)
+        Me.lblNombre.TabIndex = 13
+        Me.lblNombre.Text = "Nombre"
         '
-        'txtDescripcion
-        '
-        Me.txtDescripcion.Location = New System.Drawing.Point(140, 165)
-        Me.txtDescripcion.Multiline = True
-        Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(144, 96)
-        Me.txtDescripcion.TabIndex = 3
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.BackgroundImage = CType(resources.GetObject("btnCancelar.BackgroundImage"), System.Drawing.Image)
-        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI Light", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.ForeColor = System.Drawing.Color.White
-        Me.btnCancelar.Location = New System.Drawing.Point(188, 287)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(132, 41)
-        Me.btnCancelar.TabIndex = 4
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = True
-        '
-        'btnAceptar
-        '
-        Me.btnAceptar.BackgroundImage = CType(resources.GetObject("btnAceptar.BackgroundImage"), System.Drawing.Image)
-        Me.btnAceptar.Font = New System.Drawing.Font("Segoe UI Light", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAceptar.ForeColor = System.Drawing.Color.White
-        Me.btnAceptar.Location = New System.Drawing.Point(326, 287)
-        Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(132, 41)
-        Me.btnAceptar.TabIndex = 5
-        Me.btnAceptar.Text = "Aceptar"
-        Me.btnAceptar.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(27, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 25)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Crear"
-        '
-        'uCtrlMantenimientoRequisito
+        'uCtrlMantenimientoCrearRequisito
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lblNombre)
-        Me.Name = "uCtrlMantenimientoRequisito"
-        Me.Size = New System.Drawing.Size(478, 344)
+        Me.Controls.Add(Me.Label3)
+        Me.Name = "uCtrlMantenimientoCrearRequisito"
+        Me.Size = New System.Drawing.Size(490, 348)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents lblNombre As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents txtNombre As System.Windows.Forms.TextBox
-    Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
-    Friend WithEvents btnCancelar As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents btnCancelar As System.Windows.Forms.Button
+    Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
+    Friend WithEvents txtNombre As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents lblNombre As System.Windows.Forms.Label
 
 End Class

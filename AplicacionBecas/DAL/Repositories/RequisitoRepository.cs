@@ -36,7 +36,7 @@ namespace DAL.Repositories
             {
                 if (instance == null)
                 {
-                    instance = new RequisitoRepository() {};
+                    instance = new RequisitoRepository() { };
                 }
                 return instance;
             }
@@ -77,32 +77,29 @@ namespace DAL.Repositories
         //<returns>Retorna una lista con todos los requisitos registrados en el sistema.</returns> 
         public IEnumerable<Requisito> GetAll()
         {
+            List<Requisito> prequisito = null;
+            /*var sqlQuery = "SELECT Id, Nombre, Precio FROM Producto";
+            SqlCommand cmd = new SqlCommand(sqlQuery);
 
-            List<Requisito> pRequisito = null;
-            SqlCommand cmd = new SqlCommand();
-            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd,"Sp_consultarRequisitos");
+            var ds = DBAccess.ExecuteQuery(cmd);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                pRequisito = new List<Requisito>();
+                pmusculo = new List<Musculo>();
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    pRequisito.Add(new Requisito
+                    pmusculo.Add(new Musculo
                     {
-                        nombre = dr["Nombre"].ToString(),
-                        descripcion = dr["Descripción"].ToString(),
+                        Id = Convert.ToInt32(dr["Id"]),
+                        nombre = dr["nombre"].ToString(),
+                       ubicacion = dr["ubicacion"].ToString(),
+                        origen = dr["Origen"].ToString(),
+                        insercion = dr["insercion"].ToString()
                     });
                 }
-            }
-            return pRequisito;
-        }
+            }*/
 
-        public Requisito GetByNombre(String parametro)
-        {
-            Requisito objRequisito = null;
-
-
-            return objRequisito;
+            return prequisito;
         }
 
         //<summary> Método que se encarga de traer de la base de datos un requisito específico </summary>
@@ -134,6 +131,33 @@ namespace DAL.Repositories
 
             return objRequisito;
         }
+
+        public Requisito GetByNombre(String pnombre)
+        {
+            Requisito objRequisito = null;
+            /*var sqlQuery = "SELECT Id, Nombre, Precio FROM Producto WHERE id = @idProducto";
+            SqlCommand cmd = new SqlCommand(sqlQuery);
+            cmd.Parameters.AddWithValue("@idProducto", id);
+
+            var ds = DBAccess.ExecuteQuery(cmd);
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                var dr = ds.Tables[0].Rows[0];
+
+                objMusculo = new Musculo
+                {
+                    Id = Convert.ToInt32(dr["Id"]),
+                    nombre = dr["nombre"].ToString(),
+                    ubicacion = dr["ubicacion"].ToString(),
+                    origen = dr["Origen"].ToString(),
+                    insercion = dr["insercion"].ToString()
+                };
+            }*/
+
+            return objRequisito;
+        }
+
 
         //<summary> Método que se encarga de guardar en la base de datos los cambios realizados </summary>
         //<author> Gabriela Gutiérrez Corrales </author> 
@@ -213,7 +237,7 @@ namespace DAL.Repositories
                 cmd.Parameters.Add(new SqlParameter("@nombre", objRequisito.nombre));
                 cmd.Parameters.Add(new SqlParameter("@descripcion", objRequisito.descripcion));
 
-                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_CrearRegistro");
+                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_crearRequisito");
 
             }
             catch (Exception ex)
@@ -237,7 +261,7 @@ namespace DAL.Repositories
 
 
 
-                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "pa_modificar_Musculo");
+                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "");
 
             }
             catch (Exception ex)

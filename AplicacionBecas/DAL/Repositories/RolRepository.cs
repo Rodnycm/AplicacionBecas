@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 using System.Data;
 
 
-namespace DAL
+namespace DAL.Repositories
 {
     public class RolRepository : IRepository<Rol>
     {
@@ -79,7 +79,7 @@ namespace DAL
             List<Rol> pRol = null;
 
             SqlCommand cmd = new SqlCommand();
-            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_buscarRol");
+            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_consultarRoles");
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -88,7 +88,7 @@ namespace DAL
                 {
                     pRol.Add(new Rol
                     {
-                        Id = Convert.ToInt32(dr["IdRol"]),
+                        //Id = Convert.ToInt32(dr["IdRol"]),
                         Nombre = dr["Nombre"].ToString()
                     });
                 }
@@ -100,11 +100,10 @@ namespace DAL
         public Rol GetById(int id)
         {
             Rol objRol = null;
-            var sqlQuery = "";
-            SqlCommand cmd = new SqlCommand(sqlQuery);
-            cmd.Parameters.AddWithValue("@idRol", id);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Parameters.AddWithValue("@id", id);
 
-            var ds = DBAccess.ExecuteQuery(cmd);
+            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_buscarRolPorId");
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -113,10 +112,9 @@ namespace DAL
                 objRol = new Rol
                 {
                     Id = Convert.ToInt32(dr["IdRol"]),
-                    Nombre = dr["Nombre"].ToString()
+                    Nombre = dr["Nombre"].ToString(),
                 };
             }
-
 
 
             return objRol;
@@ -138,7 +136,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Parameters.Add(new SqlParameter("@Nombre", pnombre));
 
-                var ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_buscarRolPorNombre");
+                var ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_buscarRol");
 
                 if (ds.Tables[0].Rows.Count > 0)
                 {

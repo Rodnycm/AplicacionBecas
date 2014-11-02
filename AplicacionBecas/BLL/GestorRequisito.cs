@@ -10,28 +10,16 @@ namespace BLL
 {
     public class GestorRequisito
     {
-      
         //<summary> Método que se encarga de un nuevo Requisito</summary>
         //<author> Gabriela Gutiérrez Corrales </author> 
         //<param name = "ppNombre"> variable de tipo String que almacena el nombre del requisito  </param>
         //<param name= "pdescripcion" > variable de tipo String que almacena la descripción del requisito  </param>
         //<returns>No retorna valor</returns> 
-
-        public IEnumerable<Requisito> consultarRequisitos()
-        {
-
-            return RequisitoRepository.Instance.GetAll();
-
-        }
-
         public void crearRequisito(String pnombre, String pdescripcion)
         {
-
-            Requisito objRequisito = ContenedorMantenimiento.Instance.crearRequisito(pnombre, pdescripcion);
-
             try
             {
-                //Requisito objRequisito = contenedor.crearRequisito(pnombre, pdescripcion);
+                Requisito objRequisito = ContenedorMantenimiento.Instance.crearRequisito(pnombre, pdescripcion);
                 if (objRequisito.IsValid)
                 {
                     RequisitoRepository.Instance.Insert(objRequisito);
@@ -44,15 +32,30 @@ namespace BLL
                     {
                         sb.Append(rv.ErrorMessage);
                     }
-                    throw new ApplicationException(sb.ToString());
+                    new ApplicationException(sb.ToString());
+                    Alerts.Show(sb.ToString());
                 }
             }
 
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Alerts.Show(ex.ToString());
             }
         }
+
+
+        public IEnumerable<Requisito> consultarRequisitos()
+        {
+
+            return RequisitoRepository.Instance.GetAll();
+
+        }
+
+        public Requisito buscarRequisito(String param)
+        {
+            return RequisitoRepository.Instance.GetByNombre(param);
+        }
+
 
         //<summary> Método que se encarga de guardar los cambios de un requisito</summary>
         //<author> Gabriela Gutiérrez Corrales </author> 
@@ -61,7 +64,7 @@ namespace BLL
         public void guardarCambios()
         {
             RequisitoRepository.Instance.Save();
-            // UoW.RequisitoRepository.Save();
+
         }
     }
 }
