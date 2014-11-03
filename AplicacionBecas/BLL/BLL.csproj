@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alerts.cs" />
+    <Compile Include="Alerts.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Alerts.Designer.cs">
       <DependentUpon>Alerts.cs</DependentUpon>
     </Compile>
