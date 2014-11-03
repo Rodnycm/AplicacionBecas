@@ -1,8 +1,15 @@
 ﻿Imports EntitiesLayer
 Public Class UctrlModificarUsuario
 
+    Dim idUsuario As Integer
     Dim parametro As String
+    Dim ucntrl As UctrlListarYBuscarUsuario
+    Dim alerta As UctrlAlerta = New UctrlAlerta()
 
+
+    Public Sub setIdUsuario(ByVal pid As Integer)
+        idUsuario = pid
+    End Sub
     Public Sub setParametro(ByVal pparametro As String)
         parametro = pparametro
     End Sub
@@ -17,15 +24,22 @@ Public Class UctrlModificarUsuario
     '<returns> No retorna valor.</returns> 
     Public Sub llenarComboRoles()
 
+        Try
+            Dim listaRoles As List(Of Rol) = New List(Of Rol)
 
-        Dim listaRoles As List(Of Rol) = New List(Of Rol)
+            listaRoles = objGestorRol.consultarRoles()
 
-        listaRoles = objGestorRol.consultarRoles()
+            For i As Integer = 0 To listaRoles.Count - 1
 
-        For i As Integer = 0 To listaRoles.Count - 1
+                cmbRoles.Items.Add(listaRoles(i).Nombre)
+            Next
+        Catch ex As Exception
+            alerta.lblAlerta.Text = ex.Message
+            FrmIniciarSesion.principal.Controls.Add(alerta)
+            alerta.BringToFront()
+            alerta.Show()
+        End Try
 
-            cmbRoles.Items.Add(listaRoles(i).Nombre)
-        Next
     End Sub
 
 
@@ -48,19 +62,16 @@ Public Class UctrlModificarUsuario
         cmbRoles.SelectedText = objetoUsuario.rol.Nombre
         txtCorreoElectronico.Text = objetoUsuario.correoElectronico
         txtContraseña.Text = objetoUsuario.contraseña
+        setIdUsuario(objetoUsuario.Id)
 
 
     End Sub
 
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        Dim ucntrl As UctrlListarYBuscarUsuario = New UctrlListarYBuscarUsuario()
-        Me.Hide()
-        frmPrincipal.Controls.Add(ucntrl)
-        ucntrl.Location = New Point(120, 0)
-        ucntrl.Show()
+    Public Sub refrecarLista(ByVal puctrl As UctrlListarYBuscarUsuario)
+        ucntrl = puctrl
     End Sub
 
-    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+    Private Sub btnAceptar_Click_1(sender As Object, e As EventArgs) Handles btnAceptar.Click
         Dim pNombre As String = txtNombre.Text
         Dim sNombre As String = txtSegundoNombre.Text
         Dim pApellido As String = txtPrimerApellido.Text
@@ -85,7 +96,28 @@ Public Class UctrlModificarUsuario
             End If
         End If
 
-        objGestorUsuario.modificarUsuario(pNombre, sNombre, pApellido, sApellido, identificacion, telefono, fechaNacimiento, rol, genero, correoElectronico, contraseña, confirmacion, Me.parametro)
-        objGestorUsuario.guardarCambios()
+        Try
+            objGestorUsuario.modificarUsuario(pNombre, sNombre, pApellido, sApellido, identificacion, telefono, fechaNacimiento, rol, genero, correoElectronico, contraseña, confirmacion, Me.idUsuario)
+            objGestorUsuario.guardarCambios()
+            ucntrl.dgUsuarios.Rows.Clear()
+            ucntrl.listarUsuarios()
+            Me.Dispose()
+        Catch ex As Exception
+            alerta.lblAlerta.Text = ex.Message
+            FrmIniciarSesion.principal.Controls.Add(alerta)
+            alerta.BringToFront()
+            alerta.Show()
+        End Try
+
     End Sub
+
+    Private Sub btnCancelar_Click_1(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Dim ucntrl As UctrlListarYBuscarUsuario = New UctrlListarYBuscarUsuario()
+        Me.Hide()
+        frmPrincipal.Controls.Add(ucntrl)
+        ucntrl.Location = New Point(120, 0)
+        ucntrl.Show()
+    End Sub
+
+
 End Class

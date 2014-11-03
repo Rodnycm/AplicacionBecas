@@ -32,7 +32,7 @@ Partial Class uCtrlMantenimientoCarreras
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnMantenimiento = New System.Windows.Forms.Button()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.UCtrlCarrera1 = New AplicacionGestionBecas.uCtrlCrearCarrera()
+        Me.UCtrlCarrera1 = New UI.uCtrlCrearCarrera()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvCarreras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -153,7 +153,7 @@ Partial Class uCtrlMantenimientoCarreras
     End Sub
     Friend WithEvents btnMantenimiento As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents UCtrlCarrera1 As AplicacionGestionBecas.uCtrlCrearCarrera
+    Friend WithEvents UCtrlCarrera1 As UI.uCtrlCrearCarrera
     Friend WithEvents dgvCarreras As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewImageColumn1 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents dtaCodigo As System.Windows.Forms.DataGridViewTextBoxColumn

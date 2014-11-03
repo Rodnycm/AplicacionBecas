@@ -14,24 +14,13 @@ Public Class uCtrlListarRol
         
         Dim listaRoles As New List(Of Rol)
         listaRoles = objGestorRol.consultarRoles()
-        Try
-            For i As Integer = 0 To listaRoles.Count - 1
 
-                    DGVRol.Rows.Add(1)
-                    DGVRol.Rows(i).Cells(0).Value = listaRoles.Item(i).Id()
-                    DGVRol.Rows(i).Cells(1).Value = listaRoles.Item(i).Nombre()
-                    DGVRol.Columns("dtaId").Visible = False
-                Next
-            Catch ex As Exception
-                MsgBox("Debe Crear Un Rol")
-            End Try
+        For i As Integer = 0 To listaRoles.Count - 1
 
-            For i As Integer = 0 To listaRoles.Count - 1
-
-                DGVRol.Rows.Add(1)
-                DGVRol.Rows(i).Cells(0).Value = listaRoles.Item(i).Id()
-                DGVRol.Rows(i).Cells(1).Value = listaRoles.Item(i).Nombre()
-                DGVRol.Columns("dtaId").Visible = False
+            DGVRol.Rows.Add(1)
+            DGVRol.Rows(i).Cells(0).Value = listaRoles.Item(i).Id()
+            DGVRol.Rows(i).Cells(1).Value = listaRoles.Item(i).Nombre()
+            DGVRol.Columns("dtaId").Visible = False
             Next
 
         Catch
@@ -56,11 +45,11 @@ Public Class uCtrlListarRol
             uCtrlModRol.recieveData(value1, idROl)
             uCtrlModRol.txtNombre.Text = CType(value1, String)
             uCtrlModRol.getFrmBuscar(Me)
-            frmPrincipal.Controls.Add(uCtrlModRol)
+            'frmPrincipal.Controls.Add(uCtrlModRol)
+            frmIniciarSesion.principal.Controls.Add(uCtrlModRol)
             uCtrlModRol.Show()
             uCtrlModRol.BringToFront()
             uCtrlModRol.Location = New Point(250, 170)
-
         Catch ex As Exception
 
         End Try
@@ -77,11 +66,12 @@ Public Class uCtrlListarRol
             Dim idROl As Integer = DGVRol.Rows(numfila).Cells(0).Value
             Dim uCtrlEliRol As New uCtrlEliminarRol()
             uCtrlEliRol.recieveData(value1, idROl)
-            frmPrincipal.Controls.Add(uCtrlEliRol)
+            uCtrlEliRol.getFrmBuscar(Me)
+            'frmPrincipal.Controls.Add(uCtrlEliRol)
+            frmIniciarSesion.principal.Controls.Add(uCtrlEliRol)
             uCtrlEliRol.Show()
             uCtrlEliRol.Location = New Point(256, 226)
             uCtrlEliRol.BringToFront()
-
         Catch ex As Exception
 
         End Try
@@ -101,11 +91,12 @@ Public Class uCtrlListarRol
             uCtrlConsulRol.enseñarDatos(value1)
             uCtrlConsulRol.recieveData(value1, idROl)
             uCtrlConsulRol.txtNombre.Text = value1
-            frmPrincipal.Controls.Add(uCtrlConsulRol)
+            uCtrlConsulRol.getFrmBuscar(Me)
+            frmIniciarSesion.principal.Controls.Add(uCtrlConsulRol)
+            'frmPrincipal.Controls.Add(uCtrlConsulRol)
             uCtrlConsulRol.Show()
             uCtrlConsulRol.BringToFront()
             uCtrlConsulRol.Location = New Point(250, 170)
-
         Catch ex As Exception
         End Try
         
@@ -154,7 +145,8 @@ Public Class uCtrlListarRol
     '''<author>Rodny Castro Mathews </author> 
     Private Sub btnCrearRoles_Click(sender As Object, e As EventArgs) Handles btnCrearRoles.Click
         uCtrlRol = New UCntrlRegistrarRol()
-        frmPrincipal.Controls.Add(uCtrlRol)
+        uCtrlRol.getFrmBuscar(Me)
+        frmIniciarSesion.principal.Controls.Add(uCtrlRol)
         uCtrlRol.BringToFront()
         uCtrlRol.Show()
         uCtrlRol.Location = New Point(250, 170)
@@ -176,4 +168,5 @@ Public Class uCtrlListarRol
             ListarRoles()
         End Try
     End Sub
+
 End Class

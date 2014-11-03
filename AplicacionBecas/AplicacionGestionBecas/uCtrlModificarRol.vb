@@ -1,3 +1,4 @@
+﻿
 Imports EntitiesLayer
 
 
@@ -36,12 +37,18 @@ Public Class uCtrlModificarRol
     '''<author> Autor del código.</author> 
 
     Public Sub listarPermisos()
+        Try
+            listaPermisos = objGestorRol.consultarPermisos()
+            For i As Integer = 0 To listaPermisos.Count - 1
+                CLBPermisos.Items.Add(listaPermisos.Item(i).Nombre)
 
-        listaPermisos = objGestorRol.consultarPermisos()
-        For i As Integer = 0 To listaPermisos.Count - 1
-            CLBPermisos.Items.Add(listaPermisos.Item(i).Nombre)
+            Next
 
-        Next
+            CompararPermisos()
+        Catch ex As Exception
+            MsgBox("No tiene Permisos Asignados")
+        End Try
+        
     End Sub
 
 
@@ -51,7 +58,7 @@ Public Class uCtrlModificarRol
     '''<name> Parámetros que recibe el método </name> 
     Private Sub uCtrlModificarRol_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         listarPermisos()
-        CompararPermisos()
+        ''CompararPermisos()
     End Sub
     ''' <summary>
     ''' Este Metodo compara y pone un check a los permisos que este rol tenga asignados. 
@@ -69,7 +76,7 @@ Public Class uCtrlModificarRol
 
             Next
         Next
-
+        
     End Sub
 
     ''' <summary>
@@ -86,13 +93,12 @@ Public Class uCtrlModificarRol
     '''<name> Parámetros que recibe el método </name>  
     Private Sub btnAceptar_Click_1(sender As Object, e As EventArgs) Handles btnAceptar.Click
 
-
+        
         asignarPermisosAUnRol()
         EditarRol()
 
         listarRoles.DGVRol.Rows.Clear()
         listarRoles.ListarRoles()
-        Me.Hide()
         Me.Dispose()
     End Sub
 
@@ -151,4 +157,3 @@ Public Class uCtrlModificarRol
         Me.Dispose()
     End Sub
 End Class
-

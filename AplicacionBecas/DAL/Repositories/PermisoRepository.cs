@@ -102,14 +102,14 @@ namespace DAL
         }
 
      
-        public IEnumerable<Permiso> GetPermisosPorRol(int id)
+        public IEnumerable<Permiso> GetPermisosPorRol(int idRol)
         {
             List<Permiso> pPermiso = null;
 
-          //  try
-          //  {
+           try
+            {
                 SqlCommand cmd = new SqlCommand();
-                cmd.Parameters.Add(new SqlParameter("@IdRol", id));
+                cmd.Parameters.Add(new SqlParameter("@IdRol", idRol));
 
                 var ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_consultarPermisosPorRol");
 
@@ -122,16 +122,16 @@ namespace DAL
                         {
                             Id = Convert.ToInt32(dr["idPermiso"]),
                             Nombre = dr["Nombre"].ToString(),
-                            Descripción = dr["Descripción"].ToString()
+                            Descripción = dr["Descripcion"].ToString()
                         });
                     }
                 }
-            //}
+            }
 
-          //  catch (Exception ex)
-          // {
-          //      Console.Write(ex);
-          //  }
+            catch (Exception ex)
+           {
+               throw ex;
+            }
 
 
             return pPermiso;
@@ -258,11 +258,11 @@ namespace DAL
                 }
                 catch (TransactionAbortedException ex)
                 {
-
+                    throw ex;
                 }
                 catch (ApplicationException ex)
                 {
-
+                    throw ex;
                 }
                 finally
                 {
@@ -299,7 +299,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
 
         }
@@ -322,7 +322,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
 
         }
@@ -332,18 +332,20 @@ namespace DAL
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                cmd.Parameters.Add(new SqlParameter("@IdRolesPermisos", idRolPermiso));
+                cmd.Parameters.Add(new SqlParameter("@IdRolPermiso", idRolPermiso));
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_eliminarPermisoAUnRol");
 
             }
             catch (SqlException ex)
             {
+                throw ex;
                 //logear la excepcion a la bd con un Exception
                 // throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
 
             }
             catch (Exception ex)
             {
+                throw ex;
                 //logear la excepcion a la bd con un Exception
                 // throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
             }
@@ -366,6 +368,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
+                throw ex;
                // throw new DataAccessException("No se pudó modificar el Permiso", ex);
             }
         }
@@ -385,13 +388,16 @@ namespace DAL
 
             }
             catch (SqlException ex)
+
             {
+                throw ex;
                 //logear la excepcion a la bd con un Exception
                // throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
 
             }
             catch (Exception ex)
             {
+                throw ex;
                 //logear la excepcion a la bd con un Exception
                // throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
             }

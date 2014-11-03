@@ -210,39 +210,41 @@ namespace EntitiesLayer
                 yield return new RuleViolation("Contraseña Requerida", "contraseña");
             }
 
-            if (!(Regex.IsMatch(primerNombre, "^[a-zA-Z]+$")))
+            if (!(Regex.IsMatch(primerNombre, "^[\\p{L} .'-]+$")))
             {
-                yield return new RuleViolation("ERROR", "Nombre incorrecto");
+                yield return new RuleViolation("Error en el primer nombre", "Nombre incorrecto");
             }
 
 
-            if (!(Regex.IsMatch(primerApellido, "^[a-zA-Z]+$")))
+            if (!(Regex.IsMatch(primerApellido, "^[\\p{L} .'-]+$")))
             {
-                yield return new RuleViolation("ERROR", "Primer apellido incorrecto");
+                yield return new RuleViolation("Error en el primer apellido", "Primer apellido incorrecto");
             }
 
-            if (!(Regex.IsMatch(segundoApellido, "^[a-zA-Z]+$")))
+            //if (!(Regex.IsMatch(segundoApellido, "^[a-zA-Z]+$")))
+            //{
+            //    yield return new RuleViolation("ERROR SEGUNDO APELLIDO", "Segundo apellido incorrecto");
+
+            //}
+
+
+            if ((Regex.IsMatch(identificacion, "^([0-9a-zA-Z]{12})$")))
             {
-                yield return new RuleViolation("ERROR", "Segundo apellido incorrecto");
-
-
-                if (!(Regex.IsMatch(identificacion, "^([0-9a-zA-Z]{12})$")))
-                {
-                    yield return new RuleViolation("ERROR", "Identificación incorrecta");
-                }
-
-
-                if (!(Regex.IsMatch(telefono, "^[0-9-()+]{3,20}")))
-                {
-                    yield return new RuleViolation("ERROR", "Teléfono incorrecto");
-
-                }
-
-                //if (!(Regex.IsMatch(correoElectronico, "^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(( [a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$")))
-                //{
-                //    yield return new RuleViolation("ERROR", "Correo electrónico incorrecto");
-                //}
+                yield return new RuleViolation("Error en la identificacion", "Identificación incorrecta");
             }
+
+
+            if (!(Regex.IsMatch(telefono, "^[0-9-()+]{3,20}")))
+            {
+                yield return new RuleViolation("Error en el teléfono", "Teléfono incorrecto");
+
+            }
+
+            //if (!(Regex.IsMatch(correoElectronico, "^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(( [a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$")))
+            //{
+            //    yield return new RuleViolation("ERROR", "Correo electrónico incorrecto");
+            //}
+
 
             yield break;
         }

@@ -139,7 +139,7 @@ Partial Class uCtrlCurso
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = Global.AplicacionGestionBecas.My.Resources.Resources.tablaFinalMedianaAzul
+        Me.BackgroundImage = Global.UI.My.Resources.Resources.tablaFinalMedianaAzul
         Me.Controls.Add(Me.txtPrecio)
         Me.Controls.Add(Me.txtCreditos)
         Me.Controls.Add(Me.txtCuatrimestre)

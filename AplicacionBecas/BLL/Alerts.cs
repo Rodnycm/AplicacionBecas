@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,23 +18,35 @@ namespace BLL
             InitializeComponent();
         }
 
-       static Alerts alerta; static DialogResult result = DialogResult.No;
+        static Alerts alerta; static DialogResult result = DialogResult.No;
 
         public static DialogResult Show(String Text)
         {
             alerta = new Alerts();
-            alerta.lblAlerta.Text = Text;
+            alerta.label1.Text = Text;
             alerta.btnAceptar.Text = "Aceptar";
             alerta.ShowDialog();
             alerta.BringToFront();
             return result;
 
-        } 
+        }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void Alerts_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             result = DialogResult.Yes; alerta.Close();
         }
-    }
-    }
 
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            result = DialogResult.Yes; alerta.Close();
+        }
+
+
+    }
+}

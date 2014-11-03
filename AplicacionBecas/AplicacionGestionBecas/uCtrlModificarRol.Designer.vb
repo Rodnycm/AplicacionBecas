@@ -49,28 +49,28 @@ Partial Class uCtrlModificarRol
         '
         'btnCancelar
         '
-        Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnCancelar.BackColor = System.Drawing.Color.White
         Me.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.ForeColor = System.Drawing.Color.White
-        Me.btnCancelar.Location = New System.Drawing.Point(396, 232)
+        Me.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.btnCancelar.Location = New System.Drawing.Point(428, 232)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(110, 47)
+        Me.btnCancelar.Size = New System.Drawing.Size(89, 29)
         Me.btnCancelar.TabIndex = 17
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'btnAceptar
         '
-        Me.btnAceptar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnAceptar.BackColor = System.Drawing.Color.White
         Me.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAceptar.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAceptar.ForeColor = System.Drawing.Color.White
-        Me.btnAceptar.Location = New System.Drawing.Point(535, 232)
+        Me.btnAceptar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.btnAceptar.Location = New System.Drawing.Point(534, 232)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(110, 47)
+        Me.btnAceptar.Size = New System.Drawing.Size(89, 29)
         Me.btnAceptar.TabIndex = 16
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
@@ -92,7 +92,7 @@ Partial Class uCtrlModificarRol
         Me.btnCerrar.BackgroundImage = CType(resources.GetObject("btnCerrar.BackgroundImage"), System.Drawing.Image)
         Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.Location = New System.Drawing.Point(661, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(613, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(21, 20)
         Me.btnCerrar.TabIndex = 20
@@ -110,7 +110,7 @@ Partial Class uCtrlModificarRol
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.lblNombre)
         Me.Name = "uCtrlModificarRol"
-        Me.Size = New System.Drawing.Size(685, 320)
+        Me.Size = New System.Drawing.Size(637, 291)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

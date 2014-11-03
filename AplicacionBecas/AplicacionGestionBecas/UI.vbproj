@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{59E114ED-E593-438A-B226-DC0602321A71}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>AplicacionGestionBecas.My.MyApplication</StartupObject>
-    <RootNamespace>AplicacionGestionBecas</RootNamespace>
-    <AssemblyName>AplicacionGestionBecas</AssemblyName>
+    <StartupObject>UI.My.MyApplication</StartupObject>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>AplicacionGestionBecas.xml</DocumentationFile>
+    <DocumentationFile>UI.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +31,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>AplicacionGestionBecas.xml</DocumentationFile>
+    <DocumentationFile>UI.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -79,16 +79,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_Proyecto2DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DB_Proyecto2DataSet.vb">
-      <DependentUpon>DB_Proyecto2DataSet.xsd</DependentUpon>
+    <Compile Include="DB_Proyecto2DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_Proyecto2DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="DB_Proyecto2DataSetConsultarRegistroAcciones.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_Proyecto2DataSetConsultarRegistroAcciones.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DB_Proyecto2DataSetConsultarRegistroAcciones.vb">
-      <DependentUpon>DB_Proyecto2DataSetConsultarRegistroAcciones.xsd</DependentUpon>
+    <Compile Include="FrmIniciarSesion.Designer.vb">
+      <DependentUpon>FrmIniciarSesion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIniciarSesion.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipal.vb">
       <SubType>Form</SubType>
@@ -125,10 +130,22 @@
     <Compile Include="uCntrlConsultarRol.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UcntrlIniciar.Designer.vb">
+      <DependentUpon>UcntrlIniciar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UcntrlIniciar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UCntrlRegistrarRol.Designer.vb">
       <DependentUpon>UCntrlRegistrarRol.vb</DependentUpon>
     </Compile>
     <Compile Include="UCntrlRegistrarRol.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UctrlAlerta.Designer.vb">
+      <DependentUpon>UctrlAlerta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UctrlAlerta.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="uCtrlBitacoraAcciones.Designer.vb">
@@ -141,6 +158,12 @@
       <DependentUpon>uCtrlBuscarCursos.vb</DependentUpon>
     </Compile>
     <Compile Include="uCtrlBuscarCursos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCtrlConfirmacion.Designer.vb">
+      <DependentUpon>uCtrlConfirmacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uCtrlConfirmacion.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="uCtrlConsultarBeneficio.Designer.vb">
@@ -281,6 +304,12 @@
     <Compile Include="UctrlModificarUsuario.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UctrlRecuperarContraseña.Designer.vb">
+      <DependentUpon>UctrlRecuperarContraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UctrlRecuperarContraseña.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="uCtrlRegistrarBeneficio.Designer.vb">
       <DependentUpon>uCtrlRegistrarBeneficio.vb</DependentUpon>
     </Compile>
@@ -295,6 +324,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmIniciarSesion.resx">
+      <DependentUpon>FrmIniciarSesion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
@@ -306,20 +338,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="uCntrlBuscarBeneficio.resx">
       <DependentUpon>uCntrlBuscarBeneficio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uCntrlConsultarRol.resx">
       <DependentUpon>uCntrlConsultarRol.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UcntrlIniciar.resx">
+      <DependentUpon>UcntrlIniciar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCntrlRegistrarRol.resx">
       <DependentUpon>UCntrlRegistrarRol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UctrlAlerta.resx">
+      <DependentUpon>UctrlAlerta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uCtrlBitacoraAcciones.resx">
       <DependentUpon>uCtrlBitacoraAcciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uCtrlBuscarCursos.resx">
       <DependentUpon>uCtrlBuscarCursos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uCtrlConfirmacion.resx">
+      <DependentUpon>uCtrlConfirmacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uCtrlConsultarBeneficio.resx">
       <DependentUpon>uCtrlConsultarBeneficio.vb</DependentUpon>
@@ -390,6 +432,9 @@
     <EmbeddedResource Include="UctrlModificarUsuario.resx">
       <DependentUpon>UctrlModificarUsuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UctrlRecuperarContraseña.resx">
+      <DependentUpon>UctrlRecuperarContraseña.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uCtrlRegistrarBeneficio.resx">
       <DependentUpon>uCtrlRegistrarBeneficio.vb</DependentUpon>
     </EmbeddedResource>
@@ -408,6 +453,17 @@
     </None>
     <None Include="DB_Proyecto2DataSet.xss">
       <DependentUpon>DB_Proyecto2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_Proyecto2DataSet1.xsc">
+      <DependentUpon>DB_Proyecto2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DB_Proyecto2DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_Proyecto2DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_Proyecto2DataSet1.xss">
+      <DependentUpon>DB_Proyecto2DataSet1.xsd</DependentUpon>
     </None>
     <None Include="DB_Proyecto2DataSetConsultarRegistroAcciones.xsc">
       <DependentUpon>DB_Proyecto2DataSetConsultarRegistroAcciones.xsd</DependentUpon>

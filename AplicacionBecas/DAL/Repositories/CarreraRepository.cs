@@ -7,13 +7,14 @@ using System.Collections;
 using System.Transactions;
 using System.Data.SqlClient;
 using System.Data;
+using DAL.Repositories;
 
 namespace DAL
 {
 
     public class CarreraRepository : IRepository<Carrera>
     {
-
+        public string actividad;
         private static CarreraRepository instance;
         private List<IEntity> _insertItems;
         private List<IEntity> _deleteItems;
@@ -209,6 +210,9 @@ namespace DAL
                 cmd.Parameters.Add(new SqlParameter("@Color", objCarrera.color));
 
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_agregarCarrera");
+
+                actividad = "Se ha Registrado una Carrera";
+                registrarAccion(actividad);
             }
             catch (Exception ex)
             {
@@ -235,6 +239,9 @@ namespace DAL
                 //cmd.Parameters.Add(new SqlParameter("@directorAcademico", objCarrera.DirectorAcademico));
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_modificarCarrera");
 
+                actividad = "Se ha Editado una Carrera";
+                registrarAccion(actividad);
+
             }
             catch (Exception ex)
             {
@@ -254,12 +261,41 @@ namespace DAL
                 cmd.Parameters.Add(new SqlParameter("@Codigo", objCarrera.codigo));
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_eliminarCarrera");
 
+                actividad = "Se ha Eliminado una Carrera";
+                registrarAccion(actividad);
+
             }
             catch (SqlException ex)
             {
                 //logear la excepcion a la bd con un Exception
                 //throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
             }
+        }
+
+        public void registrarAccion(string pactividad)
+        {
+
+            RegistroAccion objRegistro;
+            DateTime fecha = DateTime.Today;
+            string nombreUsuario = Globals.userName;
+            string nombreRol = Globals.userRol.Nombre;
+            string descripcion = pactividad;
+
+
+            objRegistro = new RegistroAccion(nombreUsuario, nombreRol, descripcion, fecha);
+
+            try
+            {
+
+                RegistroAccionRepository objRegistroRep = new RegistroAccionRepository();
+                objRegistroRep.InsertAccion(objRegistro);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+
         }
     }
 }

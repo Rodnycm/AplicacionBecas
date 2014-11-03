@@ -13,6 +13,7 @@ namespace DAL.Repositories
 {
     public class RequisitoRepository : IRepository<Requisito>
     {
+        public string actividad;
         private static RequisitoRepository instance;
         private List<IEntity> _insertItems;
         private List<IEntity> _deleteItems;
@@ -36,7 +37,7 @@ namespace DAL.Repositories
             {
                 if (instance == null)
                 {
-                    instance = new RequisitoRepository() {};
+                    instance = new RequisitoRepository() { };
                 }
                 return instance;
             }
@@ -77,32 +78,29 @@ namespace DAL.Repositories
         //<returns>Retorna una lista con todos los requisitos registrados en el sistema.</returns> 
         public IEnumerable<Requisito> GetAll()
         {
+            List<Requisito> prequisito = null;
+            /*var sqlQuery = "SELECT Id, Nombre, Precio FROM Producto";
+            SqlCommand cmd = new SqlCommand(sqlQuery);
 
-            List<Requisito> pRequisito = null;
-            SqlCommand cmd = new SqlCommand();
-            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd,"Sp_consultarRequisitos");
+            var ds = DBAccess.ExecuteQuery(cmd);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                pRequisito = new List<Requisito>();
+                pmusculo = new List<Musculo>();
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                    pRequisito.Add(new Requisito
+                    pmusculo.Add(new Musculo
                     {
-                        nombre = dr["Nombre"].ToString(),
-                        descripcion = dr["Descripción"].ToString(),
+                        Id = Convert.ToInt32(dr["Id"]),
+                        nombre = dr["nombre"].ToString(),
+                       ubicacion = dr["ubicacion"].ToString(),
+                        origen = dr["Origen"].ToString(),
+                        insercion = dr["insercion"].ToString()
                     });
                 }
-            }
-            return pRequisito;
-        }
+            }*/
 
-        public Requisito GetByNombre(String parametro)
-        {
-            Requisito objRequisito = null;
-
-
-            return objRequisito;
+            return prequisito;
         }
 
         //<summary> Método que se encarga de traer de la base de datos un requisito específico </summary>
@@ -134,6 +132,33 @@ namespace DAL.Repositories
 
             return objRequisito;
         }
+
+        public Requisito GetByNombre(String pnombre)
+        {
+            Requisito objRequisito = null;
+            /*var sqlQuery = "SELECT Id, Nombre, Precio FROM Producto WHERE id = @idProducto";
+            SqlCommand cmd = new SqlCommand(sqlQuery);
+            cmd.Parameters.AddWithValue("@idProducto", id);
+
+            var ds = DBAccess.ExecuteQuery(cmd);
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                var dr = ds.Tables[0].Rows[0];
+
+                objMusculo = new Musculo
+                {
+                    Id = Convert.ToInt32(dr["Id"]),
+                    nombre = dr["nombre"].ToString(),
+                    ubicacion = dr["ubicacion"].ToString(),
+                    origen = dr["Origen"].ToString(),
+                    insercion = dr["insercion"].ToString()
+                };
+            }*/
+
+            return objRequisito;
+        }
+
 
         //<summary> Método que se encarga de guardar en la base de datos los cambios realizados </summary>
         //<author> Gabriela Gutiérrez Corrales </author> 
@@ -213,7 +238,10 @@ namespace DAL.Repositories
                 cmd.Parameters.Add(new SqlParameter("@nombre", objRequisito.nombre));
                 cmd.Parameters.Add(new SqlParameter("@descripcion", objRequisito.descripcion));
 
-                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_CrearRegistro");
+                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_crearRequisito");
+
+                actividad = "Se ha Registrado un Requisito";
+                registrarAccion(actividad);
 
             }
             catch (Exception ex)
@@ -234,10 +262,10 @@ namespace DAL.Repositories
 
                 cmd.Parameters.Add(new SqlParameter("@nombre", objRequisito.nombre));
                 cmd.Parameters.Add(new SqlParameter("@ubicacion", objRequisito.descripcion));
+                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "");
 
-
-
-                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "pa_modificar_Musculo");
+                actividad = "Se ha Editado un Requisito";
+                registrarAccion(actividad);
 
             }
             catch (Exception ex)
@@ -256,7 +284,10 @@ namespace DAL.Repositories
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Parameters.Add(new SqlParameter("@", objRequisito.Id));
-                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "pa_borrar_Musculo");
+                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "");
+
+                actividad = "Se ha Eliminado un Requisito";
+                registrarAccion(actividad);
 
             }
             catch (SqlException ex)
@@ -270,6 +301,32 @@ namespace DAL.Repositories
                 //logear la excepcion a la bd con un Exception
                 //throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
             }
+        }
+
+        public void registrarAccion(string pactividad)
+        {
+
+            RegistroAccion objRegistro;
+            DateTime fecha = DateTime.Today;
+            string nombreUsuario = Globals.userName;
+            string nombreRol = Globals.userRol.Nombre;
+            string descripcion = pactividad;
+
+
+            objRegistro = new RegistroAccion(nombreUsuario, nombreRol, descripcion, fecha);
+
+            try
+            {
+
+                RegistroAccionRepository objRegistroRep = new RegistroAccionRepository();
+                objRegistroRep.InsertAccion(objRegistro);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+
         }
 
     }

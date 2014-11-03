@@ -3,7 +3,7 @@ Imports EntitiesLayer
 Imports BLL
 
 Public Class uCtrlEliminarRol
-
+    Dim listarRoles As uCtrlListarRol
     Dim nombre As String
     Dim IdROl As Integer
 
@@ -11,6 +11,11 @@ Public Class uCtrlEliminarRol
     '''<author>Rodny Castro Mathews </author> 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Me.Dispose()
+    End Sub
+
+    Public Sub getFrmBuscar(plistarRoles As uCtrlListarRol)
+
+        listarRoles = plistarRoles
     End Sub
 
     '''<summary>REcibe el dato del rol a eliminar </summary>
@@ -27,6 +32,9 @@ Public Class uCtrlEliminarRol
 
         objGestorRol.eliminarRol(nombre, IdROl)
         objGestorRol.guardarCambios()
+        listarRoles.DGVRol.Rows.Clear()
+        listarRoles.ListarRoles()
+        Me.Dispose()
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
