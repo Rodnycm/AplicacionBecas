@@ -26,8 +26,8 @@
         Dim color As String = "9922"
         Dim directorAcademico As String = ""
 
-        objGestorCarrera.agregarCarrera(nombre, codigo, color)
-        objGestorCarrera.guardarCambios()
+        'objGestorCarrera.agregarCarrera(nombre, codigo, color)
+        'objGestorCarrera.guardarCambios()
 
     End Sub
 

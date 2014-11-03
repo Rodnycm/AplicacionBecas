@@ -16,6 +16,7 @@ C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.dll
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.pdb
+<<<<<<< HEAD
 C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.Alerts.resources
 C:\Users\backi_000\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.Properties.Resources.resources
@@ -44,3 +45,14 @@ R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.Properties.Res
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csproj.GenerateResource.Cache
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.dll
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.pdb
+=======
+C:\Users\Valeria\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\BLL.dll
+C:\Users\Valeria\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\BLL.pdb
+C:\Users\Valeria\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\DAL.dll
+C:\Users\Valeria\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\EntitiesLayer.dll
+C:\Users\Valeria\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\DAL.pdb
+C:\Users\Valeria\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\EntitiesLayer.pdb
+C:\Users\Valeria\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Valeria\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.dll
+C:\Users\Valeria\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.pdb
+>>>>>>> origin/Valeram
