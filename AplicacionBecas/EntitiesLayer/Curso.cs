@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace EntitiesLayer
 {
+
     public class Curso : IEntity
     {
 
-        private int _idProducto;
+        private int _idCurso;
         public int Id
         {
-            get { return _idProducto; }
-            set { _idProducto = value; }
+            get { return _idCurso; }
+            set { _idCurso = value; }
         }
 
         //<summary> Métodos set y get de la variable nombre</summary>
@@ -59,6 +60,7 @@ namespace EntitiesLayer
         //<returns> No retorna valor.</returns> 
         public Curso()
         {
+
             nombre = "";
             codigo = "";
             cuatrimestre = "";
@@ -78,7 +80,7 @@ namespace EntitiesLayer
         //<returns> No retorna valor.</returns> 
         public Curso(String pnombre, String pcodigo, String pcuatrimestre, int pcreditos, double pprecio)
         {
-            Id = 0;
+
             nombre = pnombre;
             codigo = pcodigo;
             cuatrimestre = pcuatrimestre;
@@ -98,7 +100,7 @@ namespace EntitiesLayer
         //<returns> No retorna valor.</returns> 
         public Curso(String pnombre, String pcodigo, String pcuatrimestre, int pcreditos)
         {
-            Id = 0;
+            _idCurso = Id;
             nombre = pnombre;
             codigo = pcodigo;
             cuatrimestre = pcuatrimestre;
@@ -107,31 +109,42 @@ namespace EntitiesLayer
 
 
 
-        //        public bool IsValid{ 
 
-        //            get { return (GetRuleViolations().Count() == 0); }
-        //        }
+        public Curso(String pnombre, String pcodigo)
+        {
 
-        //        public IEnumerable<RuleViolation> GetRuleViolations()
-        //        {
-        //            if (String.IsNullOrEmpty(Nombre))
-        //            {
-        //                yield return new RuleViolation("precio");
-        //            }
-        //            if (precio <= 0)
-
-        //                yield return new RuleViolation("El precio debe tener un valor", "Precio");
-        //            }
-
-        //            yield break;
-        //        }
+            nombre = pnombre;
+            codigo = pcodigo;
+        }
 
 
-        //        public IEnumerable<RuleViolation> GetRuleViolations()
-        //        {
-        //            throw new NotImplementedException();
-        //}
-        //}
+         public bool IsValid{ 
+
+             get { return (GetRuleViolations().Count() == 0); 
+          }
+      }
+
+
+        public IEnumerable<RuleViolation> GetRuleViolations(){
+
+            if (String.IsNullOrEmpty(nombre)){
+               
+                yield return new RuleViolation("Nombre Requerido", "Nombre");
+            }
+
+            if (String.IsNullOrEmpty(codigo)){
+
+                yield return new RuleViolation("Código Requerido", "Codigo");
+            }
+
+            if (String.IsNullOrEmpty(cuatrimestre)){
+
+                yield return new RuleViolation("Cuatrimestre Requerido", "Cuatrimestre");
+            }
+                   
+     }
+
+
 
 
     }

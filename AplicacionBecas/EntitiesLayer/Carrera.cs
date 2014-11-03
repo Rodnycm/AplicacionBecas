@@ -11,7 +11,7 @@ namespace EntitiesLayer
     {
 
         private int _idCarrera;
-
+           
         public int Id
         {
             get { return _idCarrera; }

@@ -131,10 +131,16 @@
     <Compile Include="uCtrlBitacoraAcciones.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uCtrlBuscarCursos.Designer.vb">
-      <DependentUpon>uCtrlBuscarCursos.vb</DependentUpon>
+    <Compile Include="uCtrlMantenimientoCarreras.Designer.vb">
+      <DependentUpon>uCtrlMantenimientoCarreras.vb</DependentUpon>
     </Compile>
-    <Compile Include="uCtrlBuscarCursos.vb">
+    <Compile Include="uCtrlMantenimientoCarreras.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCtrlMantenimientoCursos.Designer.vb">
+      <DependentUpon>uCtrlMantenimientoCursos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uCtrlMantenimientoCursos.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="uCtrlConsultarBeneficio.Designer.vb">
@@ -203,22 +209,10 @@
     <Compile Include="UctrlListarYBuscarUsuario.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uCtrlMantenimientoCarreras.Designer.vb">
-      <DependentUpon>uCtrlMantenimientoCarreras.vb</DependentUpon>
-    </Compile>
-    <Compile Include="uCtrlMantenimientoCarreras.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="uCtrlMantenimientoCrearRequisito.Designer.vb">
       <DependentUpon>uCtrlMantenimientoCrearRequisito.vb</DependentUpon>
     </Compile>
     <Compile Include="uCtrlMantenimientoCrearRequisito.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uCtrlMantenimientoCursos.Designer.vb">
-      <DependentUpon>uCtrlMantenimientoCursos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="uCtrlMantenimientoCursos.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="uCtrlMantenimientoRequisitos.Designer.vb">
@@ -261,6 +255,12 @@
       <DependentUpon>uCtrlModificarCarrera.vb</DependentUpon>
     </Compile>
     <Compile Include="uCtrlModificarCarrera.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uCtrlModificarCurso.Designer.vb">
+      <DependentUpon>uCtrlModificarCurso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uCtrlModificarCurso.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="uCtrlModificarRol.Designer.vb">
@@ -312,8 +312,11 @@
     <EmbeddedResource Include="uCtrlBitacoraAcciones.resx">
       <DependentUpon>uCtrlBitacoraAcciones.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uCtrlBuscarCursos.resx">
-      <DependentUpon>uCtrlBuscarCursos.vb</DependentUpon>
+    <EmbeddedResource Include="uCtrlMantenimientoCarreras.resx">
+      <DependentUpon>uCtrlMantenimientoCarreras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uCtrlMantenimientoCursos.resx">
+      <DependentUpon>uCtrlMantenimientoCursos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uCtrlConsultarBeneficio.resx">
       <DependentUpon>uCtrlConsultarBeneficio.vb</DependentUpon>
@@ -348,14 +351,8 @@
     <EmbeddedResource Include="UctrlListarYBuscarUsuario.resx">
       <DependentUpon>UctrlListarYBuscarUsuario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uCtrlMantenimientoCarreras.resx">
-      <DependentUpon>uCtrlMantenimientoCarreras.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="uCtrlMantenimientoCrearRequisito.resx">
       <DependentUpon>uCtrlMantenimientoCrearRequisito.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uCtrlMantenimientoCursos.resx">
-      <DependentUpon>uCtrlMantenimientoCursos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uCtrlMantenimientoRequisitos.resx">
       <DependentUpon>uCtrlMantenimientoRequisitos.vb</DependentUpon>
@@ -377,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uCtrlModificarCarrera.resx">
       <DependentUpon>uCtrlModificarCarrera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uCtrlModificarCurso.resx">
+      <DependentUpon>uCtrlModificarCurso.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uCtrlModificarRol.resx">
       <DependentUpon>uCtrlModificarRol.vb</DependentUpon>
@@ -443,6 +443,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tablaFinalMedianaAzul1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

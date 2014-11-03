@@ -1,6 +1,6 @@
 ﻿Public Class uCtrlMenuMantenimiento
 
-    Public Property uCtrlMantCarreras As uCtrlMantenimientoCarreras = New uCtrlMantenimientoCarreras()
+    'Public Property uCtrlMantCarreras As uCtrlMantenimientoCarreras = New uCtrlMantenimientoCarreras()
     Public Property uCtrlMantCursos As uCtrlMantenimientoCursos = New uCtrlMantenimientoCursos()
     Public Property uCtrlMantRequisitos As uCtrlMantenimientoRequisitos = New uCtrlMantenimientoRequisitos()
     Public Property uCntrlMantRol As uCtrlListarRol = New uCtrlListarRol()
@@ -27,6 +27,7 @@
         frmPrincipal.Controls.Add(uCtrlMantCursos)
         uCtrlMantCursos.Show()
 
+
     End Sub
 
     ''' <summary>Metodo que se ejecuta cuando el usuario da click al boton carreras, muestra 
@@ -35,10 +36,10 @@
 
     Private Sub btnCarreras_Click(sender As Object, e As EventArgs) Handles btnCarreras.Click
 
-        Me.Hide()
-        uCtrlMantCarreras = New uCtrlMantenimientoCarreras()
-        frmPrincipal.Controls.Add(uCtrlMantCarreras)
-        uCtrlMantCarreras.Show()
+        'Me.Hide()
+        'uCtrlMantCarreras = New uCtrlMantenimientoCarreras()
+        'frmPrincipal.Controls.Add(uCtrlMantCarreras)
+        'uCtrlMantCarreras.Show()
 
     End Sub
 

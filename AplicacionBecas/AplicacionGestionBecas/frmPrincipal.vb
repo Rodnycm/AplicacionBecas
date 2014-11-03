@@ -6,7 +6,7 @@
     Dim ucMenuAcad As New uCtrlMenuAcademico()
     Dim ucMenuRep As New uCtrlMenuReportes()
     Dim ucMenuBecas As New uCtrlMenuBecas()
-    'Public Property uCtrlMantCarreras As uCtrlMantenimientoCarreras = New uCtrlMantenimientoCarreras()
+    Public Property uCtrlMantCarreras As uCtrlMantenimientoCarreras = New uCtrlMantenimientoCarreras()
 
     Public Sub New()
 
@@ -20,7 +20,7 @@
         ucMenuRep.Hide()
         ucMenuMant.Hide()
         ucMenuAcad.Hide()
-        ucMenuMant.uCtrlMantCarreras.Dispose()
+        'ucMenuMant.uCtrlMantCarreras.Dispose()
         btnsMenus.Show()
 
     End Sub
@@ -30,7 +30,7 @@
         ucMenuRep.Hide()
         ucMenuAcad.Hide()
         btnsMenus.Hide()
-        ucMenuMant.uCtrlMantCarreras.Dispose()
+        'ucMenuMant.uCtrlMantCarreras.Dispose()
         Me.Controls.Add(ucMenuMant)
         ucMenuMant.Show()
 
@@ -42,7 +42,7 @@
         ucMenuRep.Hide()
         btnsMenus.Hide()
         ucMenuMant.Hide()
-        ucMenuMant.uCtrlMantCarreras.Dispose()
+        'ucMenuMant.uCtrlMantCarreras.Dispose()
         Me.Controls.Add(ucMenuAcad)
         ucMenuAcad.Show()
 
@@ -54,7 +54,7 @@
         btnsMenus.Hide()
         ucMenuMant.Hide()
         ucMenuAcad.Hide()
-        ucMenuMant.uCtrlMantCarreras.Dispose()
+        'ucMenuMant.uCtrlMantCarreras.Dispose()
         Me.Controls.Add(ucMenuRep)
         ucMenuRep.Show()
 
