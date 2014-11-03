@@ -44,7 +44,7 @@
 
     Private Sub btnRoles_Click(sender As Object, e As EventArgs) Handles btnRoles.Click
         Me.Hide()
-        frmPrincipal.Controls.Add(uCntrlMantRol)
+        FrmIniciarSesion.principal.Controls.Add(uCntrlMantRol)
         uCntrlMantRol.Location = New Point(210, 100)
         uCntrlMantRol.Show()
     End Sub

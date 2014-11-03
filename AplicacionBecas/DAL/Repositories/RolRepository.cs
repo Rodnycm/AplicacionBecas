@@ -79,7 +79,7 @@ namespace DAL.Repositories
             List<Rol> pRol = null;
 
             SqlCommand cmd = new SqlCommand();
-            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_consultarRoles");
+            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_listarRol");
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -88,7 +88,7 @@ namespace DAL.Repositories
                 {
                     pRol.Add(new Rol
                     {
-                        //Id = Convert.ToInt32(dr["IdRol"]),
+                        Id = Convert.ToInt32(dr["IdRol"]),
                         Nombre = dr["Nombre"].ToString()
                     });
                 }
