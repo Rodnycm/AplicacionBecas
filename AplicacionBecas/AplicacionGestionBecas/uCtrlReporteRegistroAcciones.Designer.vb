@@ -24,15 +24,27 @@ Partial Class uCtrlReporteRegistroAcciones
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uCtrlReporteRegistroAcciones))
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.Tb_BitacoraAccionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DB_Proyecto2DataSetConsultarRegistroAcciones = New UI.DB_Proyecto2DataSetConsultarRegistroAcciones()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.Tb_BitacoraAccionTableAdapter = New UI.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_BitacoraAccionTableAdapter()
         Me.DB_Proyecto2DataSet1 = New UI.DB_Proyecto2DataSet1()
         CType(Me.Tb_BitacoraAccionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DB_Proyecto2DataSetConsultarRegistroAcciones, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DB_Proyecto2DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ReportViewer1
+        '
+        ReportDataSource1.Name = "DataSetRegistroAcciones"
+        ReportDataSource1.Value = Me.Tb_BitacoraAccionBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "UI.Report3.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(13, 41)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.Size = New System.Drawing.Size(947, 271)
+        Me.ReportViewer1.TabIndex = 0
         '
         'Tb_BitacoraAccionBindingSource
         '
@@ -43,17 +55,6 @@ Partial Class uCtrlReporteRegistroAcciones
         '
         Me.DB_Proyecto2DataSetConsultarRegistroAcciones.DataSetName = "DB_Proyecto2DataSetConsultarRegistroAcciones"
         Me.DB_Proyecto2DataSetConsultarRegistroAcciones.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ReportViewer1
-        '
-        ReportDataSource1.Name = "DataSetRegistroAcciones"
-        ReportDataSource1.Value = Me.Tb_BitacoraAccionBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "UI.Report3.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(3, 31)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(715, 246)
-        Me.ReportViewer1.TabIndex = 0
         '
         'Tb_BitacoraAccionTableAdapter
         '
@@ -68,9 +69,12 @@ Partial Class uCtrlReporteRegistroAcciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "uCtrlReporteRegistroAcciones"
-        Me.Size = New System.Drawing.Size(745, 323)
+        Me.Size = New System.Drawing.Size(975, 321)
         CType(Me.Tb_BitacoraAccionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DB_Proyecto2DataSetConsultarRegistroAcciones, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DB_Proyecto2DataSet1, System.ComponentModel.ISupportInitialize).EndInit()

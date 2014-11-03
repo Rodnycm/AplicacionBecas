@@ -13,7 +13,7 @@ namespace DAL.Repositories
 {
     public class RolRepository : IRepository<Rol>
     {
-        public string actividad;
+        private string actividad;
         private static RolRepository instance;
         private List<IEntity> _insertItems;
         private List<IEntity> _deleteItems;

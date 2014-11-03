@@ -44,7 +44,13 @@ Public Class uCntrlBuscarBeneficio
 
         Catch ex As Exception
 
+            Dim UCtrl As UctrlAlerta = New UctrlAlerta()
 
+            FrmIniciarSesion.principal.Controls.Add(UCtrl)
+            UCtrl.lblAlerta.Text = ex.Message
+            UCtrl.Location = New Point(300, 100)
+            UCtrl.BringToFront()
+            UCtrl.Show()
 
         End Try
 
@@ -130,7 +136,7 @@ Public Class uCntrlBuscarBeneficio
     '//////////////////////////////////////////////////////////////////////////////////////////
 
     ''' <summary>
-    ''' 
+    ''' Muestra un beneficio en un data gird
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub verBeneficios()
