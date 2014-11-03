@@ -15,7 +15,7 @@ namespace BLL
         private ContenedorMantenimiento() { }
 
         public static ContenedorMantenimiento Instance
-        {
+        { 
 
             get
             {
