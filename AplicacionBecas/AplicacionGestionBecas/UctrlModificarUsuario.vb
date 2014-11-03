@@ -4,7 +4,8 @@ Public Class UctrlModificarUsuario
     Dim idUsuario As Integer
     Dim parametro As String
     Dim ucntrl As UctrlListarYBuscarUsuario
-    Dim alerta As UctrlAlerta = New UctrlAlerta()
+    Dim alerta As UctrlAlerta
+    Dim mBlnFormDragging As Boolean
 
 
     Public Sub setIdUsuario(ByVal pid As Integer)
@@ -34,6 +35,7 @@ Public Class UctrlModificarUsuario
                 cmbRoles.Items.Add(listaRoles(i).Nombre)
             Next
         Catch ex As Exception
+            alerta = New UctrlAlerta
             alerta.lblAlerta.Text = ex.Message
             FrmIniciarSesion.principal.Controls.Add(alerta)
             alerta.BringToFront()
@@ -103,6 +105,7 @@ Public Class UctrlModificarUsuario
             ucntrl.listarUsuarios()
             Me.Dispose()
         Catch ex As Exception
+            alerta = New UctrlAlerta()
             alerta.lblAlerta.Text = ex.Message
             FrmIniciarSesion.principal.Controls.Add(alerta)
             alerta.BringToFront()
@@ -118,6 +121,32 @@ Public Class UctrlModificarUsuario
         ucntrl.Location = New Point(120, 0)
         ucntrl.Show()
     End Sub
+
+    Public Sub uCtrlModificarUsuario_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
+
+        If mBlnFormDragging = True Then
+
+            Dim position As Point = FrmIniciarSesion.principal.PointToClient(MousePosition)
+            Me.Location = New Point(position)
+
+        End If
+
+    End Sub
+
+    Public Sub uCtrlModificarUsuario_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
+
+        mBlnFormDragging = False
+        Dim position As Point = FrmIniciarSesion.principal.PointToClient(MousePosition)
+        Location = New Point(position)
+
+    End Sub
+
+    Public Sub uCtrlModificarUsuario_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
+
+        mBlnFormDragging = True
+
+    End Sub
+
 
 
 End Class

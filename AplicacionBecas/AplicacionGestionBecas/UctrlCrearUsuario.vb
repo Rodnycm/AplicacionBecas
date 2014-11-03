@@ -2,6 +2,8 @@
 
 Public Class UctrlCrearUsuario
     Dim alerta As UctrlAlerta = New UctrlAlerta()
+    Dim lista As UctrlListarYBuscarUsuario
+    Dim mBlnFormDragging As Boolean
     '<summary> Método que se encarga mandar al gestor la información para crear un nuevo usuario</summary>
     '<author> Gabriela Gutiérrez Corrales </author> 
     '<param> No recibe valor  </param>
@@ -32,12 +34,20 @@ Public Class UctrlCrearUsuario
         Try
             objGestorUsuario.crearUsuario(pNombre, sNombre, pApellido, sApellido, identificacion, telefono, fechaNacimiento, rol, genero, correoElectronico)
             objGestorUsuario.guardarCambios()
+            lista.dgUsuarios.Rows.Clear()
+            lista.listarUsuarios()
+            MsgBox("Usuario creado correctamente")
         Catch ex As Exception
             alerta.lblAlerta.Text = ex.Message
             FrmIniciarSesion.principal.Controls.Add(alerta)
+            alerta.Location = New Point(500, 250)
             alerta.BringToFront()
             alerta.Show()
         End Try
+
+        lista.dgUsuarios.Rows.Clear()
+        lista.listarUsuarios()
+
     End Sub
 
 
@@ -87,6 +97,33 @@ Public Class UctrlCrearUsuario
         ucntrl.Show()
     End Sub
 
+    Public Sub setLista(ByVal plista As UctrlListarYBuscarUsuario)
+        lista = plista
+    End Sub
+
+    Public Sub uCtrlCrearUsuario_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
+
+        If mBlnFormDragging = True Then
+
+            Dim position As Point = FrmIniciarSesion.principal.PointToClient(MousePosition)
+            Me.Location = New Point(position)
+
+        End If
+
+    End Sub
+
+    Public Sub uCtrlCrearUsuario_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
+
+        mBlnFormDragging = False
+        Dim position As Point = FrmIniciarSesion.principal.PointToClient(MousePosition)
+        Location = New Point(position)
+
+    End Sub
+
+    Public Sub uCtrlCrearUsuario_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
+
+        mBlnFormDragging = True
+
+    End Sub
 
 End Class
-
