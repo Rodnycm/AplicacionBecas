@@ -29,6 +29,7 @@ R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.Properties.Res
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.dll
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.pdb
+<<<<<<< HEAD
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\DAL.dll
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\DAL.pdb
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\EntitiesLayer.dll
@@ -40,3 +41,7 @@ C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.dll
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.pdb
+=======
+C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\TIL.dll
+C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\DAL\bin\Debug\TIL.pdb
+>>>>>>> origin/master

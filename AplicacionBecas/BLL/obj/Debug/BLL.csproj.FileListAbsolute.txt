@@ -35,6 +35,7 @@ R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.Properties.Res
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csproj.GenerateResource.Cache
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.dll
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.pdb
+<<<<<<< HEAD
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\BLL.dll
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\BLL.pdb
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\DAL.dll
@@ -49,3 +50,10 @@ C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csproj.GenerateResource.Cache
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.dll
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.pdb
+=======
+C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\TIL.dll
+C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\TIL.pdb
+C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.Alerts.resources
+C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.Properties.Resources.resources
+C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csproj.GenerateResource.Cache
+>>>>>>> origin/master
