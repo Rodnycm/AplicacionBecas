@@ -28,6 +28,7 @@ Partial Class uCntrlConsultarRol
         Me.btnVolver = New System.Windows.Forms.Button()
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'CLBPermisos
@@ -49,14 +50,13 @@ Partial Class uCntrlConsultarRol
         '
         'btnVolver
         '
-        Me.btnVolver.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnVolver.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnVolver.ForeColor = System.Drawing.Color.White
-        Me.btnVolver.Location = New System.Drawing.Point(494, 259)
+        Me.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVolver.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVolver.ForeColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.btnVolver.Location = New System.Drawing.Point(528, 253)
         Me.btnVolver.Name = "btnVolver"
-        Me.btnVolver.Size = New System.Drawing.Size(110, 47)
+        Me.btnVolver.Size = New System.Drawing.Size(89, 29)
         Me.btnVolver.TabIndex = 17
         Me.btnVolver.Text = "Volver"
         Me.btnVolver.UseVisualStyleBackColor = False
@@ -78,24 +78,37 @@ Partial Class uCntrlConsultarRol
         Me.btnCerrar.BackgroundImage = CType(resources.GetObject("btnCerrar.BackgroundImage"), System.Drawing.Image)
         Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.Location = New System.Drawing.Point(658, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(611, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(21, 20)
         Me.btnCerrar.TabIndex = 21
         Me.btnCerrar.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(3, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(93, 25)
+        Me.Label1.TabIndex = 63
+        Me.Label1.Text = "Consultar"
         '
         'uCntrlConsultarRol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.CLBPermisos)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.lblNombre)
         Me.Name = "uCntrlConsultarRol"
-        Me.Size = New System.Drawing.Size(682, 321)
+        Me.Size = New System.Drawing.Size(635, 320)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -105,5 +118,6 @@ Partial Class uCntrlConsultarRol
     Friend WithEvents btnVolver As System.Windows.Forms.Button
     Friend WithEvents lblNombre As System.Windows.Forms.Label
     Friend WithEvents btnCerrar As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 
 End Class

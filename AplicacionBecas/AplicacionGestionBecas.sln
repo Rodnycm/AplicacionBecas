@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UI", "AplicacionGestionBecas\UI.vbproj", "{59E114ED-E593-438A-B226-DC0602321A71}"
 EndProject
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntitiesLayer", "EntitiesLa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{16AC6C97-A943-4802-8884-E0CE0D32F208}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIL", "TIL\TIL.csproj", "{858169A9-A04E-4476-82E2-2DA5FDDA4802}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIL", "TIL\TIL.csproj", "{D9317EFC-F916-4E00-92A0-3EDC370D6FEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{16AC6C97-A943-4802-8884-E0CE0D32F208}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16AC6C97-A943-4802-8884-E0CE0D32F208}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16AC6C97-A943-4802-8884-E0CE0D32F208}.Release|Any CPU.Build.0 = Release|Any CPU
-		{858169A9-A04E-4476-82E2-2DA5FDDA4802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{858169A9-A04E-4476-82E2-2DA5FDDA4802}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{858169A9-A04E-4476-82E2-2DA5FDDA4802}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{858169A9-A04E-4476-82E2-2DA5FDDA4802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9317EFC-F916-4E00-92A0-3EDC370D6FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9317EFC-F916-4E00-92A0-3EDC370D6FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9317EFC-F916-4E00-92A0-3EDC370D6FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9317EFC-F916-4E00-92A0-3EDC370D6FEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

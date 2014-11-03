@@ -2,7 +2,10 @@
 Public Class UcntrlIniciar
 
     Dim alerta As UctrlAlerta = New UctrlAlerta()
+
     Private Sub btnIniciarSesion_Click(sender As Object, e As EventArgs) Handles btnIniciarSesion.Click
+        MsgBox("Matihass mas")
+
         Dim nombreUsuario As String = txtNombreUsuario.Text
         Dim contraseña As String = txtContraseña.Text
         Dim listaUsuarios As List(Of Usuario)
@@ -13,6 +16,7 @@ Public Class UcntrlIniciar
             If listaUsuarios.Count > 0 Then
                 Me.Hide()
                 Globals.userName = listaUsuarios(0).primerNombre
+                Globals.userRol = listaUsuarios(0).rol
                 FrmIniciarSesion.Hide()
                 FrmIniciarSesion.principal.Show()
             Else
@@ -32,11 +36,11 @@ Public Class UcntrlIniciar
     End Sub
 
     Private Sub btnRecuperar_Click(sender As Object, e As EventArgs) Handles btnRecuperar.Click
+
         Dim uctrlRecuperar As UctrlRecuperarContraseña = New UctrlRecuperarContraseña()
         FrmIniciarSesion.Controls.Add(uctrlRecuperar)
         uctrlRecuperar.BringToFront()
         uctrlRecuperar.Location = New Point(140, 260)
     End Sub
 
- 
 End Class

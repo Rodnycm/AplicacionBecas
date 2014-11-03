@@ -1,3 +1,4 @@
+
 ﻿namespace BLL
 {
     partial class Alerts
@@ -30,8 +31,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Alerts));
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.lblAlerta = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -49,17 +51,17 @@
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // lblAlerta
+            // label1
             // 
-            this.lblAlerta.AutoSize = true;
-            this.lblAlerta.BackColor = System.Drawing.Color.Transparent;
-            this.lblAlerta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblAlerta.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlerta.Location = new System.Drawing.Point(12, 63);
-            this.lblAlerta.Name = "lblAlerta";
-            this.lblAlerta.Size = new System.Drawing.Size(39, 17);
-            this.lblAlerta.TabIndex = 12;
-            this.lblAlerta.Text = "label1";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 17);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "label1";
             // 
             // label2
             // 
@@ -73,15 +75,28 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Error";
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrar.Location = new System.Drawing.Point(306, 0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(21, 20);
+            this.btnCerrar.TabIndex = 21;
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // Alerts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(330, 166);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.lblAlerta);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(600, 300);
             this.Name = "Alerts";
@@ -94,7 +109,10 @@
         #endregion
 
         internal System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Label lblAlerta;
+        private System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.Button btnCerrar;
     }
+
 }
+ 
