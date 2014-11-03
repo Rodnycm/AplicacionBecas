@@ -6,7 +6,14 @@ Public Class uCntrlBuscarBeneficio
 
     Private Sub PantallaConsultarBeneficio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        listarBeneficios()
+        Try
+            listarBeneficios()
+
+        Catch
+
+
+
+        End Try
 
 
 
@@ -19,7 +26,9 @@ Public Class uCntrlBuscarBeneficio
     ''' <author>Mathias Muller</author>
     Public Sub listarBeneficios()
 
+
         Try
+
 
             Dim listaBeneficios As New List(Of Beneficio)
             listaBeneficios = objGestorBeneficio.buscarBeneficios()
@@ -32,17 +41,20 @@ Public Class uCntrlBuscarBeneficio
                 dtaBuscarBeneficio.Columns("dtaId").Visible = False
 
             Next
-        Catch
 
-            MsgBox("Debe ingresar un beneficio")
+        Catch ex As Exception
+
+
 
         End Try
+
+
 
     End Sub
     Private Sub btnMantenimiento_Click(sender As Object, e As EventArgs) Handles btnMantenimiento.Click
         Dim uCtrlRegistrarBeneficio As New uCtrlRegistrarBeneficio
 
-        frmPrincipal.Controls.Add(uCtrlRegistrarBeneficio)
+        FrmIniciarSesion.principal.Controls.Add(uCtrlRegistrarBeneficio)
         uCtrlRegistrarBeneficio.getFrmBuscar(Me)
         uCtrlRegistrarBeneficio.Location = New Point(290, 48)
         uCtrlRegistrarBeneficio.BringToFront()
@@ -101,7 +113,7 @@ Public Class uCntrlBuscarBeneficio
         End If
 
     End Sub
-    
+
     '//////////////////////////////////////////////////////////////////////////////////////////
     'El ASIGNAR AHORA LO HACE MARIA, NO VA AQUI EN BENEFICIOS!!!!
 
@@ -127,7 +139,7 @@ Public Class uCntrlBuscarBeneficio
         Dim uCtrlConsultarBeneficio As New uCtrlConsultarBeneficio
 
         uCtrlConsultarBeneficio.recibirInfo(nombre)
-        frmPrincipal.Controls.Add(uCtrlConsultarBeneficio)
+        FrmIniciarSesion.principal.Controls.Add(uCtrlConsultarBeneficio)
         uCtrlConsultarBeneficio.BringToFront()
         uCtrlConsultarBeneficio.Show()
         uCtrlConsultarBeneficio.Location = New Point(200, 150)
@@ -154,7 +166,7 @@ Public Class uCntrlBuscarBeneficio
         Dim uCtrlModificarBeneficio As New uCtrlModificarBeneficio
 
 
-        frmPrincipal.Controls.Add(uCtrlModificarBeneficio)
+        FrmIniciarSesion.principal.Controls.Add(uCtrlModificarBeneficio)
         uCtrlModificarBeneficio.getFrmBuscar(Me)
         uCtrlModificarBeneficio.recieveData(id, nombre, porcentaje, aplicacion)
         uCtrlModificarBeneficio.BringToFront()
@@ -180,8 +192,9 @@ Public Class uCntrlBuscarBeneficio
 
         Dim uCtrlEliminarBeneficio As New uCtrlEliminarBeneficio
 
-        frmPrincipal.Controls.Add(uCtrlEliminarBeneficio)
+        FrmIniciarSesion.principal.Controls.Add(uCtrlEliminarBeneficio)
         uCtrlEliminarBeneficio.getUCtrlInstance(Me)
+        uCtrlEliminarBeneficio.lblEliminar.Text = "¿Esta seguro que desea eliminar el beneficio?"
         uCtrlEliminarBeneficio.recibirInfo(id, nombre, porcentaje, aplicacion)
         uCtrlEliminarBeneficio.BringToFront()
         uCtrlEliminarBeneficio.Show()

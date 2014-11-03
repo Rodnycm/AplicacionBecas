@@ -63,7 +63,7 @@
 
     Private Sub btnBeneficios_Click(sender As Object, e As EventArgs) Handles btnBeneficios.Click
         Me.Hide()
-        frmPrincipal.Controls.Add(uCntrlBuscarBeneficio)
+        FrmIniciarSesion.principal.Controls.Add(uCntrlBuscarBeneficio)
         uCntrlBuscarBeneficio.Show()
         uCntrlBuscarBeneficio.Location = New Point(130, 50)
     End Sub

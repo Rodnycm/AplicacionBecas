@@ -7,11 +7,14 @@ using System.Collections;
 using System.Transactions;
 using System.Data.SqlClient;
 using System.Data;
+using TIL;
+using DAL.Repositories;
 
 namespace DAL
 {
     public class BeneficioRepository : IRepository<Beneficio>
     {
+        public string actividad;
         private static BeneficioRepository instance;
         private List<IEntity> _insertItems;
         private List<IEntity> _deleteItems;
@@ -82,29 +85,51 @@ namespace DAL
 
         public IEnumerable<Beneficio> GetAll()
         {
-            List<Beneficio> listaBeneficios = null;
-            var sqlQuery = "Sp_buscarBeneficios";
-            SqlCommand cmd = new SqlCommand(sqlQuery);
-
-            var ds = DBAccess.ExecuteQuery(cmd);
-
-            if (ds.Tables[0].Rows.Count > 0)
+            try
             {
-                listaBeneficios = new List<Beneficio>();
-                foreach (DataRow dr in ds.Tables[0].Rows)
-                {
-                    listaBeneficios.Add(new Beneficio
-                    {
-                        Id = Convert.ToInt32(dr["idBeneficio"]),
-                        Nombre = dr["Nombre"].ToString(),
-                        Porcentaje = Convert.ToDouble(dr["Porcentaje"]),
-                        Aplicacion = dr["Aplicabilidad"].ToString()
-                    });
-                }
-            }
 
-            return listaBeneficios;
+                List<Beneficio> listaBeneficios = null;
+                var sqlQuery = "Sp_buscarBeneficios";
+                SqlCommand cmd = new SqlCommand(sqlQuery);
+
+                var ds = DBAccess.ExecuteQuery(cmd);
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    listaBeneficios = new List<Beneficio>();
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        listaBeneficios.Add(new Beneficio
+                        {
+                            Id = Convert.ToInt32(dr["idBeneficio"]),
+                            Nombre = dr["Nombre"].ToString(),
+                            Porcentaje = Convert.ToDouble(dr["Porcentaje"]),
+                            Aplicacion = dr["Aplicabilidad"].ToString()
+                        });
+                    }
+                }
+
+                return listaBeneficios;
+
+            }
+            //catch (SqlException ex)
+            //{
+
+            //    throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
+
+            //}
+            //catch (DataAccessException ex)
+            //{ 
+            //    throw ex;
+            //}
+            catch (Exception e) {
+
+                throw e;
+            }
+            
         }
+
+        
 
         /// <summary>
         /// Trae un DataSet de la base de datos.
@@ -125,27 +150,45 @@ namespace DAL
         public Beneficio GetByNombre(String pnombre)
         {
 
-            Beneficio objBeneficio = null;
-            SqlCommand cmd = new SqlCommand();
-            cmd.Parameters.Add(new SqlParameter("@Nombre", pnombre));
-
-            var ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_buscarBeneficioPorNombre");
-
-            if (ds.Tables[0].Rows.Count > 0)
+            try
             {
-                var dr = ds.Tables[0].Rows[0];
+                Beneficio objBeneficio = null;
+                SqlCommand cmd = new SqlCommand();
+                cmd.Parameters.Add(new SqlParameter("@Nombre", pnombre));
 
-                objBeneficio = new Beneficio
+                var ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_buscarBeneficioPorNombre");
+
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    Id = Convert.ToInt32(dr["idBeneficio"]),
-                    Nombre = dr["Nombre"].ToString(),
-                    Porcentaje = Convert.ToDouble(dr["Porcentaje"]),
-                    Aplicacion = dr["Aplicabilidad"].ToString()
-                };
-            }
+                    var dr = ds.Tables[0].Rows[0];
 
-            return objBeneficio;
-        }
+                    objBeneficio = new Beneficio
+                    {
+                        Id = Convert.ToInt32(dr["idBeneficio"]),
+                        Nombre = dr["Nombre"].ToString(),
+                        Porcentaje = Convert.ToDouble(dr["Porcentaje"]),
+                        Aplicacion = dr["Aplicabilidad"].ToString()
+                    };
+                }
+
+                return objBeneficio;
+            }
+            //catch (SqlException ex)
+            //{
+
+            //    throw new DataAccessException("Ha ocurrido un error al consultar un usuario por el nombre", ex);
+
+            //}
+            //catch (DataAccessException ex)
+            //{
+            //    throw ex;
+            //}
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+       }
         /// <summary>
         /// Este método sirve para validar si en la listas globales hay información, dependiendo de la lista, aquí se llama al método para insertar, modificar o eliminar.
         /// </summary>
@@ -216,6 +259,7 @@ namespace DAL
 
         private void InsertBeneficio(Beneficio objBeneficio)
         {
+            
 
             try
             {
@@ -227,9 +271,22 @@ namespace DAL
 
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_crearBeneficio");
 
+                actividad = "Se ha registrado un Beneficio";
+                registrarAccion(actividad);
+
+
             }
+            //catch (SqlException ex)
+            //{
+
+            //    throw new DataAccessException("Ha ocurrido un error al crear un usuario", ex);
+
+            //}
+
             catch (Exception ex)
             {
+
+                throw ex;
 
             }
 
@@ -243,6 +300,7 @@ namespace DAL
 
         private void UpdateBeneficio(Beneficio objBeneficio)
         {
+
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -255,9 +313,13 @@ namespace DAL
 
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_modificarBeneficio");
 
+                actividad = "Se ha modificado un Beneficio";
+                registrarAccion(actividad);
+
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex){
+
+                throw ex;
             }
         }
 
@@ -268,24 +330,47 @@ namespace DAL
 
         private void DeleteBeneficio(Beneficio objBeneficio)
         {
+ 
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Parameters.Add(new SqlParameter("@Nombre", objBeneficio.Nombre));
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_eliminarBeneficio");
 
+                actividad = "Se ha Eliminado un Beneficio";
+                registrarAccion(actividad);
             }
-            catch (SqlException ex)
+            
+            catch (Exception e)
             {
-                //logear la excepcion a la bd con un Exception
-                //throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
+                throw e;
+            }
+        }
 
-            }
-            catch (Exception ex)
+        public void registrarAccion(string pactividad)
+        {
+
+            RegistroAccion objRegistro;
+            DateTime fecha = DateTime.Today;
+            string nombreUsuario = Globals.userName;
+            string nombreRol = Globals.userRol.Nombre;
+            string descripcion = pactividad;
+
+
+            objRegistro = new RegistroAccion(nombreUsuario, nombreRol, descripcion, fecha);
+
+            try
             {
-                //logear la excepcion a la bd con un Exception
-                //throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
+
+                RegistroAccionRepository objRegistroRep = new RegistroAccionRepository();
+                objRegistroRep.InsertAccion(objRegistro);
             }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+
         }
 
     }
