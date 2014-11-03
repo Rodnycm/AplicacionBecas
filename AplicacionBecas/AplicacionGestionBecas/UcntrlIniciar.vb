@@ -3,16 +3,9 @@ Public Class UcntrlIniciar
 
     Dim alerta As UctrlAlerta = New UctrlAlerta()
 
-    Public Sub New()
-
-
-        ' Llamada necesaria para el diseñador.
-        Me.InitializeComponent()
-
-        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-
-    End Sub
     Private Sub btnIniciarSesion_Click(sender As Object, e As EventArgs) Handles btnIniciarSesion.Click
+        MsgBox("Matihass mas")
+
         Dim nombreUsuario As String = txtNombreUsuario.Text
         Dim contraseña As String = txtContraseña.Text
         Dim listaUsuarios As List(Of Usuario)
