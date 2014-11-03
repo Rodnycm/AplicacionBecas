@@ -1,5 +1,5 @@
-R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\bin\Debug\UI.exe
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\bin\Debug\UI.exe.config
+R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\bin\Debug\UI.exe
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\bin\Debug\UI.pdb
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\bin\Debug\UI.xml
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\bin\Debug\BLL.dll
