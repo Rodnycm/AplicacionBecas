@@ -47,3 +47,7 @@ R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\AplicacionGestionBecas.exe
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\AplicacionGestionBecas.xml
 R:\Horus\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\AplicacionGestionBecas.pdb
+C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\bin\Debug\AplicacionGestionBecas.exe.config
+C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\AplicacionGestionBecas.exe
+C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\AplicacionGestionBecas.xml
+C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\AplicacionGestionBecas.pdb
