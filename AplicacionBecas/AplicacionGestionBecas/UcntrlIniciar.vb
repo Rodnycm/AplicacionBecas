@@ -15,6 +15,7 @@ Public Class UcntrlIniciar
             If listaUsuarios.Count > 0 Then
                 Me.Hide()
                 Globals.userName = listaUsuarios(0).primerNombre
+                Globals.userRol = listaUsuarios(0).rol
                 FrmIniciarSesion.Hide()
                 FrmIniciarSesion.principal.Show()
             Else
