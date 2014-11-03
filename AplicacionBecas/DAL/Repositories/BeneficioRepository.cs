@@ -14,7 +14,7 @@ namespace DAL
 {
     public class BeneficioRepository : IRepository<Beneficio>
     {
-        public string actividad;
+        private string actividad;
         private static BeneficioRepository instance;
         private List<IEntity> _insertItems;
         private List<IEntity> _deleteItems;
@@ -112,16 +112,13 @@ namespace DAL
                 return listaBeneficios;
 
             }
-            //catch (SqlException ex)
-            //{
+            catch (SqlException ex)
+            {
 
-            //    throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
+                throw new CustomExceptions.DataAccessException("Ha ocurrido un error al Consultar todos los beneficios", ex);
 
-            //}
-            //catch (DataAccessException ex)
-            //{ 
-            //    throw ex;
-            //}
+            }
+            
             catch (Exception e) {
 
                 throw e;
@@ -173,16 +170,12 @@ namespace DAL
 
                 return objBeneficio;
             }
-            //catch (SqlException ex)
-            //{
+            catch (SqlException ex)
+            {
 
-            //    throw new DataAccessException("Ha ocurrido un error al consultar un usuario por el nombre", ex);
+                throw new CustomExceptions.DataAccessException("Ha ocurrido un error al buscar un beneficio por nombre", ex);
 
-            //}
-            //catch (DataAccessException ex)
-            //{
-            //    throw ex;
-            //}
+            }
             catch (Exception e)
             {
 
@@ -228,10 +221,12 @@ namespace DAL
                 }
                 catch (TransactionAbortedException ex)
                 {
+                    throw ex;
 
                 }
                 catch (ApplicationException ex)
                 {
+                    throw ex;
 
                 }
                 finally
@@ -276,12 +271,12 @@ namespace DAL
 
 
             }
-            //catch (SqlException ex)
-            //{
+            catch (SqlException ex)
+            {
 
-            //    throw new DataAccessException("Ha ocurrido un error al crear un usuario", ex);
+                throw new CustomExceptions.DataAccessException("Ha ocurrido un error al crear un beneficio", ex);
 
-            //}
+            }
 
             catch (Exception ex)
             {
@@ -317,6 +312,13 @@ namespace DAL
                 registrarAccion(actividad);
 
             }
+            catch (SqlException ex)
+            {
+
+                throw new CustomExceptions.DataAccessException("Ha ocurrido un error al editar un beneficio", ex);
+
+            }
+
             catch (Exception ex){
 
                 throw ex;
@@ -340,7 +342,14 @@ namespace DAL
                 actividad = "Se ha Eliminado un Beneficio";
                 registrarAccion(actividad);
             }
-            
+
+            catch (SqlException ex)
+            {
+
+                throw new CustomExceptions.DataAccessException("Ha ocurrido un error al eliminar un beneficio", ex);
+
+            }
+
             catch (Exception e)
             {
                 throw e;
@@ -364,6 +373,12 @@ namespace DAL
 
                 RegistroAccionRepository objRegistroRep = new RegistroAccionRepository();
                 objRegistroRep.InsertAccion(objRegistro);
+            }
+            catch (SqlException ex)
+            {
+
+                throw new CustomExceptions.DataAccessException("Ha ocurrido un error al registrar una accion", ex);
+
             }
             catch (Exception e)
             {

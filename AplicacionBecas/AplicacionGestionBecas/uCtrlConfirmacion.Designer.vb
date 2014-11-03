@@ -53,6 +53,7 @@ Partial Class uCtrlConfirmacion
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Transparent
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Controls.Add(Me.lblConfirmacion)
         Me.Controls.Add(Me.btnAceptar)
         Me.Name = "uCtrlConfirmacion"
