@@ -113,18 +113,5 @@ namespace BLL
         {
             return new Rol(nombre);
         }
-
-        //<summary> Método que se encarga de crear instancias de la clase Curso</summary>
-        //<author> Valeria Ramírez Cordero </author> 
-        //<param name = "nombre"> variable de tipo String que almacena el nombre del curso  </param>
-        //<param name= "codigo" > variable de tipo String que almacena el código de curso  </param>
-        //<param name= "cuatrimestre" > variable de tipo String que almacena el cuatrimestre en el que se encuetra el curso  </param>
-        //<param name= "creditos" > variable de tipo String que almacena los créditos del curso  </param>
-        //<param name= "precio" > variable de tipo String que almacena el precio del curso </param>
-        //<returns>Retorna un objeto de tipo Curso</returns> 
-        public Curso crearObjetoCurso(string nombre, string codigo, string cuatrimestre, int creditos, double precio)
-        {
-            return new Curso(nombre, codigo, cuatrimestre, creditos, precio);
-        }
     }
 }
