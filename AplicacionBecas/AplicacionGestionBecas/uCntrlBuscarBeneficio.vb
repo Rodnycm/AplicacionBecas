@@ -148,8 +148,10 @@ Public Class uCntrlBuscarBeneficio
         FrmIniciarSesion.principal.Controls.Add(uCtrlConsultarBeneficio)
         uCtrlConsultarBeneficio.BringToFront()
         uCtrlConsultarBeneficio.Show()
-        uCtrlConsultarBeneficio.Location = New Point(200, 150)
+        uCtrlConsultarBeneficio.Location = New Point(150, 150)
         Me.Hide()
+        Me.Dispose()
+
 
 
     End Sub
