@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="DB_Proyecto2ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DB_Proyecto2ConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AplicacionGestionBecas.My.MySettings.GlobalReference.Default.DB_Proyecto2ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="DB_Proyecto2ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DB_Proyecto2ConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.UI.My.MySettings.GlobalReference.Default.DB_Proyecto2ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Tb_BecasTableAdapter" GeneratorDataComponentClassName="Tb_BecasTableAdapter" Name="Tb_Becas" UserDataComponentName="Tb_BecasTableAdapter">

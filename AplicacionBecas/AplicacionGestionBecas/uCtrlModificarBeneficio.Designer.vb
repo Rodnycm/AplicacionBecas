@@ -131,7 +131,7 @@ Partial Class uCtrlModificarBeneficio
         '
         'btnCerrar
         '
-        Me.btnCerrar.BackgroundImage = Global.AplicacionGestionBecas.My.Resources.Resources.cerrar
+        Me.btnCerrar.BackgroundImage = Global.UI.My.Resources.Resources.cerrar
         Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(248, Byte), Integer))
@@ -146,7 +146,7 @@ Partial Class uCtrlModificarBeneficio
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = Global.AplicacionGestionBecas.My.Resources.Resources.tablaFinalMedianaAzul
+        Me.BackgroundImage = Global.UI.My.Resources.Resources.tablaFinalMedianaAzul
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.Label1)

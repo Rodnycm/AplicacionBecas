@@ -122,7 +122,7 @@ Partial Class uCntrlBuscarBeneficio
         '
         'pctbxBeneficios
         '
-        Me.pctbxBeneficios.BackgroundImage = Global.AplicacionGestionBecas.My.Resources.Resources.tablaFinalGrandeAzul
+        Me.pctbxBeneficios.BackgroundImage = Global.UI.My.Resources.Resources.tablaFinalGrandeAzul
         Me.pctbxBeneficios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pctbxBeneficios.Location = New System.Drawing.Point(30, 202)
         Me.pctbxBeneficios.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)

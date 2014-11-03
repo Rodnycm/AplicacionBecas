@@ -2,6 +2,16 @@
 Public Class UcntrlIniciar
 
     Dim alerta As UctrlAlerta = New UctrlAlerta()
+
+    Public Sub New()
+
+
+        ' Llamada necesaria para el diseñador.
+        Me.InitializeComponent()
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+
+    End Sub
     Private Sub btnIniciarSesion_Click(sender As Object, e As EventArgs) Handles btnIniciarSesion.Click
         Dim nombreUsuario As String = txtNombreUsuario.Text
         Dim contraseña As String = txtContraseña.Text
@@ -32,11 +42,11 @@ Public Class UcntrlIniciar
     End Sub
 
     Private Sub btnRecuperar_Click(sender As Object, e As EventArgs) Handles btnRecuperar.Click
+
         Dim uctrlRecuperar As UctrlRecuperarContraseña = New UctrlRecuperarContraseña()
         FrmIniciarSesion.Controls.Add(uctrlRecuperar)
         uctrlRecuperar.BringToFront()
         uctrlRecuperar.Location = New Point(140, 260)
     End Sub
 
- 
 End Class

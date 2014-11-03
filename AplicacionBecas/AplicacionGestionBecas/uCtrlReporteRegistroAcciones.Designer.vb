@@ -25,9 +25,9 @@ Partial Class uCtrlReporteRegistroAcciones
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.DB_Proyecto2DataSetConsultarRegistroAcciones = New AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones()
+        Me.DB_Proyecto2DataSetConsultarRegistroAcciones = New UI.DB_Proyecto2DataSetConsultarRegistroAcciones()
         Me.Tb_BitacoraAccionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tb_BitacoraAccionTableAdapter = New AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_BitacoraAccionTableAdapter()
+        Me.Tb_BitacoraAccionTableAdapter = New UI.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_BitacoraAccionTableAdapter()
         CType(Me.DB_Proyecto2DataSetConsultarRegistroAcciones, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tb_BitacoraAccionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -71,7 +71,7 @@ Partial Class uCtrlReporteRegistroAcciones
     End Sub
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents Tb_BitacoraAccionBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents DB_Proyecto2DataSetConsultarRegistroAcciones As AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAcciones
-    Friend WithEvents Tb_BitacoraAccionTableAdapter As AplicacionGestionBecas.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_BitacoraAccionTableAdapter
+    Friend WithEvents DB_Proyecto2DataSetConsultarRegistroAcciones As UI.DB_Proyecto2DataSetConsultarRegistroAcciones
+    Friend WithEvents Tb_BitacoraAccionTableAdapter As UI.DB_Proyecto2DataSetConsultarRegistroAccionesTableAdapters.Tb_BitacoraAccionTableAdapter
 
 End Class

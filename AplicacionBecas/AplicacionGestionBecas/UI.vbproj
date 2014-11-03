@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{59E114ED-E593-438A-B226-DC0602321A71}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>AplicacionGestionBecas.My.MyApplication</StartupObject>
-    <RootNamespace>AplicacionGestionBecas</RootNamespace>
-    <AssemblyName>AplicacionGestionBecas</AssemblyName>
+    <StartupObject>UI.My.MyApplication</StartupObject>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>AplicacionGestionBecas.xml</DocumentationFile>
+    <DocumentationFile>UI.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +31,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>AplicacionGestionBecas.xml</DocumentationFile>
+    <DocumentationFile>UI.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>

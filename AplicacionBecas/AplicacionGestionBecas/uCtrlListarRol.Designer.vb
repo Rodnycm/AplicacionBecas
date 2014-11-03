@@ -244,9 +244,9 @@ Partial Class uCtrlListarRol
     Friend WithEvents btnCrearRol As System.Windows.Forms.Button
     Friend WithEvents PbRoles As System.Windows.Forms.PictureBox
     Friend WithEvents dgvRoles As System.Windows.Forms.DataGridView
-    Public WithEvents ventana As AplicacionGestionBecas.UCntrlRegistrarRol
+    Public WithEvents ventana As UI.UCntrlRegistrarRol
     Friend WithEvents dtaNombre As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents UCntrlRegistrarRol1 As AplicacionGestionBecas.UCntrlRegistrarRol
+    Friend WithEvents UCntrlRegistrarRol1 As UI.UCntrlRegistrarRol
     Friend WithEvents ComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents txtBuscar As System.Windows.Forms.TextBox
     Friend WithEvents lblBuscar As System.Windows.Forms.Label
