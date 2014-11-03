@@ -1,10 +1,9 @@
 ﻿Imports EntitiesLayer
 Public Class UcntrlIniciar
 
-    Dim alerta As UctrlAlerta = New UctrlAlerta()
+    Dim alerta As UctrlAlerta
 
     Private Sub btnIniciarSesion_Click(sender As Object, e As EventArgs) Handles btnIniciarSesion.Click
-        MsgBox("Matihass mas")
 
         Dim nombreUsuario As String = txtNombreUsuario.Text
         Dim contraseña As String = txtContraseña.Text
@@ -20,6 +19,7 @@ Public Class UcntrlIniciar
                 FrmIniciarSesion.Hide()
                 FrmIniciarSesion.principal.Show()
             Else
+                alerta = New UctrlAlerta()
                 alerta.lblAlerta.Text = "Nombre de usuario o contraseña incorrectos"
                 Me.Controls.Add(alerta)
                 alerta.BringToFront()
@@ -27,6 +27,7 @@ Public Class UcntrlIniciar
                 alerta.Show()
             End If
         Catch ex As Exception
+            alerta = New UctrlAlerta()
             alerta.lblAlerta.Text = ex.Message
             FrmIniciarSesion.principal.Controls.Add(alerta)
             alerta.BringToFront()
